@@ -1,0 +1,27 @@
+<div class="mt-4">
+    <form action="./services/addTask.php" method="POST">
+        <div class="d-flex flex-column mb-5">
+
+            <label for="tast">Task</label>
+            <textarea required placeholder="Write something here" rows="3" cols="30" name = "task" id="task" type="text"></textarea>
+            
+            <label class="mt-3" for="state">State</label>
+            <select name="state">
+                <option value="In progress">In progress</option>
+                <option value="At risk">At risk</option>
+                <option value="Delayed">Delayed</option>
+            </select>
+
+            <label class="mt-3" for="priority">Priority</label>
+            <select name="priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <label class="mt-3" for="deadline">Deadline</label>
+            <input class="mb-4" type="date" name="deadline" required>
+            
+            <button class="btn btn-dark mb-4" type="submit">Add task</button>
+        </div>
+        </form>
+    </div>
