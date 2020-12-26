@@ -7,7 +7,7 @@ $insert = "INSERT INTO tasks(idUser,task,state,priority,deadline) VALUES ('".$_S
 
 if (mysqli_query($connect->conn,$insert)) {
     
-    header("location: ../index.php");
+    header("location: ../");
 
 } else {
     echo "Error: " . $insert . "<br>".$connect->conn->error;

@@ -7,11 +7,10 @@ $update = "UPDATE tasks SET task = '".$_POST['task']."', state = '".$_POST['stat
 
 if (mysqli_query($connect->conn,$update)) {
     
-    header("location: ../index.php");
+    header("location: ../");
 
 } else {
     echo "Error: " . $update . "<br>".$connect->conn->error;
 
 }
-
 ?>

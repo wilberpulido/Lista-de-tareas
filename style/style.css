@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+.form{
+    color: white;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+.listTask{
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+.taskRow{
+    width: 100%;
+    margin: 0px;
+}
+
+.taskIndividualBox{
+    width: 180px;
+    overflow: auto;
+}
+
+.withoutLogin{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    background-image: url("../images/fo-1200x675.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.titleWithoutLogin{
+    position: absolute;
+    background-color:lightgrey;
+    padding: 10px;
+    border-radius: 5px;
+}
+.titleWithoutLogin div .text-center{
+    color: black;
+    font-size: 2rem;
+}
+ul li a{
+    color: white;
+    font-size: 1.2rem;
+}
+.whyUseApp{
+    height: 90vh;
+    width: 100%;
+    background-color:tomato ;
+}
+.whyUseApp div{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 10%;
+    grid-template-rows: 50px repeat(3,40vh);
+    grid-row-gap: 10vh;
+    background-color: violet;
+    border: 2px solid red;
+}
+.whyUseApp div h2{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 20px;
+}
