@@ -11,32 +11,35 @@
     <div class="container">
         <header>
             <?php
-        include("landingPage/header.html");
-        ?>
+            $whyUseUrl = "./whyUseApp.php";
+            $loginUrl = "./login.html";
+            $aboutMeUrl = "./aboutMe.php";
+            $registerUrl = "./registration.html";
+            $contactUrl = "./contact.php";
+                include("landingPage/header.php");
+            ?>
         </header>
         <main>
-            <div class="whyUseApp">
-            <div>
+            <div class="whyUseAppGrid">
                 <h2> Why use this application? </h2>
                 <div>
-                    because organizing your tasks is the best way to increase your personal productivity.
+                    <h4> Organizing your tasks is the best way to increase your personal productivity</h4>
+                </div>
+                <div class="organizingImage">
+                    <!-- imagen -->
+                </div>
+                <div class="deadlineImage">
+                    <!-- Imagen -->
                 </div>
                 <div>
-                    pruebas
+                    <h4> It is a very simple application to add tasks that have a scheduled date</h4>
                 </div>
                 <div>
-                    because it is a very simple application to add tasks that have a scheduled date.
+                   <h4> It allows you to make changes to your tasks quickly and easily</h4>
                 </div>
-                <div>
-                    pruebas
+                <div class="adaptImage">
+                    <!-- Imagen -->
                 </div>
-                <div>
-                    Because it allows you to make changes to your tasks quickly and easily.
-                </div>
-                <div>
-                    pruebas
-                </div>
-            </div>
             </div>
         </main>
 </div>

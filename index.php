@@ -17,9 +17,7 @@ if (isset($_SESSION["idUser"])) {
 
     }
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +35,12 @@ if (empty($user)) {
 <div class="container">
     <header>
         <?php
-        include("view/landingPage/header.html");
+        $whyUseUrl ="/tasklist/view/whyUseApp.php" ;
+        $loginUrl ="/tasklist/view/login.html";
+        $aboutMeUrl = "/tasklist/view/aboutMe.php";
+        $registerUrl = "/tasklist/view/registration.html";
+        $contactUrl = "/tasklist/view/contact.php";
+        include("view/landingPage/header.php");
         ?>
     </header>
 

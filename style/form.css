@@ -10,14 +10,19 @@
 	transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.89);
 	border-radius:3px;
-	padding:30px 70px 40px 70px;
+	padding:15px 50px 20px 50px;
 }
+
 .text-login{
 	color:#fff;	
     font-size: 1.8rem;
     margin: -20px 0 60px 0;
     display: block;
     text-align: center;
+}
+.link-login-register{
+    position: relative;
+    margin-top: 10px;
 }
 .text-center-welcome{
 	color:#fff;	
@@ -26,10 +31,7 @@
     display: block;
     text-align: center;
 }
-.text-right{
-    display: block;
-    text-align: end;
-}
+
 .link{
     color: #e74c3c;
 }
@@ -40,7 +42,8 @@
 
 .input-container{
 	position:relative;
-	margin-bottom:25px;
+    margin-bottom:5vh;
+    width: 15vw;
 }
 .input-container label{
 	position:absolute;
@@ -50,6 +53,11 @@
 	color:#fff;	
     pointer-events: none;
 	transition: all 0.5s ease-in-out;
+}
+.input-container-register{
+position: relative;
+margin-bottom:5vh;
+width: 25vw;
 }
 .input-container-register label{
     color: white;
@@ -61,7 +69,6 @@
   border-bottom:1px solid #555;  
   background:transparent;
   width:100%;
-  padding:8px 0 5px 0;
   font-size:16px;
   color:#fff;
 }
@@ -103,8 +110,8 @@ outline-color: transparent;
 .formFormat{
 display: grid;
 grid-template-columns: 1fr;
-grid-template-rows: repeat(6, 60px) 30px 60px;
-grid-row-gap: 10px;
+grid-template-rows: repeat(6, 10vh) 5vh 10vh;
+grid-row-gap: 2vh;
 }
 .centalBox{
     display: flex;

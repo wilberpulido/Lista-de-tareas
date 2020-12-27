@@ -1,30 +1,28 @@
 <ul class="navbar-dark bg-dark row">
     <li class="col-3">
-        <a class="nav-link text-center" href="./view/whyUseApp.php">
+        <a class="nav-link text-center" href="<?php echo $whyUseUrl ?>">
             Why use this application?
         </a>
     </li>
     <li class="col-2">
-        <a class="nav-link text-center" href="#">
+        <a class="nav-link text-center" href="<?php echo $aboutMeUrl ?>">
             About me
         </a>
     </li>
     <li class="col-2">
-        <a class="nav-link text-center" href="#">
+        <a class="nav-link text-center" href="<?php echo $contactUrl ?>">
             Contact
         </a>
     </li>
     <li class="col-1">
-        <a class="nav-link" href="#">
-        </a>
     </li>
     <li class="col-2">
-        <a class="nav-link text-right" href="./view/login.html">
+        <a class="nav-link text-right" href="<?php echo $loginUrl ?>">
             Login
         </a>
     </li>
     <li class="col-2">
-        <a class="nav-link text-left" href="./view/registration.html">
+        <a class="nav-link text-left" href="<?php echo $registerUrl ?>">
             Register
         </a>
     </li>

@@ -55,18 +55,48 @@ ul li a{
     width: 100%;
     background-color:tomato ;
 }
-.whyUseApp div{
+.whyUseAppGrid{
     display: grid;
     grid-template-columns: 45% 45%;
     grid-column-gap: 10%;
     grid-template-rows: 50px repeat(3,40vh);
     grid-row-gap: 10vh;
-    background-color: violet;
-    border: 2px solid red;
+    margin-bottom: 20vh;
 }
-.whyUseApp div h2{
+.whyUseAppGrid h2{
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
-    margin-top: 20px;
+    margin-top: 5vh;
+    font-size: 5vh;
+}
+.whyUseAppGrid div{
+    display: flex;
+    align-items: center;
+    padding: 2vh 2vw;
+}
+ .whyUseAppGrid div h4{
+     font-size: 3.5vh;
+     text-align: center;
+ }
+
+.organizingImage{
+    background-image: url("../images/organizing.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.deadlineImage{
+    background-image: url("../images/deadline.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.adaptImage{
+    background-image: url("../images/adapt.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
 }
