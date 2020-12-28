@@ -20,7 +20,37 @@
             ?>
     </header>
     <main>
-      <h2 class="text-center"> Contact </h2>
+        <h1 class="text-center"> Contact </h1>
+
+        <section class="contact">
+            <div>
+                <form id="formContact" action="POST">
+                    <div class="container-label-input">
+                        <label for="nameContact">Name: </label>
+                        <input type="text" name="nameContact" id="nameContact">
+                        <label for="telephoneContact">Telephone: </label>
+                        <input type="tel" name="telephoneContact" id="telephoneContact">
+                    </div>
+                    <div class="container-label-input">
+                        <label for="emailContact">Email: </label>
+                        <input type="email" name="emailContact" id="emailContact">
+                    </div>
+                    <div>
+                        <label for="messageContact">MessageContact: </label>
+                        <textarea name="messageContact" id="messageContact"></textarea>
+                    </div>
+                    <button class="btn btn-dark" type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
+            <div id="personalDate">
+                <p>
+                This application has been developed by Wilber Pulido,
+                a web developer with experience in different languages such as 
+                html, css, javascript, php and java, handling mySQL and mongoDB
+                 databases and javascript frameworks such as react.js and express.js
+                </p>
+            </div>
+        </section>
     </main>
 
     </div>
