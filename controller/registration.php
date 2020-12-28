@@ -3,10 +3,11 @@
 require_once("../model/connection.php");
 
 $consult= "SELECT * from users WHERE username = "."'".$_POST['username']."'";
-
 $result = mysqli_query($connect->conn,$consult);
 
 if ($result->num_rows === 0) {
+
+    
 
     $insert = "INSERT INTO users(firstName,lastName,username,password,mail) VALUES ('".$_POST['firstName']."','".$_POST['lastName']."','".$_POST['username']."','".$_POST['password']."','".$_POST['mail']."')";
 

@@ -31,7 +31,7 @@ ul li {
 }
 
 .withoutLogin{
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     position: relative;
     background-image: url("../images/fo-1200x675.jpg");
@@ -56,7 +56,6 @@ ul li a{
 .whyUseApp{
     height: 90vh;
     width: 100%;
-    background-color:tomato ;
 }
 .whyUseAppGrid{
     display: grid;

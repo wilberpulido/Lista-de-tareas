@@ -12,7 +12,6 @@
 	border-radius:3px;
 	padding:4vh 4vw;
 }
-
 .text-login{
 	color:#fff;	
     font-size: 4vh;
@@ -33,7 +32,7 @@
 }
 
 .link{
-    color: #e74c3c;
+    color:rgb(18, 109, 245);
 }
 
 .login-title{
@@ -76,11 +75,11 @@ width: 25vw;
 .input-container-register input:focus{ 
  border:none;	
  outline:none;
- border-bottom:1px solid #e74c3c;	
+ border-bottom:1px solid rgb(18, 109, 245);	
 }
 .btn-form{
 	color:#fff;
-	background-color:#e74c3c;
+	background-color:rgb(18, 109, 245);
 	outline: none;
     border: 0;
     color: #fff;
@@ -120,7 +119,7 @@ grid-row-gap: 2vh;
 }
 .centalBox button{
     color:#fff;
-	background-color:#e74c3c;
+	background-color:rgb(18, 109, 245);
 	outline: none;
     border: 0;
     color: #fff;
