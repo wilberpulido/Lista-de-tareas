@@ -13,7 +13,7 @@
     <title>Contact</title>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <header>
             <?php
             $whyUseUrl = "./whyUseApp.php";

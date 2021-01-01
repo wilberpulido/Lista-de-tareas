@@ -7,6 +7,7 @@
 ul li {
     list-style: none;
 }
+
 .form{
     color: white;
     height: 450px;
@@ -26,31 +27,72 @@ ul li {
     width: 180px;
     overflow: auto;
 }
-.container{
-    margin-bottom: 10vh;
+/* navegador */
+
+header{
+    position: fixed;
+    height: 30vh;
+    width: 100vw;
+    top: 70vh;
+    z-index: 10;
 }
 
+.btn-menu{
+    position: relative;
+    z-index: 1;
+}
+.narbar{
+    position: absolute;
+    width: 100vw;
+    height: 20vh;
+    top: 30vh;
+    transition: top 2s;
+}
+.btn-menu:focus {
+    background-color: blueviolet;
+}
+
+header .btn-menu:focus ~ .narbar{
+    top: 10vh;
+    z-index: 5;
+}
+
+.narbar li a{
+    color: white;
+    font-size: 2vh;
+}
+
+ul{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    display: inline-block;
+}
+
+
+ /* homestyle */
 .withoutLogin{
     height: 80vh;
     width: 100%;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
     background-image: url("../images/fo-1200x675.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 }
 .titleWithoutLogin{
-    position: absolute;
-    background-color:lightgrey;
-    padding: 10px;
-    border-radius: 5px;
+    position: relative;
+    margin: 10vh auto;
+    height: max-content;
+    width: max-content;
 }
-.titleWithoutLogin div .text-center{
+.titleWithoutLogin > *{
     color: black;
-    font-size: 4vh;
-}
-ul li a{
-    color: white;
     font-size: 3vh;
 }
 .whyUseApp{
@@ -199,4 +241,17 @@ row-gap: 1vh;
 .contactInf{
     display: flex;
     justify-content: center;
+}
+
+
+@media only screen and (min-width: 480px){
+    ul li a{
+        color:crimson;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    ul li a{
+        color:chartreuse;
+    }
 }
