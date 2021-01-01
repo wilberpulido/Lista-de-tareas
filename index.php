@@ -22,7 +22,7 @@ if (isset($_SESSION["idUser"])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale = 1, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
     <link rel="shortcut icon" href="images/iconTask.icon"/>
@@ -33,8 +33,9 @@ if (isset($_SESSION["idUser"])) {
 <?php 
 if (empty($user)) {
 ?>
-<div class="container">
+<div class="container-fluid">
     <header>
+        <button class="btn btn-dark btn-menu"> Mostrar</button>
         <?php
         $whyUseUrl ="view/whyUseApp.php" ;
         $loginUrl ="view/login.html";
@@ -45,21 +46,19 @@ if (empty($user)) {
         ?>
     </header>
 
-<main>
-    <div class="d-flex justify-content-center align-items-center withoutLogin">
-        <div  class="titleWithoutLogin">
-            <div>
+    <main>
+        <div class="withoutLogin">
+            <div  class="titleWithoutLogin">
                 <h2 class="text-center" >WELCOME</h2>
                 <h4 class="text-center">Organize your days in a few steps</h4>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 </div>
 <?php
 } else{
 ?>
-<div class= 'container'>
+<div class= 'container-fluid'>
     <header class="navbar navbar-expand-lg navbar-dark bg-dark row">
         <div class='col-3'>
         </div>
