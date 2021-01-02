@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-ul li {
-    list-style: none;
-}
-
 .form{
     color: white;
     height: 450px;
@@ -28,36 +24,57 @@ ul li {
     overflow: auto;
 }
 /* navegador */
-
 header{
     position: fixed;
-    height: 30vh;
+    height: 20vh;
     width: 100vw;
-    top: 70vh;
+    top: 80vh;
+    left: 0;
+    right: 0;
     z-index: 10;
 }
-
+.other-submenu,
 .btn-menu{
-    position: relative;
+    position: absolute;
+    top: 10vh;
+    transition: top 1s;
     z-index: 1;
 }
-.narbar{
+.other-submenu{
+    right: 5vw;
+}
+.btn-menu{
+    left: 5vw;
+}
+.navegbar{
     position: absolute;
     width: 100vw;
     height: 20vh;
-    top: 30vh;
-    transition: top 2s;
+    top: 20vh;
+    transition: top 1s;
+
+}
+.navegbar:focus{
+    top: 8vh;
 }
 .btn-menu:focus {
     background-color: blueviolet;
+    top: 0vh;
 }
-
-header .btn-menu:focus ~ .narbar{
-    top: 10vh;
+header div .btn-menu:focus ~ .navegbar{
+    top: 8vh;
     z-index: 5;
 }
-
-.narbar li a{
+header div .navegbar:focus ~ .btn-menu{
+    top: 0vh;
+}
+header div .btn-menu:focus ~ .other-submenu{
+    top: 0vh;
+}
+header div .navegbar:focus ~ .other-submenu{
+    top: 0vh;
+}
+.navegbar li a{
     color: white;
     font-size: 2vh;
 }
@@ -69,13 +86,16 @@ ul{
 }
 ul li {
     display: inline-block;
+    list-style: none;
+    width: 100vw;
+    height: 3.33vh;
+    background-color: brown;
 }
-
 
  /* homestyle */
 .withoutLogin{
     height: 80vh;
-    width: 100%;
+    width: 100vw;
     position: absolute;
     left: 0;
     top: 0;
