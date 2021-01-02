@@ -35,15 +35,22 @@ if (empty($user)) {
 ?>
 <div class="container-fluid">
     <header>
-        <button class="btn btn-dark btn-menu"> Mostrar</button>
-        <?php
-        $whyUseUrl ="view/whyUseApp.php" ;
-        $loginUrl ="view/login.html";
-        $aboutMeUrl = "view/aboutMe.php";
-        $registerUrl = "view/registration.html";
-        $contactUrl = "view/contact.php";
-        include("view/landingPage/header.php");
-        ?>
+        <div>
+            <button class="btn btn-dark btn-menu"> Menu</button>
+            <div class="other-submenu">
+                <button class="btn btn-dark"> login </button> 
+                <!-- <?php echo __DIR__ ?> -->
+                <button class="btn btn-dark"> Register</button>
+            </div>
+            <?php
+            $whyUseUrl ="view/whyUseApp.php" ;
+            $loginUrl ="view/login.html";
+            $aboutMeUrl = "view/aboutMe.php";
+            $registerUrl = "view/registration.html";
+            $contactUrl = "view/contact.php";
+            include("view/landingPage/header.php");
+            ?>
+        </div>
     </header>
 
     <main>
