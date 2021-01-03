@@ -6,20 +6,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="shortcut icon" href="../images/iconTask.icon"/>
+    <script defer type="text/javascript" src="../funciones.js"></script>
     <title>About Me</title>
 </head>
 <body>
     <div class="container-fluid">
     <header>
+        <div>
+            <button class="btn btn-dark btn-menu"> Menu</button>
+            <div class="other-submenu">
+                <button class="btn btn-dark"> <a href="./login.html"> Login </a> </button> 
+                <button class="btn btn-dark"> <a href="./registration.html"> Register </a></button>
+            </div>
             <?php
             $whyUseUrl = "./whyUseApp.php";
-            $loginUrl = "./login.html";
             $aboutMeUrl = "./aboutMe.php";
-            $registerUrl = "./registration.html";
             $contactUrl = "./contact.php";
                 include("landingPage/header.php");
             ?>
-    </header>
+        </div>
+        </header>
     <main>
         <section class="aboutMe">
             <h1 class="text-center"> About me </h1>
@@ -36,19 +42,14 @@
         </section>
         <section class="iconTech">
             <div class="icon iconHTML">
-
             </div>
             <div class="icon iconCSS">
-                
             </div>
             <div class="icon iconBOOTS">
-                
             </div>
             <div class="icon iconPHP">
-                
             </div>
             <div class="icon iconMYSQL">
-                
             </div>
         </section>
     </main>

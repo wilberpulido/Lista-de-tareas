@@ -26,22 +26,26 @@
 /* navegador */
 header{
     position: fixed;
-    height: 20vh;
+    height: 35vh;
+    top: 65vh;
     width: 100vw;
-    top: 80vh;
     left: 0;
     right: 0;
     z-index: 10;
+    /* background-color: tomato; */
 }
 .other-submenu,
 .btn-menu{
     position: absolute;
-    top: 10vh;
+    top:27vh;
     transition: top 1s;
     z-index: 1;
 }
 .other-submenu{
     right: 5vw;
+}
+.other-submenu button a{
+    color: white;
 }
 .btn-menu{
     left: 5vw;
@@ -49,34 +53,27 @@ header{
 .navegbar{
     position: absolute;
     width: 100vw;
-    height: 20vh;
-    top: 20vh;
+    height: 25vh;
+    top: 35vh;
     transition: top 1s;
-
 }
 .navegbar:focus{
-    top: 8vh;
+    top: 0vh;
 }
 .btn-menu:focus {
     background-color: blueviolet;
-    top: 0vh;
+    top: 2vh;
 }
 header div .btn-menu:focus ~ .navegbar{
-    top: 8vh;
+    top: 10vh;
     z-index: 5;
 }
-header div .navegbar:focus ~ .btn-menu{
-    top: 0vh;
-}
 header div .btn-menu:focus ~ .other-submenu{
-    top: 0vh;
-}
-header div .navegbar:focus ~ .other-submenu{
-    top: 0vh;
+    top: 2vh;
 }
 .navegbar li a{
     color: white;
-    font-size: 2vh;
+    font-size: 3vh;
 }
 
 ul{
@@ -84,53 +81,64 @@ ul{
     margin: 0;
     padding: 0;
 }
-ul li {
-    display: inline-block;
+ul li button{
     list-style: none;
-    width: 100vw;
-    height: 3.33vh;
-    background-color: brown;
+    border: 1px solid gray;
+    width: 100%;
+    height: 8.33vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
-
- /* homestyle */
-.withoutLogin{
-    height: 80vh;
+main{
+    height: 90vh;
     width: 100vw;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    background-image: url("../images/fo-1200x675.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    overflow: auto;
 }
-.titleWithoutLogin{
+main figure{
     position: relative;
-    margin: 10vh auto;
-    height: max-content;
-    width: max-content;
+    height: auto;
+    width: 100vw;
+    top:20vh;
+}
+main figure img{
+    width: 100%;
+}
+
+/* .menu{
+
+} */
+
+ /* homestyle */
+.titleWithoutLogin{
+    top:10vh;
+    position: relative;
+    margin: 0vh auto;
 }
 .titleWithoutLogin > *{
     color: black;
     font-size: 3vh;
 }
-.whyUseApp{
-    height: 90vh;
-    width: 100%;
-}
+
 .whyUseAppGrid{
+    margin: 5vh 5%;
+    width: 90%;
     display: grid;
     grid-template-columns: 45% 45%;
     grid-column-gap: 10%;
-    grid-template-rows: 50px repeat(3,40vh);
-    grid-row-gap: 10vh;
+    grid-template-rows: 20vh repeat(3,40vh);
 }
 .whyUseAppGrid h2{
+    margin: auto;
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
-    margin-top: 5vh;
     font-size: 5vh;
 }
 .whyUseAppGrid div{
@@ -138,10 +146,11 @@ ul li {
     align-items: center;
     padding: 2vh 2vw;
 }
- .whyUseAppGrid div h4{
-     font-size: 3.5vh;
-     text-align: center;
- }
+.whyUseAppGrid div h4{
+    font-size: 3vh;
+    text-align: center;
+    margin: 0;
+}
 
 .organizingImage{
     background-image: url("../images/organizing.jpg");
@@ -166,14 +175,14 @@ ul li {
 
 .contact h1,
 .aboutMe h1{
-    font-size: 8vh;
+    font-size: 5vh;
     margin: 5vh 0vw;
 }
 
 .aboutMe p{
-    font-size: 3vh;
+    margin: 5vh 5vw;
+    font-size: 2.5vh;
     text-align: justify;
-    margin-bottom: 6vh;
 }
 
 .iconTech{
@@ -265,13 +274,15 @@ row-gap: 1vh;
 
 
 @media only screen and (min-width: 480px){
-    ul li a{
-        color:crimson;
+    .navegbar li a{
+        color: red;
+        font-size: 3vh;
     }
 }
 
 @media only screen and (min-width: 768px){
-    ul li a{
-        color:chartreuse;
+    .navegbar li a{
+        color: cornflowerblue;
+        font-size: 3vh;
     }
 }
