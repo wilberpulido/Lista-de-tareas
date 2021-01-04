@@ -9,15 +9,17 @@
     <title>Registratation</title>
 </head>
 <body>
-<div class="container-fluid">
-    <div class="formBox">
-        <form action="../controller/registration.php" method="POST">
-        <div class="formFormat register-format">
-            <div class="centalBox">
-                <h2>REGISTER</h2>
-            </div>
-            <div class="input-container-register">
-                <label>First name</label>
+    <div class="container-fluid">
+    <main>
+    <a class="btn btn-dark btn-return-home" href="../">Return home page</a>
+        <div class="formBox">
+            <form action="../controller/registration.php" method="POST">
+                <div class="formFormat register-format">
+                    <div class="centalBox">
+                        <h2>REGISTER</h2>
+                    </div>
+                    <div class="input-container-register">
+                        <label>First name</label>
                 <input name="firstName" type="text" required/>
             </div>
             <div class="input-container-register">
@@ -44,12 +46,10 @@
             <div class="centalBox">
                 <button type="submit">submit</button>
             </div>
-        </div>
         </form>
     </div>
-    <a class="btn btn-dark" href="../">Return home page</a>
+</main>
 </div>
-
 
 </body>
 </html>

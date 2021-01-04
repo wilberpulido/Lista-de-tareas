@@ -1,40 +1,40 @@
 *{
     padding: 0px;
     margin: 0px;
-    box-sizing: 0px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+main{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: lime;
 }
 .formBox{
-    position:absolute;
+    position: absolute;
 	left:50%;
 	top:50%;
 	transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.89);
 	border-radius:3px;
-	padding:4vh 4vw;
+    padding:5vh 5vw;
+    width: 80vw;
 }
-.text-login{
-	color:#fff;	
-    font-size: 4vh;
-    margin: -4vh 0 60px 0;
-    display: block;
-    text-align: center;
-}
-.link-login-register{
-    position: relative;
-    margin-top: 2vh;
-}
+.text-login,
 .text-center-welcome{
 	color:#fff;	
-    font-size: 2vh;
-    margin: -40px 0 40px 0;
+    font-size: 4vh;
+    margin: -4vh 0 8vh 0;
     display: block;
     text-align: center;
 }
-
+.text-center-welcome{
+    font-size: 2vh;
+}
 .link{
     color:rgb(18, 109, 245);
 }
-
 .login-title{
     margin-top: 5vh;
 }
@@ -42,21 +42,27 @@
 .input-container{
 	position:relative;
     margin-bottom:5vh;
-    width: 15vw;
+    width: 100%;
 }
 .input-container label{
 	position:absolute;
-	top:0px;
-	left:0px;
+	top:-1vh;
+	left:0;
 	font-size:3vh;
 	color:#fff;	
     pointer-events: none;
 	transition: all 0.5s ease-in-out;
 }
+.btn-return-home{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+}
+
 .input-container-register{
 position: relative;
 margin-bottom:5vh;
-width: 25vw;
+width: 100%;
 }
 .input-container-register label{
     color: white;
@@ -95,6 +101,10 @@ width: 25vw;
 .input-container input:valid ~ label{
 	top:-4vh;
 	font-size:3vh;
+}
+.link-login-register{
+    position: relative;
+    margin-top: 2vh;
 }
 
 input:-webkit-autofill,

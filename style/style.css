@@ -3,6 +3,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
+p{
+    margin: 0;
+}
 /* navegador */
 header{
     position: fixed;
@@ -171,45 +174,54 @@ main figure img{
 #contactPage{
     display: flex;
     flex-wrap: wrap;
-    width: 90vw;
     margin: 0 auto;
+    width: 80%;
+}
+#contactPage section{
+    margin: 2vh 0vw;
+    width: 100%;
+}
+#contactPage section h2{
+    margin: 5vh 0vw;
+    font-size: 5vh;
 }
 
+#contactInf{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    row-gap: 5vh;
+    column-gap: 10%;
+}
+.contactGit,
+#contactInf h2,
+#formContact div,
+#formContact button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#contactInf div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #formContact{
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 5vh 5vh 20vh 10vh;
+    grid-template-columns: 30% 60%;
+    column-gap: 10%;
     row-gap: 5vh;
+    background-color:rgb(151, 183, 216);
+    margin: 6vh 0vw;
+    border-radius: 1%;
+    padding: 5vh 5vw;
 }
 #formContact div textarea{
     width: 100%;
     height: 15vh;
 }
-
-.container-label-input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#formContact button{
+    width: 70%;
+    margin: 0 auto;
 }
-
-.container-label-input label{
-    margin: 0vh 1vw;
-}
-.container-label-input input{
-    width: 30%;
-}
-
-#personalDate{
-display: grid;
-grid-template-columns: 100%;
-grid-template-rows: 20vh 8vh 20vh 8vh 20vh;
-row-gap: 1vh;
-}
-.contactInf{
-    display: flex;
-    justify-content: center;
-}
-
 .form{
     color: white;
     height: 450px;
