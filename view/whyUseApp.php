@@ -32,21 +32,21 @@
                 <div>
                     <h4> Organizing your tasks is the best way to increase your personal productivity</h4>
                 </div>
-                <div class="organizingImage">
-                    <!-- imagen -->
-                </div>
-                <div class="deadlineImage">
-                    <!-- Imagen -->
-                </div>
+                <picture>
+                    <img src="../images/organizing.jpg" alt="Organizing">
+                </picture>
+                <picture>
+                    <img src="../images/deadline.png" alt="deadline">
+                </picture>
                 <div>
                     <h4> It is a very simple application to add tasks that have a scheduled date</h4>
                 </div>
                 <div>
                    <h4> It allows you to make changes to your tasks quickly and easily</h4>
                 </div>
-                <div class="adaptImage">
-                    <!-- Imagen -->
-                </div>
+                <picture>
+                    <img src="../images/adapt.jpg" alt="deadline">
+                </picture>
             </div>
         </main>
 </div>
