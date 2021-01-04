@@ -3,26 +3,6 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
-.form{
-    color: white;
-    height: 450px;
-    background-color: rgba(0, 0, 0, 0.6);
-
-}
-.listTask{
-    padding-left: 10px;
-    padding-bottom: 15px;
-}
-.taskRow{
-    width: 100%;
-    margin: 0px;
-}
-
-.taskIndividualBox{
-    width: 180px;
-    overflow: auto;
-}
 /* navegador */
 header{
     position: fixed;
@@ -141,42 +121,29 @@ main figure img{
     grid-column-end: 3;
     font-size: 5vh;
 }
+.whyUseAppGrid picture,
 .whyUseAppGrid div{
     display: flex;
     align-items: center;
+}
+.whyUseAppGrid div{
     padding: 2vh 2vw;
 }
+
 .whyUseAppGrid div h4{
     font-size: 3vh;
     text-align: center;
     margin: 0;
 }
-
-.organizingImage{
-    background-image: url("../images/organizing.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-.deadlineImage{
-    background-image: url("../images/deadline.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.adaptImage{
-    background-image: url("../images/adapt.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
+.whyUseAppGrid picture img{
+    width: 100%;
 }
 
 .contact h1,
 .aboutMe h1{
     font-size: 5vh;
     margin: 5vh 0vw;
+    text-align: center;
 }
 
 .aboutMe p{
@@ -190,51 +157,22 @@ main figure img{
     justify-content: center;
 }
 .icon{
-    width: 10vw;
+    width: 18vw;
     height: 20vh;
-    margin: 0vh 1vh;
+    margin: 0vh 0.5vw;
     display: flex;
-    justify-content: center;
+    align-items: center;
 
 }
-.iconHTML{
-    background-image: url("../images/logoHTML.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.icon img {
+    width: 100%;
+    height: 10vh;
 }
-.iconCSS{
-    background-image: url("../images/logoCSS.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-.iconBOOTS{
-    background-image: url("../images/logoBootstrapStack.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-.iconPHP{
-    background-image: url("../images/logoPHP.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-.iconMYSQL{
-    background-image: url("../images/logomySQL.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.contact{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60vh;
-    grid-row-gap: 10vh;
-    grid-column-gap: 5vw;
-    margin-top: 10vh;
+#contactPage{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: 0 auto;
 }
 
 #formContact{
@@ -272,6 +210,25 @@ row-gap: 1vh;
     justify-content: center;
 }
 
+.form{
+    color: white;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+.listTask{
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+.taskRow{
+    width: 100%;
+    margin: 0px;
+}
+
+.taskIndividualBox{
+    width: 180px;
+    overflow: auto;
+}
 
 @media only screen and (min-width: 480px){
     .navegbar li a{

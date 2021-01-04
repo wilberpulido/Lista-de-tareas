@@ -10,27 +10,38 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="shortcut icon" href="../images/iconTask.icon"/>
     <script src="https://kit.fontawesome.com/ae8e09c608.js" crossorigin="anonymous"></script>
+    <script defer type="text/javascript" src="../funciones.js"></script>
     <title>Contact</title>
 </head>
 <body>
 <div class="container-fluid">
     <header>
+        <div>
+            <button class="btn btn-dark btn-menu"> Menu</button>
+            <div class="other-submenu">
+                <button class="btn btn-dark"> <a href="./login.html"> Login </a> </button> 
+                <button class="btn btn-dark"> <a href="./registration.html"> Register </a></button>
+            </div>
             <?php
             $whyUseUrl = "./whyUseApp.php";
-            $loginUrl = "./login.html";
             $aboutMeUrl = "./aboutMe.php";
-            $registerUrl = "./registration.html";
             $contactUrl = "./contact.php";
-                include("landingPage/header.php");
+            include("landingPage/header.php");
             ?>
+        </div>
     </header>
     <main>
-
-        <section class="contact">
+        <section id="contactPage">
             <div>
-                <h3 class="text-center mb-5">
+                <h2 class="text-center mb-5">
                     Contact form
-                </h3>
+                </h2>
+                <p class="text-justify">
+                    This application has been developed by Wilber Pulido,
+                    a web developer with experience in different languages such as 
+                    html, css, php, java, javascript with react.js and express.js and handling mySQL and mongoDB
+                    databases.
+                </p>
                 <form id="formContact" method="POST" action="../services/contactMail.php">
                     <div class="container-label-input">
                         <label for="nameContact">Name: </label>
@@ -70,12 +81,6 @@
                 ?>
             </div>
             <div id="personalDate">
-                <p class="text-justify">
-                    This application has been developed by Wilber Pulido,
-                    a web developer with experience in different languages such as 
-                    html, css, php, java, javascript with react.js and express.js and handling mySQL and mongoDB
-                    databases.
-                </p>
                 <h3 class="text-center">Contact information</h3>
                 <div class="contactInf">
                     <a class="icon" href="https://www.linkedin.com/in/wilber-pulido-b523116b/" target="_blank">
