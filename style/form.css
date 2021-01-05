@@ -1,16 +1,4 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-}
-main{
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-}
-.formBox,
+.formBoxLogin,
 .formBoxRegister{
     position: absolute;
 	left:50%;
@@ -19,7 +7,7 @@ main{
     background-color: rgba(0, 0, 0, 0.89);
 	border-radius:3px;
 }
-.formBox{
+.formBoxLogin{
     padding:5vh 5vw;
     width: 300px;
 }
@@ -102,11 +90,11 @@ width: 100%;
 .input-container-register input:focus{ 
  border:none;	
  outline:none;
- border-bottom:1px solid rgb(18, 109, 245);
+ border-bottom:1px solid #011BEB;
 }
 .btn-form{
 	color:#fff;
-	background-color:rgb(18, 109, 245);
+	background-color:#011BEB;
 	outline: none;
     border: 0;
     color: #fff;
@@ -115,7 +103,8 @@ width: 100%;
 	margin-top:50px;
 	border-radius:2px;
 	cursor:pointer;
-	position:relative;
+    position:relative;
+    width: 50%;
 }
 
 .input-container input:focus ~ label,
@@ -137,7 +126,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus{
 -webkit-text-fill-color: #fff;
-box-shadow: 0px 0px 0px 2vw rgba(0, 0, 0, 0.9) inset;
+box-shadow: 10px 10px 10px 10vw rgba(0, 0, 0, 0.9) inset;
 outline: none;
 outline-style: none;
 outline-color: transparent;
@@ -150,16 +139,54 @@ outline-color: transparent;
 }
 .btn-submit button{
     color:#fff;
-	background-color:rgb(18, 109, 245);
+	background-color:#011BEB;
 	outline: none;
     border: 0;
     color: #fff;
-	padding:2vh 10vw;
+	padding:2vh 2vw;
     text-transform:uppercase;
     border-radius:2px;
-	cursor:pointer;
+    cursor:pointer;
+    width: 50%;
 }
 .text-center h2{
     color: white;
     font-size: 5vh;
+}
+
+.formBoxTask{
+    position: fixed;
+    left: -100%;
+    top: 10%;
+    width:90%;
+    height: 65%;
+    color: white;
+    background-color: rgb(18, 109, 245);
+    font-size: 3vh;
+    z-index: 15;
+    transition: left 1s;
+}
+
+.btn-add-task-form{
+    position: fixed;
+    top:2%;
+    left: 5%;
+    z-index: 16;
+}
+main .btn-add-task-form:focus ~ .formBoxTask{
+    left: 5%;
+}
+
+.input-container-addTask{
+    width: 100%;
+    height: 20%;
+    padding: 1vh 5%;
+}
+.input-container-addTask textarea,
+.input-container-addTask select,
+.input-container-addTask input{
+    width: 100%;
+}
+.input-container-addTask button{
+    width: 50%;
 }

@@ -6,6 +6,26 @@
 p{
     margin: 0;
 }
+main{
+    height: 90vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    z-index: 1;
+}
+main figure{
+    position: relative;
+    height: auto;
+    width: 100vw;
+    top:20vh;
+}
+main figure img{
+    width: 100%;
+}
+
 /* navegador */
 header{
     position: fixed;
@@ -74,28 +94,6 @@ ul li button{
     margin: 0;
     padding: 0;
 }
-main{
-    height: 90vh;
-    width: 100vw;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    overflow: auto;
-}
-main figure{
-    position: relative;
-    height: auto;
-    width: 100vw;
-    top:20vh;
-}
-main figure img{
-    width: 100%;
-}
-
-/* .menu{
-
-} */
 
  /* homestyle */
 .titleWithoutLogin{
@@ -227,27 +225,48 @@ main figure img{
     width: 100%;
     height: 20vh;
     top: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
-
-.form{
+.nav-profile div {
+    width: 35vw;
+    overflow-wrap: break-word;
+}
+.nav-profile div a,
+.nav-profile div h2{
+    width: 100%;
+    font-size: 3vh;
+    margin: 0 5vw;
+    text-align: center;
     color: white;
-    height: 450px;
-    background-color: rgba(0, 0, 0, 0.6);
-
 }
+
+.tasksBox{
+    position: absolute;
+    overflow: scroll;
+    width: 100%;
+    height: 80vh;
+    z-index: 14;
+    top: 10%;
+}
+
 .listTask{
-    padding-left: 10px;
-    padding-bottom: 15px;
+    position: relative;
+    top: 10%;
+
 }
 .taskRow{
+    position: relative;
     width: 100%;
     margin: 0px;
 }
 
-.taskIndividualBox{
+/* .taskIndividualBox{
     width: 180px;
     overflow: auto;
-}
+} */
 
 @media only screen and (min-width: 480px){
     .navegbar li a{
