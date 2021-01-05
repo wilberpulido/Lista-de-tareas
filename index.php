@@ -27,7 +27,6 @@ if (isset($_SESSION["idUser"])) {
     <link rel="stylesheet" href="style/style.css">
     <link rel="shortcut icon" href="images/iconTask.icon"/>
     <script defer type="text/javascript" src="./funciones.js"></script>
-
     <title>Home page</title>
 </head>
 <body>
@@ -65,14 +64,16 @@ if (empty($user)) {
 } else{
 ?>
 <div class= 'container-fluid'>
-    <header class="navbar navbar-expand-lg navbar-dark bg-dark row">
-        <div class='col-3'>
-        </div>
-        <div class='col-6 text-center'>
-            <h2 class='text-white'> WELCOME <?php echo $user['firstName']." ".$user['lastName']."</h2>";?>
-        </div>
-        <div class= 'col-3 text-right'>
-            <a class='text-white' href="controller/logout.php" >LOGOUT</a>
+    <header>
+        <div class="nav-profile bg-dark">
+            <div class='col-3'>
+                </div>
+                <div class='col-6 text-center'>
+                    <h2 class='text-white'> WELCOME <?php echo $user['firstName']." ".$user['lastName']."</h2>";?>
+                </div>
+                <div class= 'col-3 text-right'>
+                    <a class='text-white' href="controller/logout.php" >LOGOUT</a>
+                </div>
         </div>
     </header>
     <main class="mb-5">
