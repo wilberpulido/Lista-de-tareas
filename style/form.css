@@ -9,17 +9,23 @@ main{
     position: absolute;
     width: 100vw;
     height: 100%;
-    background-color: lime;
 }
-.formBox{
+.formBox,
+.formBoxRegister{
     position: absolute;
 	left:50%;
-	top:50%;
+	top:45%;
 	transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.89);
 	border-radius:3px;
+}
+.formBox{
     padding:5vh 5vw;
-    width: 80vw;
+    width: 300px;
+}
+.formBoxRegister{
+    padding: 4vh 10vw;
+    width: 85%;
 }
 .text-login,
 .text-center-welcome{
@@ -53,35 +59,50 @@ main{
     pointer-events: none;
 	transition: all 0.5s ease-in-out;
 }
+
 .btn-return-home{
     position: absolute;
     top: 90%;
     left: 50%;
 }
-
 .input-container-register{
 position: relative;
-margin-bottom:5vh;
 width: 100%;
 }
+.formFormat{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 8vh) 5vh 10vh;
+    grid-row-gap: 1vh;
+}
 .input-container-register label{
+    position: relative;
     color: white;
+    transition: all 0.5s ease-in-out;
     font-size: 3vh;
+    top:1vh;
+    z-index: 1;
+
+}
+.input-container-register input{
+    position: absolute;
+    top:2vh;
+    z-index: 2;
 }
 .input-container input,
 .input-container-register input{ 
-  border:0px;
-  border-bottom:1px solid #555;  
-  background:transparent;
-  width:100%;
-  font-size:3vh;
-  color:#fff;
+    border:0px;
+    border-bottom:1px solid #555;  
+    background:transparent;
+    width:100%;
+    font-size:3vh;
+    color:#fff;
 }
 .input-container input:focus,
 .input-container-register input:focus{ 
  border:none;	
  outline:none;
- border-bottom:1px solid rgb(18, 109, 245);	
+ border-bottom:1px solid rgb(18, 109, 245);
 }
 .btn-form{
 	color:#fff;
@@ -100,7 +121,12 @@ width: 100%;
 .input-container input:focus ~ label,
 .input-container input:valid ~ label{
 	top:-4vh;
-	font-size:3vh;
+	font-size:2vh;
+}
+.input-container-register input:focus ~ label,
+.input-container-register input:valid ~ label{
+	top:-2vh;
+	font-size:2vh;
 }
 .link-login-register{
     position: relative;
@@ -116,29 +142,24 @@ outline: none;
 outline-style: none;
 outline-color: transparent;
 }
-.formFormat{
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: repeat(6, 10vh) 5vh 10vh;
-grid-row-gap: 2vh;
-}
-.centalBox{
+
+.btn-submit{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.centalBox button{
+.btn-submit button{
     color:#fff;
 	background-color:rgb(18, 109, 245);
 	outline: none;
     border: 0;
     color: #fff;
-	padding:2vh 1vw;
+	padding:2vh 10vw;
     text-transform:uppercase;
     border-radius:2px;
 	cursor:pointer;
 }
-.centalBox h2{
+.text-center h2{
     color: white;
     font-size: 5vh;
 }

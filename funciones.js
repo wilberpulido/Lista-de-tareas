@@ -15,6 +15,8 @@ function onClick(e){
     return window.open(link,"_self");
 }
 
-liOne.addEventListener("click", onClick);
-liTwo.addEventListener("click", onClick);
-liThee.addEventListener("click", onClick);
+if (typeof liOne !== "undefined" && typeof liTwo !== "undefined" && typeof liThee !== "undefined") {
+    liOne.addEventListener("click", onClick);
+    liTwo.addEventListener("click", onClick);
+    liThee.addEventListener("click", onClick);
+}
