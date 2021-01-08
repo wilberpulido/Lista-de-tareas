@@ -66,7 +66,7 @@ if (empty($user)) {
 } else{
 ?>
 <div class= 'container-fluid'>
-    <header>
+    <header class="headerProfile">
         <div class="nav-profile bg-dark">
             <div>
                 <h2> WELCOME <?php echo $user['firstName']." ".$user['lastName']."</h2>";?>
@@ -86,8 +86,8 @@ if (empty($user)) {
             ?>
         </div>
         <div class="tasksBox">
-            <h3 class="text-center mt-4 mb-4"> THESE ARE THE TASKS </h3>
-            <div class="row taskRow">
+            <h3 class="text-center"> THESE ARE THE TASKS </h3>
+            <div>
                 <div class="text-center">
                     <h4>Task</h4>
                 </div>
@@ -104,37 +104,35 @@ if (empty($user)) {
             <div class="listTask">
             <?php
             while ($row = mysqli_fetch_assoc($taskResult)) {
-            
                 $urlDelete = "services/deleteTask.php?idTask=".$row['idTask'];
                 $urlEdit = "view/editTaskForm.php?idTask=".$row['idTask'];
             ?>
             <br>
-            <div class="row taskRow">
-                <div class="col-3 taskIndividualBox">
+            <div>
+                <div>
                     <p>
                         <?php echo $row['task']?>
                     </p>
                 </div>
-                <div class="col-2 text-center">
+                <div class="text-center">
                     <p>
                         <?php echo $row['state']?>
                     </p>
                 </div>
-                <div class="col-2 text-center">
+                <div class="text-center">
                     <p>
                         <?php echo $row['priority']?>
                     </p>
                 </div>
-                <div class="col-2 text-center">
+                <div class="text-center">
                     <p>
                         <?php echo $row['deadline']?>
                     </p>
                 </div>
-                <div class="col-3 text-center">
+                <div class="text-center">
                     <a href="<?php echo $urlEdit?>" class="btn btn-dark"> Edit </a>
                     <a href="<?php echo $urlDelete?>" class="btn btn-dark">Delete</a><?php ?>
                 </div>
-                
             </div>
             <br>
             <?php
