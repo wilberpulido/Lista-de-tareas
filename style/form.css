@@ -1,19 +1,22 @@
 .formBoxLogin,
-.formBoxRegister{
+.formBoxRegister,
+.formBoxEditTask{
     position: absolute;
 	left:50%;
 	top:45%;
 	transform: translate(-50%,-50%);
-    background-color: rgba(0, 0, 0, 0.89);
 	border-radius:3px;
 }
 .formBoxLogin{
+    background-color: rgba(0, 0, 0, 0.89);
     padding:5vh 5vw;
-    width: 300px;
+    width: 90%;
 }
 .formBoxRegister{
     padding: 4vh 10vw;
     width: 85%;
+    background-color: rgba(0, 0, 0, 0.89);
+
 }
 .text-login,
 .text-center-welcome{
@@ -193,6 +196,10 @@ main .formBoxTask:focus-within{
     padding: 1vh 5%;
 
 }
+.input-container-addTask label{
+font-size: 3vh;
+font-weight: 500;
+}
 .input-container-addTask textarea,
 .input-container-addTask select,
 .input-container-addTask input{
@@ -200,4 +207,10 @@ main .formBoxTask:focus-within{
 }
 .input-container-addTask button{
     width: 50%;
+}
+
+.formBoxEditTask{
+    width: 90%;
+    background-color: rgb(18, 109, 245);
+    padding: 5vh 2vw;
 }
