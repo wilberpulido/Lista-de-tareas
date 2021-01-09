@@ -23,38 +23,48 @@ $task = mysqli_fetch_assoc($resultTask);
 </head>
 <body>
 
-<div class="mt-5 container" style="width: 450px; background-color: lightgray; border-radius: 5px; padding: 50px 40px">
-    <form action="../services/editTask.php" method="POST">
-        <div class="d-flex flex-column">
+<div class="container-fluid">
+    <div class="formBoxEditTask">
 
-            <label for="task">Task</label>
-            <textarea id="editTask" required placeholder="Write something here" rows="3" cols="40" name = "task" id="task" type="text"><?php echo $task['task']?></textarea>
+        <form action="../services/editTask.php" method="POST">
+        <div>
+            <div class="input-container-addTask">
+                <label for="task">Task</label>
+                <textarea id="editTask" required placeholder="Write something here" rows="3" cols="40" name = "task" id="task" type="text"><?php echo $task['task']?></textarea>
+            </div>
+
+            <div class="input-container-addTask">
+                <label for="state">State</label>
+                <select id="editState" name="state">
+                    <option selected value="<?php echo $task['state']?>"> <?php echo $task['state'] ?></option>
+                    <option value="In progress">In progress</option>
+                    <option value="At risk">At risk</option>
+                    <option value="Delayed">Delayed</option>
+                </select>
+            </div>
+
+            <div class="input-container-addTask">
+                <label for="priority">Priority</label>
+                <select id="editPriority" name="priority">
+                    <option selected value="<?php echo $task["priority"]?>"> <?php echo $task["priority"] ?></option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
             
-            <label class="mt-3" for="state">State</label>
-            <select id="editState" name="state">
-                <option selected value="<?php echo $task['state']?>"> <?php echo $task['state'] ?></option>
-                <option value="In progress">In progress</option>
-                <option value="At risk">At risk</option>
-                <option value="Delayed">Delayed</option>
-            </select>
-
-            <label class="mt-3" for="priority">Priority</label>
-            <select id="editPriority" name="priority">
-                <option selected value="<?php echo $task["priority"]?>"> <?php echo $task["priority"] ?></option>
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
-            </select>
-
-            <label class="mt-3" for="deadline">Deadline</label>
+        <div class="input-container-addTask">
+            <label for="deadline">Deadline</label>
             <input value="<?php echo $task['deadline']; ?>" id="editDeadline" class="mb-4" type="date" name="deadline">
-            
-            <input name="idTask" style="visibility: hidden; height: 0px;" value=<?php echo $task["idTask"]?> type="text">
-
-            <button type="submit" class="btn btn-dark">Edit task</button>
+        </div>
+        
+        <div class="input-container-addTask btn-submit">
+            <input name="idTask" style="display:none; height: 0px;" value=<?php echo $task["idTask"]?> type="text">
+            <button class="btn" type="submit">Edit Task</button>
         </div>
         </form>
     </div>
+</div>
 
     </body>
 </html>

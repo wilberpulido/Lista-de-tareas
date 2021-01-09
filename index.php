@@ -86,59 +86,81 @@ if (empty($user)) {
             ?>
         </div>
         <div class="tasksBox">
-            <h3 class="text-center"> THESE ARE THE TASKS </h3>
+            <h2> THESE ARE THE TASKS </h2>
+
             <div>
-                <div class="text-center">
-                    <h4>Task</h4>
-                </div>
-                <div class="text-center">
-                    <h4>State</h4>
-                </div>
-                <div class="text-center">
-                    <h4>Priority</h4>
-                </div>
-                <div class="text-center">
-                    <h4>Deadline</h4>
-                </div>
-            </div>
-            <div class="listTask">
+            <table id = "tableTask" >
+                <thead>
+                    <tr class="theadLarge">
+                        <th><h4>Task</h4></th>
+                        <th><h4>State</h4></th>
+                        <th><h4>Priority</h4></th>
+                        <th><h4>Deadline</h4></th>
+                    </tr>
+                    <tr class="theadSmall">
+                        <th><h4>Task</h4></th>
+                    </tr>
+                </thead>
+                <tbody>
             <?php
             while ($row = mysqli_fetch_assoc($taskResult)) {
                 $urlDelete = "services/deleteTask.php?idTask=".$row['idTask'];
                 $urlEdit = "view/editTaskForm.php?idTask=".$row['idTask'];
             ?>
-            <br>
-            <div>
-                <div>
-                    <p>
-                        <?php echo $row['task']?>
-                    </p>
-                </div>
-                <div class="text-center">
-                    <p>
-                        <?php echo $row['state']?>
-                    </p>
-                </div>
-                <div class="text-center">
-                    <p>
-                        <?php echo $row['priority']?>
-                    </p>
-                </div>
-                <div class="text-center">
-                    <p>
-                        <?php echo $row['deadline']?>
-                    </p>
-                </div>
-                <div class="text-center">
-                    <a href="<?php echo $urlEdit?>" class="btn btn-dark"> Edit </a>
-                    <a href="<?php echo $urlDelete?>" class="btn btn-dark">Delete</a><?php ?>
-                </div>
-            </div>
-            <br>
+                    <tr class="tbodyLarge">
+                        <td>
+                            <?php echo $row['task']?>
+                        </td>
+                        <td>
+                            <?php echo $row['state']?>
+                        </td>
+                        <td>
+                            <?php echo $row['priority']?>
+                        </td>
+                        <td>
+                            <?php echo $row['deadline']?>
+                        </td>
+                        <td>
+                            <button class="btn btn-edit">
+                                <a href="<?php echo $urlEdit?>"> Edit </a>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-delete">
+                                <a href="<?php echo $urlDelete?>">Delete</a><?php ?>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="tbodySmall">
+                        <td>
+                            <?php echo $row['task']?>
+                        </td>
+                        <td>
+                            <button class="btn btn-details">
+                                Details
+                            </button>
+                            <div class="details">
+                                <p>
+                                    Task: <?php echo $row['task']?>
+                                </p>
+                                <p>
+                                    State: <?php echo $row['state']?>
+                                </p>
+                                <p>
+                                    Priority: <?php echo $row['priority']?>
+                                </p>
+                                <p>
+                                    Deadline: <?php echo $row['deadline']?>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
             <?php
             }
             ?>
-        </div>
+                </tbody>
+            </table>
+            </div>
         </div>
     </main>
 
