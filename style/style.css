@@ -306,6 +306,8 @@ ul li{
 .btn-edit,
 .btn-delete,
 .btn-details{
+    position: relative;
+    color: white;
     background-color:rgb(18, 109, 245);
 }
 
@@ -317,12 +319,15 @@ ul li{
     background-color: rgb(241, 241, 82);
 
 }
-#tableTask tr .btn-details:focus{
-    background-color: rgb(20, 197, 64);
-}
 #tableTask tr button a{
     color:white;
+    z-index: 52;
 }
+#tableTask tr .btn-details:focus{
+    color: white;
+    background-color: rgb(20, 197, 64);
+}
+
 #tableTask thead .theadLarge,
 #tableTask tbody .tbodyLarge{
     display: none;
@@ -330,27 +335,38 @@ ul li{
 #tableTask tbody .tbodySmall td div{
     display: none;
 }
-#tableTask tbody .tbodySmall td .btn-details:focus ~ div{
-    display: flex;
+
+#tableTask tbody .tbodySmall td .btn-details:focus ~ .details{
+    display: grid;
 }
 #tableTask tbody .tbodySmall td{
     position: relative;
 }
 .details{
     position: absolute;
-    width: 90vh;
-    height: 40vh;
+    width: 85vw;
     top: 35%;
-    left: -50vw;
+    right:0vw;
     z-index: 6;
     background-color: rgb(18, 109, 245);
-    display: grid;
     grid-template-columns: 70% 30%;
-}
-.details div{
-    background-color: chartreuse;
+    row-gap: 1vh;
 }
 
+.details .btn-centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.details .btn-centered .btn-edit,
+.details .btn-centered .btn-delete{
+    background-color: #011BEB;
+}
+
+.btn-edit,
+.btn-delete{
+    z-index: 100;
+}
 
 @media only screen and (min-width: 480px){
     .navegbar li a{
