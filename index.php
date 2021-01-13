@@ -106,7 +106,7 @@ if (empty($user)) {
                 $urlEdit = "view/editTaskForm.php?idTask=".$row['idTask'];
             ?>
                     <tr class="tbodyLarge">
-                        <td>
+                        <td class="taskTable">
                             <?php echo $row['task']?>
                         </td>
                         <td>
@@ -137,8 +137,8 @@ if (empty($user)) {
                             <button class="btn btn-details">
                                 Details
                             </button>
-                            <div class="details">
-                                <div>
+                            <div class="detailsBox">
+                                <div class="taskTable">
                                     <h4>Task:</h4>
                                     <p>
                                         <?php echo $row['task']?>
