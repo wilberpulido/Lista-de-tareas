@@ -14,7 +14,7 @@ main{
     top: 0;
     bottom: 0;
     overflow: auto;
-    z-index: 2;
+    z-index: 20;
 }
 main figure{
     position: relative;
@@ -25,7 +25,6 @@ main figure{
 main figure img{
     width: 100%;
 }
-
 /* navegador */
 header{
     position: fixed;
@@ -34,7 +33,7 @@ header{
     width: 100vw;
     left: 0;
     right: 0;
-    z-index: 3;
+    z-index: 30;
 }
 .other-submenu,
 .btn-menu{
@@ -58,7 +57,7 @@ header{
     height: 25vh;
     top: 35vh;
     transition: top 1s;
-    z-index: 3;
+    z-index: 30;
 }
 .navegbar:focus{
     top: 0vh;
@@ -69,7 +68,7 @@ header{
 }
 header div .btn-menu:focus ~ .navegbar{
     top: -15vh;
-    z-index: 5;
+    z-index: 50;
 }
 header div .btn-menu:focus ~ .other-submenu{
     top: -25vh;
@@ -95,14 +94,12 @@ ul li button{
     align-items: center;
     margin: 0;
     padding: 0;
-    z-index: 5;
+    z-index: 50;
 }
-
 ul li{
     position: relative;
     z-index:inherit;
 }
-
  /* homestyle */
 .titleWithoutLogin{
     top:10vh;
@@ -113,7 +110,6 @@ ul li{
     color: black;
     font-size: 3vh;
 }
-
 .whyUseAppGrid{
     margin: 5vh 5%;
     width: 90%;
@@ -146,14 +142,12 @@ ul li{
 .whyUseAppGrid picture img{
     width: 100%;
 }
-
 .contact h1,
 .aboutMe h1{
     font-size: 5vh;
     margin: 5vh 0vw;
     text-align: center;
 }
-
 .aboutMe p{
     margin: 5vh 5vw;
     font-size: 2.5vh;
@@ -190,7 +184,6 @@ ul li{
     margin: 5vh 0vw;
     font-size: 5vh;
 }
-
 #contactInf{
     display: grid;
     grid-template-columns: 45% 45%;
@@ -227,7 +220,6 @@ ul li{
     width: 70%;
     margin: 0 auto;
 }
-
 .headerProfile{
     position: fixed;
     height: 20vh;
@@ -235,9 +227,8 @@ ul li{
     width: 100vw;
     left: 0;
     right: 0;
-    z-index: 4;
+    z-index: 20;
 }
-
 .nav-profile{
     position: absolute;
     width: 100%;
@@ -246,7 +237,7 @@ ul li{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    z-index: 3;
+    z-index: 20;
 }
 .nav-profile div {
     width: 35vw;
@@ -267,18 +258,16 @@ ul li{
     margin: 0 auto;
     width: 85%;
     height: 70vh;
-    z-index: 4;
+    z-index: 20;
     overflow:auto;
 }
 .tasksBox h2{
     font-size: 4vh;
     text-align: center;
 }
-
-.tasksBox div{
-    margin: 5vh 0;
+#tableTask{
+    margin: 5vh 0vw;
 }
-
 #tableTask,
 #tableTask td,
 #tableTask th{
@@ -297,88 +286,70 @@ ul li{
     text-align: left;
 }
 #tableTask tr{
-    background-color: rgb(208, 236, 246);
-}
-
-#tableTask tr:nth-child(even) {
+    position: relative;
     background-color: skyblue;
 }
+
 .btn-edit,
 .btn-delete,
 .btn-details{
-    position: relative;
+    display: block;
     color: white;
     background-color:rgb(18, 109, 245);
 }
-
 #tableTask tr .btn-delete:active{
     background-color: rgb(248, 56, 38);
 
 }
 #tableTask tr .btn-edit:active{
     background-color: rgb(241, 241, 82);
-
 }
 #tableTask tr button a{
     color:white;
-    z-index: 52;
 }
 #tableTask tr .btn-details:focus{
     color: white;
     background-color: rgb(20, 197, 64);
 }
-
 #tableTask thead .theadLarge,
 #tableTask tbody .tbodyLarge{
     display: none;
-}
-#tableTask tbody .tbodySmall td div{
-    display: none;
-}
-
-#tableTask tbody .tbodySmall td .btn-details:focus ~ .details{
-    display: grid;
 }
 #tableTask tbody .tbodySmall td{
     position: relative;
 }
 .details{
+    display: none;
     position: absolute;
     width: 85vw;
-    top: 35%;
+    top: 7vh;
     right:0vw;
-    z-index: 6;
+    border-radius: 5px;
     background-color: rgb(18, 109, 245);
     grid-template-columns: 70% 30%;
     row-gap: 1vh;
+    z-index: 45;
 }
-
 .details .btn-centered{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.details .btn-centered .btn-edit,
-.details .btn-centered .btn-delete{
+.details .btn-centered button{
     background-color: #011BEB;
 }
-
-.btn-edit,
-.btn-delete{
-    z-index: 100;
+#tableTask tbody .tbodySmall td .btn-details:focus + .details{
+    display: grid;
 }
-
 @media only screen and (min-width: 480px){
     .navegbar li a{
         color: red;
         font-size: 3vh;
     }
-
     #tableTask thead .theadLarge,
     #tableTask tbody .tbodyLarge{
         display: table-row;
     }
-
     #tableTask thead .theadSmall,
     #tableTask tbody .tbodySmall{
         display: none;

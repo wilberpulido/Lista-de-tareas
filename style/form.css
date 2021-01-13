@@ -72,13 +72,13 @@ width: 100%;
     transition: all 0.5s ease-in-out;
     font-size: 3vh;
     top:1vh;
-    z-index: 1;
+    z-index: 10;
 
 }
 .input-container-register input{
     position: absolute;
     top:2vh;
-    z-index: 2;
+    z-index: 20;
 }
 .input-container input,
 .input-container-register input{ 
@@ -169,14 +169,14 @@ outline-color: transparent;
     background-color: rgb(18, 109, 245);
     font-size: 3vh;
     transition: left 1s;
-    z-index: 20;
+    z-index: 50;
 }
 
 .btn-add-task-form{
     position: fixed;
     top:2%;
     left: 5%;
-    z-index: 4;
+    z-index: 40;
 }
 main .btn-add-task-form:focus ~ .formBoxTask{
     left: 5%;
@@ -188,7 +188,7 @@ main .btn-add-task-form:focus{
 main .formBoxTask:focus-within{
     position: fixed;
     left: 5%;
-    z-index: 5;
+    z-index: 50;
 }
 .input-container-addTask{
     width: 100%;

@@ -87,8 +87,6 @@ if (empty($user)) {
         </div>
         <div class="tasksBox">
             <h2> THESE ARE THE TASKS </h2>
-
-            <div>
             <table id = "tableTask" >
                 <thead>
                     <tr class="theadLarge">
@@ -127,7 +125,7 @@ if (empty($user)) {
                         </td>
                         <td>
                             <button class="btn btn-delete">
-                                <a href="<?php echo $urlDelete?>">Delete</a><?php ?>
+                                <a href="<?php echo $urlDelete?>">Delete</a>
                             </button>
                         </td>
                     </tr>
@@ -140,43 +138,43 @@ if (empty($user)) {
                                 Details
                             </button>
                             <div class="details">
-                                <span>
+                                <div>
                                     <h4>Task:</h4>
                                     <p>
                                         <?php echo $row['task']?>
                                     </p>
-                                </span>
-                                <span class="btn-centered">
+                                </div>
+                                <div class="btn-centered">
                                     <button class="btn btn-edit">
                                         <a href="<?php echo $urlEdit?>"> Edit </a>
                                     </button>
-                                </span>
-                                <span>
+                                </div>
+                                <div>
                                     <h4>State:</h4> 
                                     <p>
                                         <?php echo $row['state']?>
                                     </p>
-                                </span>
-                                <span class = "btn-centered">
+                                </div>
+                                <div class = "btn-centered">
                                     <button class="btn btn-delete">
                                         <a href="<?php echo $urlDelete?>">Delete</a>
                                     </button>
-                                </span>
-                                <span>
+                                </div>
+                                <div>
                                     <h4>Priority: </h4>
                                     <p>
                                         <?php echo $row['priority']?>
                                     </p>
-                                </span>
-                                <span>
+                                </div>
+                                <div>
                                     <!-- avoid -->
-                                </span>
-                                <span>
+                                </div>
+                                <div>
                                     <h4> Deadline:</h4> 
                                     <p>
                                         <?php echo $row['deadline']?>
                                     </p>
-                                </span>
+                                </div>
                             </div>
                         </td>
                     </tr>
@@ -185,7 +183,6 @@ if (empty($user)) {
             ?>
                 </tbody>
             </table>
-            </div>
         </div>
     </main>
 
