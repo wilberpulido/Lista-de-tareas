@@ -6,6 +6,7 @@
 p{
     margin: 0;
 }
+ /* homestyle */
 main{
     height: 90vh;
     width: 100vw;
@@ -25,6 +26,16 @@ main figure{
 main figure img{
     width: 100%;
 }
+main .titleWithoutLogin{
+    top:10vh;
+    position: relative;
+    margin: 0vh auto;
+    z-index: 20;
+}
+.titleWithoutLogin > *{
+    color: black;
+    font-size: 3vh;
+}
 /* navegador */
 header{
     position: fixed;
@@ -40,6 +51,7 @@ header{
     position: absolute;
     top: 2vh;
     transition: top 1s;
+    transition-delay: 0.5s;
 }
 .other-submenu{
     right: 5vw;
@@ -50,20 +62,20 @@ header{
 .btn-menu{
     left: 5vw;
 }
-
 .navegbar{
     position: absolute;
     width: 100vw;
     height: 25vh;
     top: 35vh;
     transition: top 1s;
+    transition-delay: 0.5s;
     z-index: 30;
 }
 .navegbar:focus{
     top: 0vh;
 }
 .btn-menu:focus {
-    background-color: blueviolet;
+    background-color: rgb(18, 109, 245);
     top: -25vh;
 }
 header div .btn-menu:focus ~ .navegbar{
@@ -86,7 +98,8 @@ ul{
 ul li button{
     position: relative;
     list-style: none;
-    border: 1px solid gray;
+    border: 0.5px solid gray;
+    outline: none;
     width: 100%;
     height: 8.33vh;
     display: flex;
@@ -99,16 +112,6 @@ ul li button{
 ul li{
     position: relative;
     z-index:inherit;
-}
- /* homestyle */
-.titleWithoutLogin{
-    top:10vh;
-    position: relative;
-    margin: 0vh auto;
-}
-.titleWithoutLogin > *{
-    color: black;
-    font-size: 3vh;
 }
 .whyUseAppGrid{
     margin: 5vh 5%;
@@ -129,6 +132,8 @@ ul li{
 .whyUseAppGrid div{
     display: flex;
     align-items: center;
+    justify-content: center;
+
 }
 .whyUseAppGrid div{
     padding: 2vh 2vw;
@@ -142,21 +147,27 @@ ul li{
 .whyUseAppGrid picture img{
     width: 100%;
 }
+.aboutMe{
+    width: 90%;
+    margin: 3vh auto 0 auto;
+    padding: 3vh 5vw 0 5vw;
+    background-color: yellowgreen;
+}
 .contact h1,
 .aboutMe h1{
     font-size: 5vh;
-    margin: 5vh 0vw;
     text-align: center;
+    margin-bottom: 3vh;
 }
 .aboutMe p{
-    margin: 5vh 5vw;
-    font-size: 2.5vh;
+    font-size: 3vh;
     text-align: justify;
 }
 
 .iconTech{
     display: flex;
     justify-content: center;
+    background-color: yellow;
 }
 .icon{
     width: 18vw;
@@ -202,24 +213,6 @@ ul li{
     align-items: center;
     justify-content: center;
 }
-#formContact{
-    display: grid;
-    grid-template-columns: 30% 60%;
-    column-gap: 10%;
-    row-gap: 5vh;
-    background-color:rgb(151, 183, 216);
-    margin: 6vh 0vw;
-    border-radius: 1%;
-    padding: 5vh 5vw;
-}
-#formContact div textarea{
-    width: 100%;
-    height: 15vh;
-}
-#formContact button{
-    width: 70%;
-    margin: 0 auto;
-}
 .headerProfile{
     position: fixed;
     height: 20vh;
@@ -253,12 +246,11 @@ ul li{
 }
 .tasksBox{
     position: relative;
-    overflow: scroll;
     top:10vh;
     margin: 0 auto;
-    width: 85%;
+    width: 90%;
     height: 69.5vh;
-    z-index: 20;
+    z-index: 21;
     overflow:auto;
 }
 .tasksBox h2{
@@ -267,12 +259,17 @@ ul li{
 }
 #tableTask{
     margin: 5vh 0vw;
+    table-layout: fixed;
+    width: 100%;
 }
+#tableTask tr .taskTable{
+    overflow: auto;
+}
+
 #tableTask,
 #tableTask td,
 #tableTask th{
     border: 1px solid lightsteelblue;
-    width: 100%;
     height: 50px;
 }
 #tableTask th {
@@ -289,22 +286,16 @@ ul li{
     position: relative;
     background-color: skyblue;
 }
-
+#tableTask thead .theadSmall th{
+    width: 70%;
+}
 .btn-edit,
 .btn-delete,
 .btn-details{
     display: block;
     color: white;
+    margin: 0 auto;
     background-color:rgb(18, 109, 245);
-    width: 73px;
-    height: 38px;
-}
-.btn-details{
-    z-index: 30;
-}
-.btn-edit,
-.btn-delete{
-    z-index: 40;
 }
 #tableTask tr .btn-delete:active{
     background-color: rgb(248, 56, 38);
@@ -331,9 +322,9 @@ ul li{
     display: grid;
     visibility: hidden;
     position: absolute;
-    padding: 2vh 5vw;
-    width: 85vw;
-    top: 8vh;
+    padding: 5px;
+    width: 90vw;
+    top: -30vh;
     right:0vw;
     border-radius: 5px;
     background-color: rgb(18, 109, 245);
@@ -350,13 +341,11 @@ ul li{
 }
 .detailsBox .btn-centered button{
     background-color: #011BEB;
+    width: 75px;
 }
 #tableTask tbody .tbodySmall td .btn-details:focus + .detailsBox{
     visibility: visible;
-}
-.taskTable{
-    position: relative;
-    overflow: hidden;
+    top: 8vh;
 }
 @media only screen and (min-width: 480px){
     .navegbar li a{
@@ -378,4 +367,99 @@ ul li{
         color: cornflowerblue;
         font-size: 3vh;
     }
+}
+
+@media only screen and (orientation: landscape) {
+
+    main{
+        height: 85vh;
+        overflow: auto;
+        z-index: 20;
+    }
+    main figure{
+        position: absolute;
+        top: 5vh;
+        left: 5vw;
+        height: 90%;
+        width: 90%;
+    }
+    main figure img{
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .navegbar li a{
+        color: greenyellow;
+        font-size: 5vh;
+    }
+    header{
+        top: 85vh;
+    }
+    header div .btn-menu:focus ~ .navegbar{
+        top: -10vh;
+        z-index: 50;
+    }
+     /* homestyle */
+    main .titleWithoutLogin{
+        top:40vh;
+        width: max-content;
+        padding: 10px;
+        background: rgb(178,186,199);
+        border-radius: 5px;
+        animation: mymove 2s 1;
+        animation-fill-mode: backwards;
+    }
+    @keyframes mymove {
+        from {top: 10vh; background-color: white;}
+        to {top: 40vh;}
+      }
+    .titleWithoutLogin > *{
+        font-size: 5vh;
+    }
+    /* Why use this application */
+    .whyUseAppGrid{
+        grid-template-columns: 47.5% 47.5%;
+        grid-column-gap: 5%;
+        grid-template-rows: 20vh repeat(3,50vh);
+        grid-row-gap: 2vh;
+    }
+    .whyUseAppGrid h2{
+        font-size: 8vh;
+    }    
+    .whyUseAppGrid div h4{
+        font-size: 5vh;
+    }
+    .whyUseAppGrid picture img{
+        width: 70%;
+        height: 100%;
+    }
+    /* About ME page */
+    .contact h1,
+    .aboutMe h1{
+        font-size: 8vh;
+    }
+    .aboutMe p{
+        margin: 5vh 5vw;
+        font-size: 2.5vh;
+        text-align: justify;
+    }
+
+    .iconTech{
+        display: flex;
+        justify-content: center;
+    }
+    .icon{
+        width: 18vw;
+        height: 20vh;
+        margin: 0vh 0.5vw;
+        display: flex;
+        align-items: center;
+
+    }
+    .icon img {
+        width: 100%;
+        height: 10vh;
+    }
+
+
 }

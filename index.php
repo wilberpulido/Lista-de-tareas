@@ -130,7 +130,7 @@ if (empty($user)) {
                         </td>
                     </tr>
                     <tr class="tbodySmall">
-                        <td>
+                        <td class="taskTable">
                             <?php echo $row['task']?>
                         </td>
                         <td>
@@ -138,9 +138,9 @@ if (empty($user)) {
                                 Details
                             </button>
                             <div class="detailsBox">
-                                <div class="taskTable">
+                                <div>
                                     <h4>Task:</h4>
-                                    <p>
+                                    <p class="taskTable">
                                         <?php echo $row['task']?>
                                     </p>
                                 </div>
