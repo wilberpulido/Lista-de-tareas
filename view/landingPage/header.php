@@ -1,20 +1,20 @@
-<ul class="navegbar navbar-dark bg-dark">
+<ul class="navegbar">
     <li >
-        <button class="bg-dark">
+        <button>
             <a href="<?php echo $whyUseUrl ?>">
                 Why this application?
             </a>
         </button>
     </li>
     <li>
-        <button class="bg-dark">
+        <button>
             <a href="<?php echo $aboutMeUrl ?>">
                 About me
             </a>
         </button>
     </li>
     <li>
-        <button class="bg-dark">
+        <button>
         <a href="<?php echo $contactUrl ?>">
             Contact
         </a>

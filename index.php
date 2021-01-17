@@ -39,10 +39,10 @@ if (empty($user)) {
 <div class="container-fluid">
     <header>
         <div class="menu">
-            <button class="btn btn-dark btn-menu"> Menu</button>
+            <button class="btn btn-menu"> Menu</button>
             <div class="other-submenu">
-                <button class="btn btn-dark"> <a href="view/login.html"> Login </a> </button> 
-                <button class="btn btn-dark"> <a href="view/registration.html"> Register </a></button>
+                <button class="btn"> <a href="view/login.html"> Login </a> </button> 
+                <button class="btn"> <a href="view/registration.html"> Register </a></button>
             </div>
             <?php
             $whyUseUrl ="view/whyUseApp.php" ;
@@ -107,16 +107,24 @@ if (empty($user)) {
             ?>
                     <tr class="tbodyLarge">
                         <td class="taskTable">
-                            <?php echo $row['task']?>
+                            <p>
+                                <?php echo $row['task']?>
+                            </p>
                         </td>
                         <td>
-                            <?php echo $row['state']?>
+                            <p>
+                                <?php echo $row['state']?>
+                            </p>
                         </td>
                         <td>
-                            <?php echo $row['priority']?>
+                            <p>
+                                <?php echo $row['priority']?>
+                            </p>
                         </td>
                         <td>
-                            <?php echo $row['deadline']?>
+                            <p>
+                                <?php echo $row['deadline']?>
+                            </p>
                         </td>
                         <td>
                             <button class="btn btn-edit">

@@ -16,7 +16,6 @@
     padding: 4vh 10vw;
     width: 85%;
     background-color: rgba(0, 0, 0, 0.89);
-
 }
 .text-login,
 .text-center-welcome{
@@ -35,7 +34,6 @@
 .login-title{
     margin-top: 5vh;
 }
-
 .input-container{
 	position:relative;
     margin-bottom:5vh;
@@ -43,18 +41,24 @@
 }
 .input-container label{
 	position:absolute;
-	top:-1vh;
 	left:0;
 	font-size:3vh;
 	color:#fff;	
     pointer-events: none;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in;
 }
-
 .btn-return-home{
     position: absolute;
-    top: 90%;
-    left: 50%;
+    top: 101%;
+    right: 0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.89);
+}
+.btn-return-home a{
+    color: white;
+    font-size: 3vh;
 }
 .input-container-register{
 position: relative;
@@ -122,7 +126,7 @@ width: 100%;
 }
 .link-login-register{
     position: relative;
-    margin-top: 2vh;
+    margin-top: 1vh;
 }
 
 input:-webkit-autofill,
@@ -176,13 +180,10 @@ outline-color: transparent;
     width: 100%;
     height: 15vh;
 }
-#formContact button{
-    width: 60%;
-    margin: 0 auto;
-    background-color: #011BEB;
-    color: whitesmoke;
+#contactPage .btn-submit button{
+    width: 70%;
+    font-size: 3vh;
 }
-
 .formBoxTask{
     position: fixed;
     left: -100%;
@@ -212,7 +213,6 @@ main .btn-add-task-form:focus{
 main .formBoxTask:focus-within{
     position: fixed;
     left: 5%;
-    z-index: 50;
 }
 .input-container-addTask{
     width: 100%;
@@ -237,4 +237,114 @@ font-weight: 500;
     width: 90%;
     background-color: rgb(18, 109, 245);
     padding: 5vh 2vw;
+}
+
+@media only screen and (orientation: landscape) {
+
+    #contactPage .btn-submit button{
+        width: 80%;
+        font-size:4vh;
+    }
+    .formBoxLogin{
+        width: 40% !important;
+        padding-top: 2;
+    }
+    .text-login,
+    .text-center-welcome{	
+        position: relative;
+        font-size: 4vh;
+        top:2vh;
+    }
+    .link{
+        position: relative;
+        top: 4vh;
+        font-size: 4vh;
+    }
+    .login-title{
+        margin-top: 2vh;
+    }
+    .input-container label{
+        font-size:4vh;
+    }
+    .input-container{
+        position: relative;
+        top: 2vh;
+    }
+    .formBoxLogin button{
+        font-size: 3vh;
+    }
+    .btn-return-home{
+        font-size: 3vh;
+    }
+    .formBoxRegister{
+        padding: 5vh 5vw;
+        width: 40%;
+    }
+    .formBoxRegister .btn-submit{
+        justify-content: start;
+        width: 80%;
+        font-size: 3vh;
+    }
+    .link-login-register{
+        position: relative;
+        top: -4vh;
+        font-size: 3vh;
+    }
+    .formBoxTask{
+        width:60%;
+        height: 60vh;
+        font-size: 3vh;
+        padding: 0vh 0vw;
+        border: 2px solid gray;
+    }
+    main .btn-add-task-form:focus ~ .formBoxTask{
+        left: 20%;
+    }
+    main .formBoxTask:focus-within{
+        left: 20%;
+    }
+    .formBoxTask div{
+        display: grid;
+        grid-template-columns: 45% 45%;
+        column-gap: 10%;
+        grid-template-rows: repeat(3,20vh);
+    }
+    .formBoxTask div .input-container-addTask{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .input-container-addTask label{
+        font-size: 2vw;
+    }
+    .input-container-addTask textarea,
+    .input-container-addTask select,
+    .input-container-addTask input{
+        height: 40%;
+    }
+    .formBoxTask div:nth-child(5){
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .formBoxEditTask{
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 480px){
+    .formBoxLogin{
+        width: 60%;
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+    .formBoxTask{
+        width:25%;
+        left: 2.5%;
+        top: 10vh;
+        height: 60vh;
+        font-size: 3vh;
+        padding: 0vh 0vw;
+    }
 }
