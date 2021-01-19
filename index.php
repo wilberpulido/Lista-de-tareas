@@ -36,7 +36,7 @@ if (isset($_SESSION["idUser"])) {
 <?php 
 if (empty($user)) {
 ?>
-<div class="container-fluid">
+<div class="contenedor">
     <header>
         <div class="menu">
             <button class="btn btn-menu"> Menu</button>
@@ -65,7 +65,7 @@ if (empty($user)) {
 <?php
 } else{
 ?>
-<div class= 'container-fluid'>
+<div class= "contenedor">
     <header class="headerProfile">
         <div class="nav-profile bg-dark">
             <div>
@@ -193,6 +193,11 @@ if (empty($user)) {
             </table>
         </div>
     </main>
+    <footer>
+        <div>
+            Holas
+        </div>
+    </footer>
 
 <?php
 }

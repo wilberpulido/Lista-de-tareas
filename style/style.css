@@ -2,6 +2,24 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
+}
+*::-webkit-scrollbar {
+    width: 0.5vw;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(193, 219, 230);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(37, 5, 250);
+    border-radius: 20px;
+  }
+.contenedor{
+    width: 100vw;
+    margin: 0 auto;
 }
 p{
     margin: 0;
@@ -136,12 +154,10 @@ ul li{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 .whyUseAppGrid div{
     padding: 2vh 2vw;
 }
-
 .whyUseAppGrid div h4{
     font-size: 3vh;
     text-align: center;
@@ -196,7 +212,7 @@ ul li{
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
 }
 #contactPage section h2{
     margin: 5vh 0vw;
@@ -236,7 +252,7 @@ ul li{
 .nav-profile{
     position: absolute;
     width: 100%;
-    height: 20vh;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -257,10 +273,10 @@ ul li{
 }
 .tasksBox{
     position: relative;
-    top:10vh;
+    top:12vh;
     margin: 0 auto;
     width: 90%;
-    height: 69.5vh;
+    height: 68vh;
     z-index: 21;
     overflow:auto;
 }
@@ -336,9 +352,9 @@ ul li{
     visibility: hidden;
     position: absolute;
     padding: 5px;
-    width: 90vw;
+    width: 80vw;
     top: -30vh;
-    right:0vw;
+    right:5vw;
     border-radius: 5px;
     background-color: rgb(18, 109, 245);
     grid-template-columns: 70% 30%;
@@ -365,7 +381,6 @@ ul li{
     top: 8vh;
 }
 @media only screen and (orientation: landscape) {
-
     main{
         height: 85vh;
         overflow: auto;
@@ -382,9 +397,7 @@ ul li{
         margin: 0 auto;
         height: 100%;
     }
-
     .navegbar li a{
-        color: greenyellow;
         font-size: 5vh;
     }
     header{
@@ -412,7 +425,6 @@ ul li{
         60% {top: 40vh; background-color: rgb(178,186,199);}
         80% {top: 35vh; background-color: lightgrey;}
         100% {top: 40vh; background-color: rgb(178,186,199);}
-
       }
     .titleWithoutLogin > *{
         font-size: 5vh;
@@ -425,14 +437,14 @@ ul li{
         grid-row-gap: 2vh;
     }
     .whyUseAppGrid h2{
-        font-size: 8vh;
+        font-size: 6vh;
     }    
     .whyUseAppGrid div h4{
-        font-size: 5vh;
+        font-size: 4vh;
     }
     .whyUseAppGrid picture img{
         width: 70%;
-        height: 100%;
+        height: 70%;
     }
     /* About ME page */
     .contact h1,
@@ -489,29 +501,120 @@ ul li{
     .tasksBox{
         width: 80%;
     }
-
 }
-
 @media only screen and (min-width: 768px){
     .navegbar li a{
         color: cornflowerblue;
         font-size: 3vh;
     }
     #tableTask thead .theadLarge h4{
-        font-size: 3vh;
+        font-size: 3.5vh;
     }
     #tableTask tbody .tbodyLarge td,
     #tableTask tbody .tbodyLarge td button a{
-        font-size: 2.5vh;
+        font-size: 3vh;
     }
     .tasksBox{
         width: 70%;
         margin-right: 2.5%;
         float: right;
-        background-color: cadetblue;
     }
     .btn-add-task-form{
         display: none;
+    }
+    .whyUseAppGrid h2{
+        font-size: 7vh;
+    }    
+    .whyUseAppGrid div h4{
+        font-size: 4vh;
+    }
+    .whyUseAppGrid picture img{
+        width: 70%;
+        height: 70%;
+    }
+    .contact h1,
+    .aboutMe h1{
+        font-size: 7vh;
+    }
+    .aboutMe p{
+        font-size: 3vh;
+    }
+    #contactPage section h2{
+        font-size: 5vh;
+    }
+    .btn-edit,
+    .btn-delete,
+    .btn-details{
+        padding: 0.5vh 1vw;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .headerProfile{
+        top:0;
+        height: 15vh;
+    }
+    .tasksBox{
+        top: 0;
+        height: 80vh;
+    }
+    main{
+        position: absolute;
+        top: 20vh;
+        height: 70vh;
+        width: 100vw;
+        margin: 0;
+    }
+    main .titleWithoutLogin{
+        top:30vh;
+    }
+    @keyframes mymove {
+        0% {top: 0vh; background-color: white;}
+        20% {top: 30vh; background-color:rgb(178,186,199);}
+        40% {top: 20vh; background-color: lightgrey;}
+        60% {top: 30vh; background-color: rgb(178,186,199);}
+        80% {top: 25vh; background-color: lightgrey;}
+        100% {top: 30vh; background-color: rgb(178,186,199);}
+      }
+    main figure{
+        position: absolute;
+        top:0vh;
+        height: 100%;
+        width: 90%;
+    }
+    main figure img{
+        width: 100%;
+    }
+    footer{
+        position: relative;
+        display: block;
+        top:90vh;
+        height: 10vh;
+        width: 100%;
+        background-color: orange;
+    }
+    /* footer div{
+
+    } */
+    .nav-profile div h2,
+    .nav-profile div a{
+        margin: 0;
+    }
+    .nav-profile div{
+        position: relative;
+        width: max-content;
+        overflow-wrap: normal;
+    }
+    .nav-profile div:nth-child(1){
+        left: 5%;
+    }
+    .nav-profile div:nth-child(2){
+        right: 5%;
+    }
+    .tasksBox{
+        overflow: visible;
+    }
+    #tableTask{
+        overflow: auto;
     }
 }
 
