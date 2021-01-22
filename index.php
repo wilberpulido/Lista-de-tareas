@@ -193,12 +193,11 @@ if (empty($user)) {
             </table>
         </div>
     </main>
-    <footer>
+    <!-- <footer>
         <div>
             Holas
         </div>
-    </footer>
-
+    </footer> -->
 <?php
 }
 ?>

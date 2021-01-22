@@ -67,7 +67,7 @@ header{
 .other-submenu,
 .btn-menu{
     position: absolute;
-    top: 2vh;
+    top: 0vh;
     transition: top 1s;
     transition-delay: 0.5s;
     color: white;
@@ -96,6 +96,7 @@ header{
 }
 .btn-menu:focus {
     background-color: rgb(18, 109, 245);
+    color: white;
     top: -25vh;
 }
 header div .btn-menu:focus ~ .navegbar{
@@ -212,7 +213,7 @@ ul li{
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
 }
 #contactPage section h2{
     margin: 5vh 0vw;
@@ -270,6 +271,18 @@ ul li{
     margin: 0 5vw;
     text-align: center;
     color: white;
+}
+.btn-add-task-form{
+    position: fixed;
+    top:2%;
+    left: 5%;
+    z-index: 40;
+}
+main .btn-add-task-form:focus ~ .formBoxTask{
+    left: 10%;
+}
+main .btn-add-task-form:focus{
+    background-color: rgb(18, 109, 245);
 }
 .tasksBox{
     position: relative;
@@ -362,6 +375,7 @@ ul li{
     z-index: 35;
     transition: all 0s;
     transition-delay: 0.1s;
+    border: 1px solid #011BEB;
 }
 .detailsBox p,
 .detailsBox h4{
@@ -474,6 +488,9 @@ ul li{
     }
     #contactPage section h2{
         font-size: 6vh;
+    }
+    main .btn-add-task-form:focus ~ .formBoxTask{
+        left: 15%;
     }
 
 }

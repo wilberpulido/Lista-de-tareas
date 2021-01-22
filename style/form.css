@@ -10,42 +10,72 @@
 .formBoxLogin{
     background-color: rgba(0, 0, 0, 0.89);
     padding:5vh 5vw;
-    width: 90%;
+    width: 75%;
+    max-width: 350px;
+    height: 70%;
 }
 .formBoxRegister{
     padding: 4vh 10vw;
     width: 85%;
     background-color: rgba(0, 0, 0, 0.89);
 }
-.text-login,
-.text-center-welcome{
-	color:#fff;	
+.formBoxLogin form{
+    position: relative;
+    height: 100%;
+}
+.formBoxLogin .form-container-login{
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:  30% 20% 20% 10% 20%;
+    color: white;
+}
+.formBoxLogin .form-container-login div h2{
     font-size: 4vh;
-    margin: -4vh 0 8vh 0;
-    display: block;
     text-align: center;
 }
-.text-center-welcome{
-    font-size: 2vh;
+.formBoxLogin .form-container-login div h3{
+    font-size: 3vh;
+    text-align: center;
 }
-.link{
-    color:rgb(18, 109, 245);
-}
-.login-title{
-    margin-top: 5vh;
-}
-.input-container{
+.formBoxLogin .form-container-login div{
 	position:relative;
-    margin-bottom:5vh;
     width: 100%;
 }
 .input-container label{
-	position:absolute;
-	left:0;
+    position:absolute;
+    top:40%;
+	left:2%;
 	font-size:3vh;
-	color:#fff;	
     pointer-events: none;
 	transition: all 0.5s ease-in;
+}
+.input-container input{
+    position: absolute;
+    top:40%;
+}
+.formBoxLogin .form-container-login div a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3vh;
+}
+.formBoxLogin .form-container-login div:nth-child(5){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-form{
+	background-color:#011BEB;
+	outline: none;
+    border: none;
+    color: #fff;
+    font-size: 3vh;
+	padding:1vh 3vw;
+	text-transform:uppercase;
+	border-radius:5px;
+	cursor:pointer;
 }
 .btn-return-home{
     position: absolute;
@@ -64,7 +94,7 @@
 position: relative;
 width: 100%;
 }
-.formFormat{
+.form-container-register{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(6, 8vh) 5vh 10vh;
@@ -98,22 +128,9 @@ width: 100%;
  outline:none;
  border-bottom:1px solid #011BEB;
 }
-.btn-form{
-	background-color:#011BEB;
-	outline: none;
-    border: 0;
-    color: #fff;
-	padding:2vh 2vw;
-	text-transform:uppercase;
-	margin-top:50px;
-	border-radius:2px;
-	cursor:pointer;
-    position:relative;
-    width: 50%;
-}
 .input-container input:focus ~ label,
 .input-container input:valid ~ label{
-	top:-4vh;
+	top:0;
 	font-size:2vh;
 }
 .input-container-register input:focus ~ label,
@@ -189,24 +206,13 @@ outline-color: transparent;
     height: 68vh;
     color: white;
     background-color: rgb(18, 109, 245);
+    border: 2px solid #011BEB;
     font-size: 3vh;
     transition: left 1s;
     z-index: 50;
 }
 .formBoxTask form:first-child{
     height: 100%;
-}
-.btn-add-task-form{
-    position: fixed;
-    top:2%;
-    left: 10%;
-    z-index: 40;
-}
-main .btn-add-task-form:focus ~ .formBoxTask{
-    left: 10%;
-}
-main .btn-add-task-form:focus{
-    background-color: rgb(18, 109, 245);
 }
 main .formBoxTask:focus-within{
     position: fixed;
@@ -225,30 +231,31 @@ font-weight: 500;
 .input-container-addTask select,
 .input-container-addTask input{
     width: 100%;
-    height: 5vh;
+    height: 6vh;
 }
 .input-container-addTask button{
     width: 50%;
 }
 .formBoxEditTask{
-    width: 90%;
+    width: 80%;
+    color: white;
     background-color: rgb(18, 109, 245);
-    padding: 5vh 2vw;
+    padding: 2vh 2vw;
 }
-
 @media only screen and (orientation: landscape) and (max-width: 767px) {
     #contactPage .btn-submit button{
         width: 80%;
         font-size:4vh;
     }
     .formBoxLogin{
-        width: 40% !important;
-        padding-top: 2;
+        width: 50%;
+        height: 80%;
     }
+    /*
     .text-login,
     .text-center-welcome{	
         position: relative;
-        font-size: 4vh;
+        font-size: 3vh;
         top:2vh;
     }
     .link{
@@ -260,7 +267,7 @@ font-weight: 500;
         margin-top: 2vh;
     }
     .input-container label{
-        font-size:4vh;
+        top:5px; 
     }
     .input-container{
         position: relative;
@@ -268,7 +275,7 @@ font-weight: 500;
     }
     .formBoxLogin button{
         font-size: 3vh;
-    }
+    } */
     .btn-return-home{
         font-size: 3vh;
     }
@@ -287,12 +294,11 @@ font-weight: 500;
         font-size: 3vh;
     }
     .formBoxTask{
-        top: 12vh;
+        top: 15vh;
         width:70%;
+        height: 60vh;
+        padding: 4vh 0;
 
-    }
-    main .btn-add-task-form:focus ~ .formBoxTask{
-        left: 15%;
     }
     main .formBoxTask:focus-within{
         left: 15%;
@@ -311,12 +317,13 @@ font-weight: 500;
         justify-content: center;
         padding: 2vh 3vw;
     }
-    .input-container-addTask label{
-        font-size: 4vh;
+    .formBoxTask .input-container-addTask label,
+    .formBoxTask div .input-container-addTask button{
+        font-size: 3vh;
     }
-    .input-container-addTask textarea,
-    .input-container-addTask select,
-    .input-container-addTask input{
+    .formBoxTask .input-container-addTask textarea,
+    .formBoxTask .input-container-addTask select,
+    .formBoxTask .input-container-addTask input{
         height: 30%;
     }
     .formBoxTask div:nth-child(5){
@@ -324,13 +331,25 @@ font-weight: 500;
         grid-column-end: 3;
     }
     .formBoxEditTask{
-        width: 40%;
+        width: 60%;
+        top: 50%;
+    }
+    .formBoxEditTask div .input-container-addTask{
+        padding: 0;
+        height: 16%;
+        background-color: tomato;
+        border: 2px solid thistle;
+    }
+    .formBoxEditTask .input-container-addTask textarea,
+    .formBoxEditTask .input-container-addTask select,
+    .formBoxEditTask .input-container-addTask input{
+        height: 25px;
     }
 }
 @media only screen and (min-width: 480px){
-    .formBoxLogin{
+    /* .formBoxLogin{
         width: 60%;
-    }
+    } */
 }
 @media only screen and (min-width: 768px){
     #formContact{
