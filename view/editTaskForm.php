@@ -25,7 +25,6 @@ $task = mysqli_fetch_assoc($resultTask);
 
 <div class="container-fluid">
     <div class="formBoxEditTask">
-
         <form action="../services/editTask.php" method="POST">
         <div>
             <div class="input-container-addTask">
