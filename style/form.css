@@ -9,7 +9,7 @@
 }
 .formBoxLogin{
     background-color: rgba(0, 0, 0, 0.89);
-    padding:5vh 5vw;
+    padding:5vh 6vw;
     width: 75%;
     max-width: 350px;
     height: 70%;
@@ -28,7 +28,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows:  30% 20% 20% 10% 20%;
+    grid-template-rows:  repeat(5,20%);
     color: white;
 }
 .formBoxLogin .form-container-login div h2{
@@ -36,7 +36,7 @@
     text-align: center;
 }
 .formBoxLogin .form-container-login div h3{
-    font-size: 3vh;
+    font-size: 2vh;
     text-align: center;
 }
 .formBoxLogin .form-container-login div{
@@ -57,9 +57,9 @@
 }
 .formBoxLogin .form-container-login div a{
     position: absolute;
-    top: 0;
+    top: 30%;
     right: 0;
-    font-size: 3vh;
+    font-size: 2.5vh;
 }
 .formBoxLogin .form-container-login div:nth-child(5){
     display: flex;
@@ -72,10 +72,10 @@
     border: none;
     color: #fff;
     font-size: 3vh;
-	padding:1vh 3vw;
+    padding:1vh 3vw;
 	text-transform:uppercase;
 	border-radius:5px;
-	cursor:pointer;
+    cursor:pointer;
 }
 .btn-return-home{
     position: absolute;
@@ -249,35 +249,6 @@ font-weight: 500;
     }
     .formBoxLogin{
         width: 50%;
-        height: 80%;
-    }
-    /*
-    .text-login,
-    .text-center-welcome{	
-        position: relative;
-        font-size: 3vh;
-        top:2vh;
-    }
-    .link{
-        position: relative;
-        top: 4vh;
-        font-size: 4vh;
-    }
-    .login-title{
-        margin-top: 2vh;
-    }
-    .input-container label{
-        top:5px; 
-    }
-    .input-container{
-        position: relative;
-        top: 2vh;
-    }
-    .formBoxLogin button{
-        font-size: 3vh;
-    } */
-    .btn-return-home{
-        font-size: 3vh;
     }
     .formBoxRegister{
         padding: 5vh 5vw;
@@ -347,9 +318,9 @@ font-weight: 500;
     }
 }
 @media only screen and (min-width: 480px){
-    /* .formBoxLogin{
-        width: 60%;
-    } */
+    .formBoxLogin{
+        padding: 5vh 40px;
+    }
 }
 @media only screen and (min-width: 768px){
     #formContact{
@@ -358,6 +329,9 @@ font-weight: 500;
     }
     #formContact label{
         font-size: 1.5vw;
+    }
+    .btn-form{
+        padding:6px 21px;
     }
     .formBoxTask{
         width:24%;
@@ -371,6 +345,9 @@ font-weight: 500;
     .formBoxTask div .input-container-addTask button{
         width: 80%;
         font-size: 3vh;
+    }
+    main .formBoxTask:focus-within{
+        left: 2.5%;
     }
 }
 @media only screen and (min-width: 1024px){
