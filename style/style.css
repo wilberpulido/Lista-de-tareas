@@ -26,8 +26,8 @@ p{
 }
  /* homestyle */
 main{
-    height: 90vh;
-    width: 100vw;
+    height: 85vh;
+    width: 100%;
     position: absolute;
     left: 0;
     top: 0;
@@ -35,24 +35,33 @@ main{
     overflow: auto;
     z-index: 20;
 }
-main figure{
-    position: relative;
-    height: auto;
-    width: 100vw;
-    top:20vh;
-}
-main figure img{
+.containerImagesHome{
+    position: absolute;
+    top: 10%;
     width: 100%;
+    height: 90%;
 }
-main .titleWithoutLogin{
-    top:10vh;
+main .containerImagesHome .titleWithoutLogin{
     position: relative;
     margin: 0vh auto;
+    top:0;
     z-index: 20;
+    text-align: center;
 }
 .titleWithoutLogin > *{
     color: black;
-    font-size: 3vh;
+    font-size: 14px;
+}
+main .containerImagesHome figure{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 70%;
+    top:5%;
+    background-image: url("../images/fo-1200x675.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 /* navegador */
 header{
@@ -63,6 +72,26 @@ header{
     left: 0;
     right: 0;
     z-index: 30;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
 }
 .other-submenu,
 .btn-menu{
@@ -75,15 +104,17 @@ header{
 .other-submenu{
     right: 5vw;
 }
-.other-submenu button {
+.other-submenu button,
+.btn-menu{
     background-color: rgba(0, 0, 0, 0.89);
+    padding: 1vh 2vw;
+    font-size: 4vw;
 }
 .other-submenu button a {
     color: white;
 }
 .btn-menu{
     left: 5vw;
-    background-color: rgba(0, 0, 0, 0.89);
 }
 .navegbar{
     position: absolute;
@@ -108,9 +139,8 @@ header div .btn-menu:focus ~ .other-submenu{
 }
 .navegbar li a{
     color: white;
-    font-size: 3vh;
+    font-size: 18px;
 }
-
 ul{
     display: inline;
     margin: 0;
@@ -212,22 +242,26 @@ ul li{
 #contactPage{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 2vh auto;
     width: 80%;
-}
-#contactPage section h2{
-    margin: 5vh 0vw;
-    font-size: 5vh;
+    background-color: darkviolet;
 }
 #contactPage section{
-    margin: 2vh 0vw;
     width: 100%;
+    background-color: darkslateblue;
+}
+#contactPage section h2{
+    margin: 3vh 0vw;
+    font-size: 20px;
 }
 #contactInf{
+    width: 90%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 45% 45%;
-    row-gap: 5vh;
+    row-gap: 2vh;
     column-gap: 10%;
+    background-color: deeppink;
 }
 .contactGit,
 #contactInf h2,
@@ -236,22 +270,33 @@ ul li{
     grid-column-start: 1;
     grid-column-end: 3;
 }
-#contactInf div{
+#contactInf div:nth-child(2){
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
+    border: 2px solid deepskyblue;
+}
+#contactInf div:nth-child(3){
+    display: flex;
+    justify-content: flex-start;
+    border: 2px solid deepskyblue;
+}
+#contactInf div:nth-child(5){
+    display: flex;
     justify-content: center;
+    border: 2px solid deepskyblue;
 }
 .headerProfile{
     position: fixed;
     height: 20vh;
     top: 80vh;
-    width: 100vw;
+    width: 100%;
     left: 0;
     right: 0;
     z-index: 20;
 }
 .nav-profile{
     position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
     width: 100%;
     height: 100%;
     display: flex;
@@ -267,7 +312,7 @@ ul li{
 .nav-profile div a,
 .nav-profile div h2{
     width: 100%;
-    font-size: 3vh;
+    font-size: 12px;
     margin: 0 5vw;
     text-align: center;
     color: white;
@@ -286,19 +331,24 @@ main .btn-add-task-form:focus{
 }
 .tasksBox{
     position: relative;
-    top:12vh;
     margin: 0 auto;
+    top:12vh;
     width: 90%;
     height: 68vh;
     z-index: 21;
-    overflow:auto;
+    overflow:hidden;
+}
+.tasksBox .tableBox{
+    background-color: brown;
+    overflow: auto;
+    height: 62vh;
 }
 .tasksBox h2{
     font-size: 4vh;
     text-align: center;
 }
 #tableTask{
-    margin: 5vh 0vw;
+    overflow:auto;
     table-layout: fixed;
     width: 100%;
 }
@@ -312,13 +362,13 @@ main .btn-add-task-form:focus{
     height: 50px;
 }
 #tableTask th {
-    padding: 0px 5px;
     text-align: center;
     background-color: rgb(18, 109, 245);
     color: white;
+    padding: 5px;
 }
 #tableTask td {
-    padding: 10px 5px;
+    padding: 5px 10px;
     text-align: left;
 }
 #tableTask tr{
@@ -326,7 +376,7 @@ main .btn-add-task-form:focus{
     background-color: skyblue;
 }
 #tableTask thead .theadSmall th{
-    width: 70%;
+    width: 60%;
 }
 .btn-edit,
 .btn-delete,
@@ -365,9 +415,9 @@ main .btn-add-task-form:focus{
     visibility: hidden;
     position: absolute;
     padding: 5px;
-    width: 80vw;
-    top: -30vh;
-    right:5vw;
+    width: 89vw;
+    top: -50vh;
+    right:0vw;
     border-radius: 5px;
     background-color: rgb(18, 109, 245);
     grid-template-columns: 70% 30%;
@@ -395,24 +445,36 @@ main .btn-add-task-form:focus{
     top: 8vh;
 }
 @media only screen and (orientation: landscape) {
-    main{
-        height: 85vh;
-        overflow: auto;
-        z-index: 20;
+    main .containerImagesHome .titleWithoutLogin{
+        top:45%;
+        width: 420px !important;
+        height: 120px;
+        background-image: url("../images/nube0.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        animation: mymove 3s 1;
+        animation-timing-function: ease-out;
+        animation-fill-mode: backwards;
     }
-    main figure{
-        position: absolute;
-        top: 5vh;
-        left: 5vw;
-        height: 90%;
-        width: 90%;
+    @keyframes mymove {
+        0% {top: 0%}
+        20% {top: 45%}
+        40% {top: 30%}
+        60% {top: 45%}
+        80% {top: 35%}
+        100% {top: 45%}
     }
-    main figure img{
-        margin: 0 auto;
-        height: 100%;
+    .titleWithoutLogin > *{
+        position: relative;
+        top: 30%;
+        font-size: 2vw;
     }
-    .navegbar li a{
-        font-size: 5vh;
+    main .containerImagesHome figure{
+        top: 0;
+        height: 80%;
+        width: 100%;
     }
     header{
         top: 85vh;
@@ -420,28 +482,6 @@ main .btn-add-task-form:focus{
     header div .btn-menu:focus ~ .navegbar{
         top: -10vh;
         z-index: 50;
-    }
-     /* homestyle */
-    main .titleWithoutLogin{
-        top:40vh;
-        width: max-content;
-        padding: 10px;
-        background: rgb(178,186,199);
-        border-radius: 5px;
-        animation: mymove 3s 1;
-        animation-timing-function: ease-out;
-        animation-fill-mode: backwards;
-    }
-    @keyframes mymove {
-        0% {top: 10vh; background-color: white;}
-        20% {top: 40vh; background-color:rgb(178,186,199);}
-        40% {top: 30vh; background-color: lightgrey;}
-        60% {top: 40vh; background-color: rgb(178,186,199);}
-        80% {top: 35vh; background-color: lightgrey;}
-        100% {top: 40vh; background-color: rgb(178,186,199);}
-      }
-    .titleWithoutLogin > *{
-        font-size: 5vh;
     }
     /* Why use this application */
     .whyUseAppGrid{
@@ -486,15 +526,45 @@ main .btn-add-task-form:focus{
     #contactPage{
         width: 90%;
     }
-    #contactPage section h2{
-        font-size: 6vh;
-    }
+    /* #contactPage section h2{
+        font-size: 22px;
+    } */
     main .btn-add-task-form:focus ~ .formBoxTask{
         left: 15%;
     }
-
 }
 @media only screen and (min-width: 480px){
+    main{
+        height: 90vh;
+    }
+    main .containerImagesHome .titleWithoutLogin{
+        top:45%;
+        width: 390px;
+        height: 15%;
+        background-image: url(../images/nube0.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .titleWithoutLogin > *{
+        position: relative;
+        top: 25%;
+        font-size: 2vh;
+    }
+    main .containerImagesHome figure{
+        position: absolute;
+        top:10%;
+        height: 80%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .other-submenu button,
+    .btn-menu{
+    padding: 5px 15px;
+    font-size: 16px;
+    }
     #tableTask thead .theadLarge,
     #tableTask tbody .tbodyLarge{
         display: table-row;
@@ -504,9 +574,14 @@ main .btn-add-task-form:focus{
         display: none;
     }
     #contactPage section{
-        margin: 2vh 0vw;
-        padding: 5vh 4vw;
+        margin: 2vh 0;
+        padding: 4vh 2vw;
         width: 50%;
+        background-color: darksalmon;
+    }
+    #contactPage section:nth-child(2){
+        padding: 0 0 0 1vw;
+        background-color: darkseagreen;
     }
     #tableTask thead .theadLarge h4{
         font-size: 3vw;
@@ -518,36 +593,64 @@ main .btn-add-task-form:focus{
     .tasksBox{
         width: 80%;
     }
+    .btn-edit,
+    .btn-delete{
+        padding: 1vh 1vw;
+    }
 }
 @media only screen and (min-width: 768px){
-    .navegbar li a{
-        color: cornflowerblue;
-        font-size: 3vh;
+    /* main{
+        height: 90vh;
+    } */
+    /* main figure{
+        top:10vh;
+    }
+    main .titleWithoutLogin{
+        width: 520px;
+        background-color: chocolate;
+    }
+    .titleWithoutLogin > *{
+        top: 30%;
+        font-size: 18px;
+    } */
+    .headerProfile{
+        height: 10vh;
+        top: 90vh;
+    }
+    .nav-profile div a,
+    .nav-profile div h2{
+        font-size: 14px;
     }
     #tableTask thead .theadLarge h4{
-        font-size: 3.5vh;
+        font-size: 2vw;
     }
     #tableTask tbody .tbodyLarge td,
     #tableTask tbody .tbodyLarge td button a{
-        font-size: 3vh;
+        font-size: 1.5vw;
     }
     .tasksBox{
+        top: 5vh;
+        background-color: aquamarine;
         width: 70%;
-        margin-right: 2.5%;
+        height: 85vh;
+        margin-right: 2%;
         float: right;
+    }
+    .tasksBox .tableBox{
+        height: 79vh;
     }
     .btn-add-task-form{
         display: none;
     }
     .whyUseAppGrid h2{
-        font-size: 7vh;
+        font-size: 5vh;
     }    
     .whyUseAppGrid div h4{
-        font-size: 4vh;
+        font-size: 3vh;
     }
     .whyUseAppGrid picture img{
-        width: 70%;
-        height: 70%;
+        width: 220px;
+        height: 220px;
     }
     .contact h1,
     .aboutMe h1{
@@ -556,9 +659,9 @@ main .btn-add-task-form:focus{
     .aboutMe p{
         font-size: 3vh;
     }
-    #contactPage section h2{
+    /* #contactPage section h2{
         font-size: 5vh;
-    }
+    } */
     .btn-edit,
     .btn-delete,
     .btn-details{
@@ -570,18 +673,7 @@ main .btn-add-task-form:focus{
         top:0;
         height: 15vh;
     }
-    .tasksBox{
-        top: 0;
-        height: 80vh;
-    }
-    main{
-        position: absolute;
-        top: 20vh;
-        height: 70vh;
-        width: 100vw;
-        margin: 0;
-    }
-    main .titleWithoutLogin{
+    /* main .titleWithoutLogin{
         top:30vh;
     }
     @keyframes mymove {
@@ -591,16 +683,7 @@ main .btn-add-task-form:focus{
         60% {top: 30vh; background-color: rgb(178,186,199);}
         80% {top: 25vh; background-color: lightgrey;}
         100% {top: 30vh; background-color: rgb(178,186,199);}
-      }
-    main figure{
-        position: absolute;
-        top:0vh;
-        height: 100%;
-        width: 90%;
-    }
-    main figure img{
-        width: 100%;
-    }
+      } */
     footer{
         position: relative;
         display: block;
@@ -609,9 +692,6 @@ main .btn-add-task-form:focus{
         width: 100%;
         background-color: orange;
     }
-    /* footer div{
-
-    } */
     .nav-profile div h2,
     .nav-profile div a{
         margin: 0;
@@ -627,11 +707,11 @@ main .btn-add-task-form:focus{
     .nav-profile div:nth-child(2){
         right: 5%;
     }
-    .tasksBox{
+    /* .tasksBox{
         overflow: visible;
     }
     #tableTask{
         overflow: auto;
-    }
+    } */
 }
 
