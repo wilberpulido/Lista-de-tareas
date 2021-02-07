@@ -15,12 +15,18 @@
     height: 70%;
 }
 .formBoxRegister{
-    padding: 4vh 10vw;
+    padding: 20px 25px 30px 30px;
     width: 85%;
+    max-width: 340px;
+    height: 80%;
+    max-height: 500px;
     background-color: rgba(0, 0, 0, 0.89);
 }
 .formBoxLogin form{
     position: relative;
+    height: 100%;
+}
+.formBoxRegister form{
     height: 100%;
 }
 .formBoxLogin .form-container-login{
@@ -88,7 +94,7 @@
 }
 .btn-return-home a{
     color: white;
-    font-size: 3vh;
+    font-size: 12px;
 }
 .input-container-register{
 position: relative;
@@ -96,21 +102,27 @@ width: 100%;
 }
 .form-container-register{
     display: grid;
+    height: 100%;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(6, 8vh) 5vh 10vh;
-    grid-row-gap: 1vh;
+    grid-template-rows: repeat(6, 10.833%) 10% 15%;
+    grid-row-gap: 1.43%;
+}
+.form-container-register div h2{
+    color: white;
+    text-align: center;
+    font-size: 4vh;
 }
 .input-container-register label{
-    position: relative;
+    position: absolute;
     color: white;
-    transition: all 0.5s ease-in-out;
     font-size: 3vh;
-    top:1vh;
+    bottom: 5px;
     z-index: 10;
+    transition: top 1s;
 }
 .input-container-register input{
     position: absolute;
-    top:2vh;
+    bottom: 5px;
     z-index: 20;
 }
 .input-container input,
@@ -140,7 +152,13 @@ width: 100%;
 }
 .link-login-register{
     position: relative;
-    margin-top: 1vh;
+    right: 0;
+}
+.link-login-register a{
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    color: rgb(18, 109, 245);
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -163,14 +181,13 @@ outline-color: transparent;
 	outline: none;
     border: 0;
     color: #fff;
-	padding:5px 10px;
+	padding:.5rem 1.5rem;
     text-transform:uppercase;
     border-radius:2px;
     cursor:pointer;
 }
-.text-center h2{
-    color: white;
-    font-size: 5vh;
+.form-container-register .btn-submit button{
+	padding:1vh 5vw;
 }
 #formContact{
     width: 90%;
@@ -192,11 +209,10 @@ outline-color: transparent;
 }
 #formContact label{
     position: relative;
-    top: 6px;
     font-size: 4vw;
 }
 #contactPage .btn-submit button{
-    width: 70%;
+    width: max-content;
     font-size: 3.5vw;
 }
 .formBoxTask{
@@ -233,9 +249,6 @@ font-weight: 500;
     width: 100%;
     height: 6vh;
 }
-/* .input-container-addTask button{
-    width: 50%;
-} */
 .formBoxEditTask{
     width: 80%;
     color: white;
@@ -250,26 +263,11 @@ font-weight: 500;
     .formBoxLogin{
         width: 50%;
     }
-    .formBoxRegister{
-        padding: 5vh 5vw;
-        width: 40%;
-    }
-    .formBoxRegister .btn-submit{
-        justify-content: start;
-        width: 80%;
-        font-size: 3vh;
-    }
-    .link-login-register{
-        position: relative;
-        top: -4vh;
-        font-size: 3vh;
-    }
     .formBoxTask{
         top: 15vh;
         width:70%;
         height: 60vh;
         padding: 4vh 0;
-
     }
     main .formBoxTask:focus-within{
         left: 15%;
@@ -316,7 +314,9 @@ font-weight: 500;
     }
 }
 @media only screen and (min-width: 480px){
-    
+    .input-container-register label{
+        font-size: 16px;
+    }
     #formContact{
         width: 100%;
         display: grid;
@@ -328,12 +328,11 @@ font-weight: 500;
     }
     #formContact label{
         position: relative;
-        top: 4px;
         font-size: 2.5vw;
     }
     #contactPage .btn-submit button{
-        width: 85%;
-        font-size: 16px;
+        width: max-content;
+        font-size: 1rem;
     }
     .formBoxLogin{
         padding: 5vh 40px;
@@ -341,8 +340,9 @@ font-weight: 500;
 }
 @media only screen and (min-width: 768px){
     #formContact{
-        width: 90%;
-        padding: 5vh 3vw;
+        width: 80%;
+        max-width: 400px;
+        padding: 30px 20px 40px 25px;
     }
     #formContact label{
         font-size: 18px;

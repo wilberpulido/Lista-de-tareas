@@ -17,23 +17,39 @@
     background-color: rgb(37, 5, 250);
     border-radius: 20px;
   }
-.contenedor{
-    width: 100vw;
-    margin: 0 auto;
+body {
+    margin: 0;
+    font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
 }
-p{
+.contenedor{
+    position: relative;
+    width: 100vw;
+    max-width: 1300px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: chartreuse;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
     margin: 0;
 }
  /* homestyle */
 main{
-    height: 85vh;
-    width: 100%;
     position: absolute;
-    left: 0;
+    width: 100%;
+    height: 90%;
     top: 0;
     bottom: 0;
     overflow: auto;
     z-index: 20;
+    /* background-color: coral; */
 }
 .containerImagesHome{
     position: absolute;
@@ -44,20 +60,19 @@ main{
 main .containerImagesHome .titleWithoutLogin{
     position: relative;
     margin: 0vh auto;
-    top:0;
     z-index: 20;
     text-align: center;
+    top:0%;
 }
 .titleWithoutLogin > *{
     color: black;
-    font-size: 14px;
+    font-size: 3vh;
 }
 main .containerImagesHome figure{
-    position: relative;
-    margin: 0 auto;
+    position: absolute;
     width: 100%;
     height: 70%;
-    top:5%;
+    top:18%;
     background-image: url("../images/fo-1200x675.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -67,11 +82,12 @@ main .containerImagesHome figure{
 header{
     position: fixed;
     height: 35vh;
-    top: 90vh;
-    width: 100vw;
+    top: 90%;
+    width: 100%;
     left: 0;
     right: 0;
     z-index: 30;
+    background-color: crimson;
 }
 .btn {
     display: inline-block;
@@ -96,7 +112,7 @@ a:link, a:visited, a:active {
 .other-submenu,
 .btn-menu{
     position: absolute;
-    top: 0vh;
+    top: 2vh;
     transition: top 1s;
     transition-delay: 0.5s;
     color: white;
@@ -108,7 +124,7 @@ a:link, a:visited, a:active {
 .btn-menu{
     background-color: rgba(0, 0, 0, 0.89);
     padding: 1vh 2vw;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 .other-submenu button a {
     color: white;
@@ -139,19 +155,24 @@ header div .btn-menu:focus ~ .other-submenu{
 }
 .navegbar li a{
     color: white;
-    font-size: 18px;
+    font-size: 100%;
 }
 ul{
     display: inline;
     margin: 0;
     padding: 0;
 }
+ul li{
+    position: relative;
+    z-index:inherit;
+    height: 33.33%;
+}
 ul li button{
     position: relative;
     list-style: none;
     outline: none;
     width: 100%;
-    height: 8.33vh;
+    height:100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,24 +182,24 @@ ul li button{
     border: 0.5px solid gray;
     background-color: rgb(31, 27, 27);
 }
-ul li{
-    position: relative;
-    z-index:inherit;
+footer{
+    display: none;
 }
+/* pages*/
 .whyUseAppGrid{
-    margin: 5vh 5%;
+    margin: 8vh 5%;
     width: 90%;
     display: grid;
     grid-template-columns: 45% 45%;
     grid-column-gap: 10%;
-    grid-template-rows: 20vh repeat(3,40vh);
+    grid-template-rows: 10vh repeat(3,30vh);
 }
 .whyUseAppGrid h2{
     margin: auto;
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
-    font-size: 5vh;
+    font-size: 6vw;
 }
 .whyUseAppGrid picture,
 .whyUseAppGrid div{
@@ -190,33 +211,38 @@ ul li{
     padding: 2vh 2vw;
 }
 .whyUseAppGrid div h4{
-    font-size: 3vh;
+    font-size: 3vw;
     text-align: center;
     margin: 0;
 }
 .whyUseAppGrid picture img{
-    width: 100%;
+    width: 80%;
+    height: 60%;
 }
 .aboutMe{
+    position: relative;
     width: 90%;
     margin: 3vh auto 0 auto;
-    padding: 3vh 5vw 0 5vw;
+    padding: 3vh 5vw 1vh 5vw;
 }
 .contact h1,
 .aboutMe h1{
-    font-size: 5vh;
+    font-size: 1.5rem;
     text-align: center;
     margin-bottom: 3vh;
 }
 .aboutMe p{
-    font-size: 2.5vh;
+    font-size: 0.8rem;
     text-align: justify;
+    margin: 0 auto;
+    max-width: 560px;
 }
 .aboutMe p:nth-child(2){
     margin-bottom: 2vh;
 }
 .iconTech{
     width: 90%;
+    max-width: 600px;
     margin: 5vh auto;
     display: flex;
     justify-content: center;
@@ -244,15 +270,18 @@ ul li{
     flex-wrap: wrap;
     margin: 2vh auto;
     width: 80%;
-    background-color: darkviolet;
 }
 #contactPage section{
     width: 100%;
-    background-color: darkslateblue;
 }
 #contactPage section h2{
     margin: 3vh 0vw;
-    font-size: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+#contactPage section p{
+    font-size: 1rem;
+    text-align: justify;
 }
 #contactInf{
     width: 90%;
@@ -261,7 +290,6 @@ ul li{
     grid-template-columns: 45% 45%;
     row-gap: 2vh;
     column-gap: 10%;
-    background-color: deeppink;
 }
 .contactGit,
 #contactInf h2,
@@ -273,17 +301,14 @@ ul li{
 #contactInf div:nth-child(2){
     display: flex;
     justify-content: flex-end;
-    border: 2px solid deepskyblue;
 }
 #contactInf div:nth-child(3){
     display: flex;
     justify-content: flex-start;
-    border: 2px solid deepskyblue;
 }
 #contactInf div:nth-child(5){
     display: flex;
     justify-content: center;
-    border: 2px solid deepskyblue;
 }
 .headerProfile{
     position: fixed;
@@ -447,8 +472,8 @@ main .btn-add-task-form:focus{
 @media only screen and (orientation: landscape) {
     main .containerImagesHome .titleWithoutLogin{
         top:45%;
-        width: 420px !important;
-        height: 120px;
+        width: 60% !important;
+        height: 20%;
         background-image: url("../images/nube0.png");
         background-position: center;
         background-size: contain;
@@ -469,10 +494,10 @@ main .btn-add-task-form:focus{
     .titleWithoutLogin > *{
         position: relative;
         top: 30%;
-        font-size: 2vw;
+        font-size: 2vh;
     }
     main .containerImagesHome figure{
-        top: 0;
+        top: 10%;
         height: 80%;
         width: 100%;
     }
@@ -501,13 +526,6 @@ main .btn-add-task-form:focus{
         height: 70%;
     }
     /* About ME page */
-    .contact h1,
-    .aboutMe h1{
-        font-size: 8vh;
-    }
-    .aboutMe p{
-        font-size: 4vh;
-    }
     .iconTech{
         margin: 10vh auto;
     }
@@ -535,7 +553,7 @@ main .btn-add-task-form:focus{
 }
 @media only screen and (min-width: 480px){
     main{
-        height: 90vh;
+        height: 90%;
     }
     main .containerImagesHome .titleWithoutLogin{
         top:45%;
@@ -548,7 +566,7 @@ main .btn-add-task-form:focus{
     }
     .titleWithoutLogin > *{
         position: relative;
-        top: 25%;
+        top: 12%;
         font-size: 2vh;
     }
     main .containerImagesHome figure{
@@ -559,6 +577,15 @@ main .btn-add-task-form:focus{
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+    }
+    .whyUseAppGrid h2{
+        font-size: 5vh;
+    }    
+    .whyUseAppGrid div h4{
+        font-size: 3vh;
+    }
+    .aboutMe p{
+        font-size: .9rem;
     }
     .other-submenu button,
     .btn-menu{
@@ -599,9 +626,10 @@ main .btn-add-task-form:focus{
     }
 }
 @media only screen and (min-width: 768px){
-    /* main{
-        height: 90vh;
-    } */
+    main{
+        top: 15%;
+        height: 75%;
+    }
     /* main figure{
         top:10vh;
     }
@@ -620,6 +648,14 @@ main .btn-add-task-form:focus{
     .nav-profile div a,
     .nav-profile div h2{
         font-size: 14px;
+    }
+    footer{
+        position: absolute;
+        display: block;
+        top: 90%;
+        height: 10%;
+        width: 100%;
+        background-color: cornflowerblue;
     }
     #tableTask thead .theadLarge h4{
         font-size: 2vw;
@@ -643,22 +679,22 @@ main .btn-add-task-form:focus{
         display: none;
     }
     .whyUseAppGrid h2{
-        font-size: 5vh;
+        font-size: 2rem;
     }    
     .whyUseAppGrid div h4{
-        font-size: 3vh;
+        font-size: 1.5rem;
     }
     .whyUseAppGrid picture img{
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
     }
-    .contact h1,
+    /* .contact h1,
     .aboutMe h1{
         font-size: 7vh;
     }
     .aboutMe p{
         font-size: 3vh;
-    }
+    } */
     /* #contactPage section h2{
         font-size: 5vh;
     } */

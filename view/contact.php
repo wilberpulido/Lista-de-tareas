@@ -6,7 +6,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/form.css">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="shortcut icon" href="../images/iconTask.icon"/>
@@ -34,17 +33,17 @@
     <main>
         <div id="contactPage">
             <section>
-                <h2 class="text-center">
+                <h2>
                     Introduction
                 </h2>
-                <p class="text-justify">
+                <p>
                     This application has been developed by Wilber Pulido,
                     web developer with experience in different languages such as 
                     html, css, php, java, javascript with react.js and express.js and handling mySQL and mongoDB
                     databases.
                 </p>
                 <div id="contactInf">
-                    <h2 class="text-center">Contact information</h2>
+                    <h2>Contact information</h2>
                     <div>
                         <a href="https://www.linkedin.com/in/wilber-pulido-b523116b/" target="_blank">
                             <i class="fab fa-linkedin fa-5x"></i>
@@ -64,7 +63,7 @@
                 </div>
             </section>
             <section>
-                <h2 class="text-center">
+                <h2>
                     Contact form
                 </h2>
                 <form method="POST" action="../services/contactMail.php">
