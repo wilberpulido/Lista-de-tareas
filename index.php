@@ -36,7 +36,7 @@ if (empty($user)) {
 ?>
 <div class="contenedor">
     <header>
-        <div class="menu">
+        <div class="menu-short">
             <button class="btn btn-menu"> Menu</button>
             <div class="other-submenu">
                 <button class="btn"> <a href="view/login.html"> Login </a> </button> 
