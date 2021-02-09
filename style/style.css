@@ -62,11 +62,13 @@ main .containerImagesHome .titleWithoutLogin{
     margin: 0vh auto;
     z-index: 20;
     text-align: center;
-    top:0%;
 }
 .titleWithoutLogin > *{
+    position: absolute;
+    width: 90%;
+    left: 5%;
     color: black;
-    font-size: 3vh;
+    font-size: 2.5vh;
 }
 main .containerImagesHome figure{
     position: absolute;
@@ -83,11 +85,16 @@ header{
     position: fixed;
     height: 35vh;
     top: 90%;
-    width: 100%;
-    left: 0;
     right: 0;
+    width: 100%;
     z-index: 30;
     background-color: crimson;
+}
+.menu-short{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: orchid;
 }
 .btn {
     display: inline-block;
@@ -104,7 +111,7 @@ header{
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: .25rem;
+    border-radius: 3px;
 }
 a:link, a:visited, a:active {
     text-decoration:none;
@@ -112,25 +119,29 @@ a:link, a:visited, a:active {
 .other-submenu,
 .btn-menu{
     position: absolute;
-    top: 2vh;
+    top: 2%;
     transition: top 1s;
     transition-delay: 0.5s;
     color: white;
+    background-color: mediumaquamarine;
 }
 .other-submenu{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
     right: 5vw;
+}
+.btn-menu{
+    left: 5vw;
 }
 .other-submenu button,
 .btn-menu{
     background-color: rgba(0, 0, 0, 0.89);
     padding: 1vh 2vw;
-    font-size: 3vw;
+    font-size: 4vw;
 }
 .other-submenu button a {
     color: white;
-}
-.btn-menu{
-    left: 5vw;
 }
 .navegbar{
     position: absolute;
@@ -155,7 +166,7 @@ header div .btn-menu:focus ~ .other-submenu{
 }
 .navegbar li a{
     color: white;
-    font-size: 100%;
+    font-size: 10px;
 }
 ul{
     display: inline;
@@ -217,7 +228,9 @@ footer{
 }
 .whyUseAppGrid picture img{
     width: 80%;
+    max-width: 340px;
     height: 60%;
+    max-height: 300px;
 }
 .aboutMe{
     position: relative;
@@ -469,11 +482,12 @@ main .btn-add-task-form:focus{
     visibility: visible;
     top: 8vh;
 }
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) and (max-width: 767px) {
     main .containerImagesHome .titleWithoutLogin{
         top:45%;
-        width: 60% !important;
+        width: 60%;
         height: 20%;
+        max-height: 90px;
         background-image: url("../images/nube0.png");
         background-position: center;
         background-size: contain;
@@ -493,20 +507,28 @@ main .btn-add-task-form:focus{
     }
     .titleWithoutLogin > *{
         position: relative;
-        top: 30%;
-        font-size: 2vh;
+        top: 25%;
+        font-size:2vh;
+    }
+    header{
+        background-color: palevioletred;
     }
     main .containerImagesHome figure{
         top: 10%;
-        height: 80%;
+        height: 90% !important;
         width: 100%;
     }
-    header{
-        top: 85vh;
-    }
     header div .btn-menu:focus ~ .navegbar{
-        top: -10vh;
+        top: -15vh;
         z-index: 50;
+    }
+    .other-submenu,
+    .btn-menu{
+        top: 0;
+    }
+    .other-submenu button,
+    .btn-menu{
+        font-size: 3.5vh !important;
     }
     /* Why use this application */
     .whyUseAppGrid{
@@ -558,25 +580,28 @@ main .btn-add-task-form:focus{
     main .containerImagesHome .titleWithoutLogin{
         top:45%;
         width: 390px;
-        height: 15%;
-        background-image: url(../images/nube0.png);
+        height: 20%;
+        max-height: 100px;
+        background-image: url("../images/nube0.png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
     }
     .titleWithoutLogin > *{
-        position: relative;
-        top: 12%;
+        top: 20%;
         font-size: 2vh;
     }
     main .containerImagesHome figure{
         position: absolute;
-        top:10%;
+        top:5%;
         height: 80%;
         width: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+    }
+    header{
+        height: 10%;
     }
     .whyUseAppGrid h2{
         font-size: 5vh;
@@ -589,8 +614,8 @@ main .btn-add-task-form:focus{
     }
     .other-submenu button,
     .btn-menu{
-    padding: 5px 15px;
-    font-size: 16px;
+        padding: 5px 15px;
+        font-size: 16px;
     }
     #tableTask thead .theadLarge,
     #tableTask tbody .tbodyLarge{
@@ -626,21 +651,44 @@ main .btn-add-task-form:focus{
     }
 }
 @media only screen and (min-width: 768px){
+    header{
+        top: 0;
+        height: 15%;
+    }
+    header .menu-short{
+        background-color: pink;
+        display: none;
+    }
     main{
         top: 15%;
         height: 75%;
+    
     }
-    /* main figure{
-        top:10vh;
+    main .containerImagesHome{
+        top: 0%;
+        height: 100%;
+        background-color: darkorange;
     }
-    main .titleWithoutLogin{
-        width: 520px;
-        background-color: chocolate;
+    main .containerImagesHome figure{
+        position: absolute;
+        top:0%;
+        height: 100%;
+    }
+    main .containerImagesHome .titleWithoutLogin{
+        top:50%;
+    }
+    @keyframes mymove {
+        0% {top: 0%}
+        20% {top: 50%}
+        40% {top: 35%}
+        60% {top: 50%}
+        80% {top: 45%}
+        100% {top: 50%}
     }
     .titleWithoutLogin > *{
-        top: 30%;
-        font-size: 18px;
-    } */
+        top: 20%;
+        font-size: 12px;
+    }
     .headerProfile{
         height: 10vh;
         top: 90vh;
@@ -704,50 +752,3 @@ main .btn-add-task-form:focus{
         padding: 0.5vh 1vw;
     }
 }
-@media only screen and (min-width: 1024px){
-    .headerProfile{
-        top:0;
-        height: 15vh;
-    }
-    /* main .titleWithoutLogin{
-        top:30vh;
-    }
-    @keyframes mymove {
-        0% {top: 0vh; background-color: white;}
-        20% {top: 30vh; background-color:rgb(178,186,199);}
-        40% {top: 20vh; background-color: lightgrey;}
-        60% {top: 30vh; background-color: rgb(178,186,199);}
-        80% {top: 25vh; background-color: lightgrey;}
-        100% {top: 30vh; background-color: rgb(178,186,199);}
-      } */
-    footer{
-        position: relative;
-        display: block;
-        top:90vh;
-        height: 10vh;
-        width: 100%;
-        background-color: orange;
-    }
-    .nav-profile div h2,
-    .nav-profile div a{
-        margin: 0;
-    }
-    .nav-profile div{
-        position: relative;
-        width: max-content;
-        overflow-wrap: normal;
-    }
-    .nav-profile div:nth-child(1){
-        left: 5%;
-    }
-    .nav-profile div:nth-child(2){
-        right: 5%;
-    }
-    /* .tasksBox{
-        overflow: visible;
-    }
-    #tableTask{
-        overflow: auto;
-    } */
-}
-
