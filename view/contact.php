@@ -3,18 +3,11 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/form.css">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="shortcut icon" href="../images/iconTask.icon"/>
-    <script src="https://kit.fontawesome.com/ae8e09c608.js" crossorigin="anonymous"></script>
-    <script defer type="text/javascript" src="../funciones.js"></script>
-    <title>Contact</title>
-</head>
+<?php 
+    include("partials/head.html");
+?>
 <body>
-<div class="container-fluid">
+<div class="contenedor">
     <header>
         <div>
             <button class="btn btn-dark btn-menu"> Menu</button>
@@ -26,7 +19,7 @@
             $whyUseUrl = "./whyUseApp.php";
             $aboutMeUrl = "./aboutMe.php";
             $contactUrl = "./contact.php";
-            include("landingPage/header.php");
+            include("partials/header.php");
             ?>
         </div>
     </header>
@@ -109,6 +102,9 @@
             </section>
         </div>
     </main>
+    <footer>
+        holas
+    </footer>
 </div>
 </body>
 </html>

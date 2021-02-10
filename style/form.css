@@ -339,10 +339,15 @@ font-weight: 500;
     }
 }
 @media only screen and (min-width: 768px){
+    #contactInf {
+        display: grid;
+        row-gap: 0px !important;
+    }
     #formContact{
-        width: 80%;
-        max-width: 400px;
+        width: 89%;
+        max-width: 380px;
         padding: 30px 20px 40px 25px;
+        margin: 25px auto 0 auto;
     }
     #formContact label{
         font-size: 18px;
@@ -368,10 +373,4 @@ font-weight: 500;
     main .formBoxTask:focus-within{
         left: 1%;
     }
-}
-@media only screen and (min-width: 1024px){
-    .formBoxTask{
-        top: 20vh;
-    }
-
 }
