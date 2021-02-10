@@ -30,7 +30,7 @@ body {
     max-width: 1300px;
     height: 100vh;
     margin: 0 auto;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
 }
 p {
     display: block;
@@ -88,13 +88,11 @@ header{
     right: 0;
     width: 100%;
     z-index: 30;
-    background-color: crimson;
 }
 .menu-short{
     position: relative;
     height: 100%;
     width: 100%;
-    background-color: orchid;
 }
 .btn {
     display: inline-block;
@@ -119,16 +117,14 @@ a:link, a:visited, a:active {
 .other-submenu,
 .btn-menu{
     position: absolute;
-    top: 2%;
-    transition: top 1s;
-    transition-delay: 0.5s;
     color: white;
-    background-color: mediumaquamarine;
+    transition: top 0.5s ease-out;
+    transition-delay: 0.7s;
 }
 .other-submenu{
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 35%;
     right: 5vw;
 }
 .btn-menu{
@@ -148,8 +144,8 @@ a:link, a:visited, a:active {
     width: 100vw;
     height: 25vh;
     top: 35vh;
-    transition: top 1s;
-    transition-delay: 0.5s;
+    transition: top 0.5s ease-out;
+    transition-delay: 0.7s;
     z-index: 30;
 }
 .btn-menu:focus {
@@ -166,7 +162,7 @@ header div .btn-menu:focus ~ .other-submenu{
 }
 .navegbar li a{
     color: white;
-    font-size: 10px;
+    font-size: 12px;
 }
 ul{
     display: inline;
@@ -227,10 +223,10 @@ footer{
     margin: 0;
 }
 .whyUseAppGrid picture img{
-    width: 80%;
-    max-width: 340px;
-    height: 60%;
-    max-height: 300px;
+    width: 70%;
+    max-width: 100px;
+    height: 70%;
+    max-height: 100px;
 }
 .aboutMe{
     position: relative;
@@ -255,7 +251,7 @@ footer{
 }
 .iconTech{
     width: 90%;
-    max-width: 600px;
+    max-width: 470px;
     margin: 5vh auto;
     display: flex;
     justify-content: center;
@@ -289,11 +285,11 @@ footer{
 }
 #contactPage section h2{
     margin: 3vh 0vw;
-    font-size: 1.5rem;
+    font-size: 3vh;
     text-align: center;
 }
 #contactPage section p{
-    font-size: 1rem;
+    font-size: 2vh;
     text-align: justify;
 }
 #contactInf{
@@ -510,9 +506,6 @@ main .btn-add-task-form:focus{
         top: 25%;
         font-size:2vh;
     }
-    header{
-        background-color: palevioletred;
-    }
     main .containerImagesHome figure{
         top: 10%;
         height: 90% !important;
@@ -526,9 +519,12 @@ main .btn-add-task-form:focus{
     .btn-menu{
         top: 0;
     }
+    .other-submenu{
+        justify-content: space-around;
+    }
     .other-submenu button,
     .btn-menu{
-        font-size: 3.5vh !important;
+        font-size: 3vh !important;
     }
     /* Why use this application */
     .whyUseAppGrid{
@@ -538,14 +534,10 @@ main .btn-add-task-form:focus{
         grid-row-gap: 2vh;
     }
     .whyUseAppGrid h2{
-        font-size: 6vh;
+        font-size: 4vh;
     }    
     .whyUseAppGrid div h4{
-        font-size: 4vh;
-    }
-    .whyUseAppGrid picture img{
-        width: 70%;
-        height: 70%;
+        font-size: 3vh;
     }
     /* About ME page */
     .iconTech{
@@ -566,9 +558,12 @@ main .btn-add-task-form:focus{
     #contactPage{
         width: 90%;
     }
-    /* #contactPage section h2{
-        font-size: 22px;
-    } */
+    #contactPage section h2{
+        font-size: 3vw;
+    }
+    #contactPage section p{
+        font-size: 2vw;
+    }
     main .btn-add-task-form:focus ~ .formBoxTask{
         left: 15%;
     }
@@ -603,11 +598,14 @@ main .btn-add-task-form:focus{
     header{
         height: 10%;
     }
+    .other-submenu{
+        width: 30%;
+    }
     .whyUseAppGrid h2{
-        font-size: 5vh;
+        font-size: 4vw;
     }    
     .whyUseAppGrid div h4{
-        font-size: 3vh;
+        font-size: 2.5vw;
     }
     .aboutMe p{
         font-size: .9rem;
@@ -617,6 +615,20 @@ main .btn-add-task-form:focus{
         padding: 5px 15px;
         font-size: 16px;
     }
+    .whyUseAppGrid picture img{
+        width: 50%;
+        height: 60%;
+        max-width: 200px;
+        max-height: 300px;
+    }
+    #contactPage section{
+        margin: 2vh 0;
+        padding: 4vh 2vw;
+        width: 50%;
+    }
+    #contactPage section:nth-child(2){
+        padding: 4vh 0 0 1vw;
+    }
     #tableTask thead .theadLarge,
     #tableTask tbody .tbodyLarge{
         display: table-row;
@@ -624,16 +636,6 @@ main .btn-add-task-form:focus{
     #tableTask thead .theadSmall,
     #tableTask tbody .tbodySmall{
         display: none;
-    }
-    #contactPage section{
-        margin: 2vh 0;
-        padding: 4vh 2vw;
-        width: 50%;
-        background-color: darksalmon;
-    }
-    #contactPage section:nth-child(2){
-        padding: 0 0 0 1vw;
-        background-color: darkseagreen;
     }
     #tableTask thead .theadLarge h4{
         font-size: 3vw;
@@ -654,20 +656,18 @@ main .btn-add-task-form:focus{
     header{
         top: 0;
         height: 15%;
+        display: none;
     }
     header .menu-short{
-        background-color: pink;
         display: none;
     }
     main{
         top: 15%;
         height: 75%;
-    
     }
     main .containerImagesHome{
         top: 0%;
         height: 100%;
-        background-color: darkorange;
     }
     main .containerImagesHome figure{
         position: absolute;
@@ -689,6 +689,41 @@ main .btn-add-task-form:focus{
         top: 20%;
         font-size: 12px;
     }
+    .whyUseAppGrid{
+        row-gap: 40px;
+    }
+    .whyUseAppGrid h2{
+        font-size: 24px;
+    }    
+    .whyUseAppGrid div h4{
+        font-size: 20px;
+    }
+    .whyUseAppGrid picture img{
+        height: 80%;
+    }
+    #contactInf{
+        grid-template-columns: 40% 40%;
+        column-gap: 20%;
+    }
+    #contactPage{
+        height: 100%;
+        margin: 0vh auto;
+    }
+    #contactPage section{
+        height: 100%;
+        padding: 2vh 2vw 0 2vw;
+        margin: 0;
+    }
+    #contactPage section:nth-child(2){
+        padding: 2vh 0 0 1vw;
+    }
+    #contactPage section h2{
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+    #contactPage section p{
+        font-size: 1rem;
+    }
     .headerProfile{
         height: 10vh;
         top: 90vh;
@@ -698,8 +733,8 @@ main .btn-add-task-form:focus{
         font-size: 14px;
     }
     footer{
-        position: absolute;
         display: block;
+        position: absolute;
         top: 90%;
         height: 10%;
         width: 100%;
@@ -726,26 +761,6 @@ main .btn-add-task-form:focus{
     .btn-add-task-form{
         display: none;
     }
-    .whyUseAppGrid h2{
-        font-size: 2rem;
-    }    
-    .whyUseAppGrid div h4{
-        font-size: 1.5rem;
-    }
-    .whyUseAppGrid picture img{
-        width: 200px;
-        height: 200px;
-    }
-    /* .contact h1,
-    .aboutMe h1{
-        font-size: 7vh;
-    }
-    .aboutMe p{
-        font-size: 3vh;
-    } */
-    /* #contactPage section h2{
-        font-size: 5vh;
-    } */
     .btn-edit,
     .btn-delete,
     .btn-details{

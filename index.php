@@ -46,7 +46,7 @@ if (empty($user)) {
             $whyUseUrl ="view/whyUseApp.php" ;
             $aboutMeUrl = "view/aboutMe.php";
             $contactUrl = "view/contact.php";
-            include("view/landingPage/header.php");
+            include("view/partials/header.php");
             ?>
         </div>
     </header>
@@ -89,7 +89,7 @@ if (empty($user)) {
         </button>
         <div class="formBoxTask">
             <?php
-                include_once("view/landingPage/formTask.html");
+                include_once("view/partials/formTask.html");
             ?>
         </div>
         <div class="tasksBox">
