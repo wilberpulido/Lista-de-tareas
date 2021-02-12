@@ -255,7 +255,7 @@ font-weight: 500;
     background-color: rgb(18, 109, 245);
     padding: 2vh 2vw;
 }
-@media only screen and (orientation: landscape) and (max-width: 767px) {
+@media only screen and (orientation: landscape) and (max-width: 768px) {
     #contactPage .btn-submit button{
         width: 80%;
         font-size:4vh;
@@ -338,7 +338,7 @@ font-weight: 500;
         padding: 5vh 40px;
     }
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 769px){
     #contactInf {
         display: grid;
         row-gap: 0px !important;
