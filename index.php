@@ -36,19 +36,14 @@ if (empty($user)) {
 ?>
 <div class="contenedor">
     <header>
-        <div class="menu-short">
-            <button class="btn btn-menu"> Menu</button>
-            <div class="other-submenu">
-                <button class="btn"> <a href="view/login.html"> Login </a> </button> 
-                <button class="btn"> <a href="view/registration.html"> Register </a></button>
-            </div>
-            <?php
+        <?php
             $whyUseUrl ="view/whyUseApp.php" ;
             $aboutMeUrl = "view/aboutMe.php";
             $contactUrl = "view/contact.php";
+            $loginUrl = "view/login.html";
+            $registerUrl = "view/registration.html";
             include("view/partials/header.php");
             ?>
-        </div>
     </header>
     <main>
         <section class="containerImagesHome">
@@ -59,15 +54,12 @@ if (empty($user)) {
             </div>
         </div>
         <figure>
-            <!-- <img src="images/fo-1200x675.jpg" alt="homePage"> -->
         </figure>
     </section>
     </main>
-        <footer>
-            <div>
-            Holas
-            </div>
-        </footer>
+    <?php
+        include("view/partials/footer.html");
+    ?>
 </div>
 <?php
 } else{

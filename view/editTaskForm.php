@@ -45,7 +45,6 @@ $task = mysqli_fetch_assoc($resultTask);
                     <option value="High">High</option>
                 </select>
             </div>
-            
         <div class="input-container-addTask">
             <label for="deadline">Deadline</label>
             <input value="<?php echo $task['deadline']; ?>" id="editDeadline" class="mb-4" type="date" name="deadline">

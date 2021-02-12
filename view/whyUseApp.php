@@ -6,19 +6,14 @@
 <body>
     <div class="contenedor">
         <header>
-        <div>
-            <button class="btn btn-dark btn-menu"> Menu</button>
-            <div class="other-submenu">
-                <button class="btn btn-dark"> <a href="./login.html"> Login </a> </button> 
-                <button class="btn btn-dark"> <a href="./registration.html"> Register </a></button>
-            </div>
-            <?php
-            $whyUseUrl = "./whyUseApp.php";
-            $aboutMeUrl = "./aboutMe.php";
-            $contactUrl = "./contact.php";
+            <?php 
+                $whyUseUrl = "./whyUseApp.php";
+                $aboutMeUrl = "./aboutMe.php";
+                $contactUrl = "./contact.php";
+                $loginUrl = "./login.html";
+                $registerUrl = "./registration.html";
                 include("partials/header.php");
             ?>
-        </div>
         </header>
         <main>
             <div class="whyUseAppGrid">
@@ -43,6 +38,9 @@
                 </picture>
             </div>
         </main>
+        <?php
+        include("partials/footer.html");
+        ?>
 </div>
     
 </body>

@@ -49,7 +49,6 @@ main{
     bottom: 0;
     overflow: auto;
     z-index: 20;
-    /* background-color: coral; */
 }
 .containerImagesHome{
     position: absolute;
@@ -89,8 +88,14 @@ header{
     width: 100%;
     z-index: 30;
 }
-.menu-short{
+#menu-short{
     position: relative;
+    height: 100%;
+    width: 100%;
+}
+#menu-large{
+    display: none;
+    background-color:rgba(0, 0, 0, 0.9);
     height: 100%;
     width: 100%;
 }
@@ -160,21 +165,17 @@ header div .btn-menu:focus ~ .navegbar{
 header div .btn-menu:focus ~ .other-submenu{
     top: -25vh;
 }
-.navegbar li a{
-    color: white;
-    font-size: 12px;
-}
-ul{
+.navegbar{
     display: inline;
     margin: 0;
     padding: 0;
 }
-ul li{
+.navegbar li{
     position: relative;
     z-index:inherit;
     height: 33.33%;
 }
-ul li button{
+.navegbar li button{
     position: relative;
     list-style: none;
     outline: none;
@@ -188,6 +189,10 @@ ul li button{
     z-index: 50;
     border: 0.5px solid gray;
     background-color: rgb(31, 27, 27);
+}
+header li a{
+    color: white;
+    font-size: 14px;
 }
 footer{
     display: none;
@@ -541,10 +546,10 @@ main .btn-add-task-form:focus{
     }
     /* About ME page */
     .iconTech{
-        margin: 10vh auto;
+        margin: 5vh auto;
     }
     .icon{
-        width: 10vw;
+        width: 12vw;
         height: 16vh;
     }
     .iconTech .icon:nth-child(2){
@@ -652,14 +657,26 @@ main .btn-add-task-form:focus{
         padding: 1vh 1vw;
     }
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 769px){
     header{
         top: 0;
         height: 15%;
+    }
+    #menu-short{
         display: none;
     }
-    header .menu-short{
-        display: none;
+    #menu-large{
+        display: block;
+    }
+    #menu-large .navegbar-desktop{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+    }
+    #menu-large .navegbar-desktop li{
+        background-color: tomato;
+        border: 1px solid red
     }
     main{
         top: 15%;
@@ -676,6 +693,7 @@ main .btn-add-task-form:focus{
     }
     main .containerImagesHome .titleWithoutLogin{
         top:50%;
+        height: 300px;
     }
     @keyframes mymove {
         0% {top: 0%}
@@ -686,8 +704,8 @@ main .btn-add-task-form:focus{
         100% {top: 50%}
     }
     .titleWithoutLogin > *{
-        top: 20%;
-        font-size: 12px;
+        top: 24%;
+        font-size: 11px;
     }
     .whyUseAppGrid{
         row-gap: 40px;
@@ -733,12 +751,19 @@ main .btn-add-task-form:focus{
         font-size: 14px;
     }
     footer{
-        display: block;
         position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: 90%;
         height: 10%;
         width: 100%;
-        background-color: cornflowerblue;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    footer div{
+        color: white;
+        width: max-content;
+        height: max-content;
     }
     #tableTask thead .theadLarge h4{
         font-size: 2vw;
