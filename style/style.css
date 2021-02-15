@@ -95,9 +95,6 @@ header{
 }
 #menu-large{
     display: none;
-    background-color:rgba(0, 0, 0, 0.9);
-    height: 100%;
-    width: 100%;
 }
 .btn {
     display: inline-block;
@@ -199,7 +196,7 @@ footer{
 }
 /* pages*/
 .whyUseAppGrid{
-    margin: 8vh 5%;
+    margin: 8vh auto;
     width: 90%;
     display: grid;
     grid-template-columns: 45% 45%;
@@ -239,7 +236,6 @@ footer{
     margin: 3vh auto 0 auto;
     padding: 3vh 5vw 1vh 5vw;
 }
-.contact h1,
 .aboutMe h1{
     font-size: 1.5rem;
     text-align: center;
@@ -326,8 +322,8 @@ footer{
 }
 .headerProfile{
     position: fixed;
-    height: 20vh;
-    top: 80vh;
+    height: 20%;
+    top: 80%;
     width: 100%;
     left: 0;
     right: 0;
@@ -659,28 +655,44 @@ main .btn-add-task-form:focus{
 }
 @media only screen and (min-width: 769px){
     header{
+        position: relative;
         top: 0;
-        height: 15%;
+        height: 10%;
     }
     #menu-short{
         display: none;
     }
     #menu-large{
         display: block;
+        background-color:rgba(0, 0, 0, 0.9);
+        height: 100%;
+        width: 100%;
     }
     #menu-large .navegbar-desktop{
         display: flex;
         list-style: none;
         align-items: center;
+        height: 100%;
+    }
+    #menu-large .navegbar-desktop div:nth-child(1){
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #menu-large .navegbar-desktop div:nth-child(2){
+        width: 30%;
+        display: flex;
         justify-content: center;
     }
-    #menu-large .navegbar-desktop li{
-        background-color: tomato;
-        border: 1px solid red
+    #menu-large .navegbar-desktop div:nth-child(2) li:nth-child(2){
+        margin-left: 30px;
+    }
+    #menu-large .navegbar-desktop li a{
+        font-size: 1.3rem;
     }
     main{
-        top: 15%;
-        height: 75%;
+        top: 10%;
+        height: 85%;
     }
     main .containerImagesHome{
         top: 0%;
@@ -704,10 +716,11 @@ main .btn-add-task-form:focus{
         100% {top: 50%}
     }
     .titleWithoutLogin > *{
-        top: 24%;
-        font-size: 11px;
+        top: 26%;
+        font-size: 13px;
     }
     .whyUseAppGrid{
+        width: 70%;
         row-gap: 40px;
     }
     .whyUseAppGrid h2{
@@ -718,6 +731,10 @@ main .btn-add-task-form:focus{
     }
     .whyUseAppGrid picture img{
         height: 80%;
+    }
+    .aboutMe p{
+        font-size: 1rem;
+        max-width: 900px;
     }
     #contactInf{
         grid-template-columns: 40% 40%;
@@ -755,10 +772,10 @@ main .btn-add-task-form:focus{
         display: flex;
         justify-content: center;
         align-items: center;
-        top: 90%;
-        height: 10%;
+        top: 95%;
+        height: 5%;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0,0.9);
     }
     footer div{
         color: white;

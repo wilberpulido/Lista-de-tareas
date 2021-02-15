@@ -8,9 +8,9 @@
         // public $database = 'id15418449_mydb';
         // public $conn;
 
-        public $host = "localhost";
+        public $host = "localhost:3306";
         public $user = "root";
-        public $password = "";
+        public $password = "example";
         public $database = 'taskList';
         public $conn;
 
