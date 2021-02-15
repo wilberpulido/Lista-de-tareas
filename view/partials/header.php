@@ -30,30 +30,35 @@
 </div>
 <div id="menu-large">
     <ul class="navegbar-desktop">
-        <li >
-            <a href="<?php echo $whyUseUrl ?>">
-                Why this application?
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo $aboutMeUrl ?>">
-                About me
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo $contactUrl ?>">
-                Contact
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo $loginUrl ?>">
-                Login
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo $registerUrl ?>">
-                Register
-            </a>
-        </li>
+        <div>
+
+            <li >
+                <a href="<?php echo $whyUseUrl ?>">
+                    Why this application?
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo $aboutMeUrl ?>">
+                    About me
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo $contactUrl ?>">
+                    Contact
+                </a>
+            </li>
+        </div>
+        <div>
+            <li>
+                <a href="<?php echo $loginUrl ?>">
+                    Login
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo $registerUrl ?>">
+                    Register
+                </a>
+            </li>
+        </div>   
     </ul>
 </div>
