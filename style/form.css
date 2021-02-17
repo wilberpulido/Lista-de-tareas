@@ -218,15 +218,18 @@ outline-color: transparent;
 .formBoxTask{
     position: fixed;
     left: -100%;
-    top: 12vh;
+    top: 5%;
     width:80%;
-    height: 67vh;
+    height: 64%;
     color: white;
     background-color: rgb(18, 109, 245);
     border: 2px solid #011BEB;
     font-size: 3vh;
     transition: left 1s;
     z-index: 50;
+}
+.formBoxTask .btn-submit button{
+    padding: 1vh 3vw;
 }
 .formBoxTask form:first-child{
     height: 100%;
@@ -264,13 +267,12 @@ font-weight: 500;
         width: 50%;
     }
     .formBoxTask{
-        top: 15vh;
-        width:70%;
-        height: 60vh;
+        top: 10%;
+        height: 59%;
         padding: 4vh 0;
     }
     main .formBoxTask:focus-within{
-        left: 15%;
+        left: 10%;
     }
     .formBoxTask div{
         display: grid;

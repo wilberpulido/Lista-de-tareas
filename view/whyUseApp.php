@@ -10,8 +10,8 @@
                 $whyUseUrl = "./whyUseApp.php";
                 $aboutMeUrl = "./aboutMe.php";
                 $contactUrl = "./contact.php";
-                $loginUrl = "./login.html";
-                $registerUrl = "./registration.html";
+                $loginUrl = "./login.php";
+                $registerUrl = "./registration.php";
                 include("partials/header.php");
             ?>
         </header>
