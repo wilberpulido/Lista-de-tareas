@@ -13,14 +13,14 @@ php ^7.4.3
 
 Once the repository has been cloned, inside the project and through the console type:
 
-````bash
+```bash
 docker-compose up
 ```
 ## Usage
 
 Type in console: 
 
-````bash
+```bash
 php -S localhost:4000
 ```
 On localhost:4000 you will see the page.
