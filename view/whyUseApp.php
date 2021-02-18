@@ -10,12 +10,12 @@
                 $whyUseUrl = "./whyUseApp.php";
                 $aboutMeUrl = "./aboutMe.php";
                 $contactUrl = "./contact.php";
-                $loginUrl = "./login.html";
-                $registerUrl = "./registration.html";
+                $loginUrl = "./login.php";
+                $registerUrl = "./registration.php";
                 include("partials/header.php");
             ?>
         </header>
-        <main>
+        <main id="mainWhyUseAppGrid">
             <div class="whyUseAppGrid">
                 <h2> Why use this application? </h2>
                 <div>

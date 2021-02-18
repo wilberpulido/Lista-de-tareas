@@ -38,8 +38,8 @@ if (empty($user)) {
             $whyUseUrl ="view/whyUseApp.php" ;
             $aboutMeUrl = "view/aboutMe.php";
             $contactUrl = "view/contact.php";
-            $loginUrl = "view/login.html";
-            $registerUrl = "view/registration.html";
+            $loginUrl = "view/login.php";
+            $registerUrl = "view/registration.php";
             include("view/partials/header.php");
             ?>
     </header>
@@ -63,7 +63,7 @@ if (empty($user)) {
 } else{
 ?>
 <div class= "contenedor">
-    <header class="headerProfile">
+    <header id="headerProfile">
         <div class="nav-profile">
             <div>
                 <h2> WELCOME <?php echo $user['firstName']." ".$user['lastName']."</h2>";?>
@@ -73,15 +73,7 @@ if (empty($user)) {
             </div>
         </div>
     </header>
-    <main>
-        <button class="btn btn-dark btn-add-task-form">
-            add task
-        </button>
-        <div class="formBoxTask">
-            <?php
-                include_once("view/partials/formTask.html");
-            ?>
-        </div>
+    <main id=mainProfile>
         <div class="tasksBox">
             <h2> THESE ARE THE TASKS </h2>
             <div class="tableBox">
@@ -189,6 +181,14 @@ if (empty($user)) {
             ?>
                 </tbody>
             </table>
+        </div>
+        <button class="btn btn-add-task-form">
+            ADD TASK
+        </button>
+        <div class="formBoxTask">
+            <?php
+                include_once("view/partials/formTask.html");
+            ?>
         </div>
         </div>
     </main>
