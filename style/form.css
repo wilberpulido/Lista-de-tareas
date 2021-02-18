@@ -10,50 +10,57 @@
 	transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.89);
 	border-radius:3px;
-	padding:30px 70px 40px 70px;
+	padding:4vh 4vw;
 }
 .text-login{
 	color:#fff;	
-    font-size: 1.8rem;
-    margin: -20px 0 60px 0;
+    font-size: 4vh;
+    margin: -4vh 0 60px 0;
     display: block;
     text-align: center;
 }
+.link-login-register{
+    position: relative;
+    margin-top: 2vh;
+}
 .text-center-welcome{
 	color:#fff;	
-    font-size: 14px;
+    font-size: 2vh;
     margin: -40px 0 40px 0;
     display: block;
     text-align: center;
 }
-.text-right{
-    display: block;
-    text-align: end;
-}
+
 .link{
-    color: #e74c3c;
+    color:rgb(18, 109, 245);
 }
 
 .login-title{
-    margin-top: 40px;
+    margin-top: 5vh;
 }
 
 .input-container{
 	position:relative;
-	margin-bottom:25px;
+    margin-bottom:5vh;
+    width: 15vw;
 }
 .input-container label{
 	position:absolute;
 	top:0px;
 	left:0px;
-	font-size:20px;
+	font-size:3vh;
 	color:#fff;	
     pointer-events: none;
 	transition: all 0.5s ease-in-out;
 }
+.input-container-register{
+position: relative;
+margin-bottom:5vh;
+width: 25vw;
+}
 .input-container-register label{
     color: white;
-    font-size: 20px;
+    font-size: 3vh;
 }
 .input-container input,
 .input-container-register input{ 
@@ -61,23 +68,22 @@
   border-bottom:1px solid #555;  
   background:transparent;
   width:100%;
-  padding:8px 0 5px 0;
-  font-size:16px;
+  font-size:3vh;
   color:#fff;
 }
 .input-container input:focus,
 .input-container-register input:focus{ 
  border:none;	
  outline:none;
- border-bottom:1px solid #e74c3c;	
+ border-bottom:1px solid rgb(18, 109, 245);	
 }
 .btn-form{
 	color:#fff;
-	background-color:#e74c3c;
+	background-color:rgb(18, 109, 245);
 	outline: none;
     border: 0;
     color: #fff;
-	padding:10px 20px;
+	padding:2vh 2vw;
 	text-transform:uppercase;
 	margin-top:50px;
 	border-radius:2px;
@@ -87,15 +93,15 @@
 
 .input-container input:focus ~ label,
 .input-container input:valid ~ label{
-	top:-12px;
-	font-size:12px;
+	top:-4vh;
+	font-size:3vh;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus{
 -webkit-text-fill-color: #fff;
-box-shadow: 0px 0px 0px 30px rgba(0, 0, 0, 0.9) inset;
+box-shadow: 0px 0px 0px 2vw rgba(0, 0, 0, 0.9) inset;
 outline: none;
 outline-style: none;
 outline-color: transparent;
@@ -103,8 +109,8 @@ outline-color: transparent;
 .formFormat{
 display: grid;
 grid-template-columns: 1fr;
-grid-template-rows: repeat(6, 60px) 30px 60px;
-grid-row-gap: 10px;
+grid-template-rows: repeat(6, 10vh) 5vh 10vh;
+grid-row-gap: 2vh;
 }
 .centalBox{
     display: flex;
@@ -113,16 +119,16 @@ grid-row-gap: 10px;
 }
 .centalBox button{
     color:#fff;
-	background-color:#e74c3c;
+	background-color:rgb(18, 109, 245);
 	outline: none;
     border: 0;
     color: #fff;
-	padding:10px 20px;
+	padding:2vh 1vw;
     text-transform:uppercase;
     border-radius:2px;
 	cursor:pointer;
 }
 .centalBox h2{
     color: white;
-    font-size: 1.5rem;
+    font-size: 5vh;
 }

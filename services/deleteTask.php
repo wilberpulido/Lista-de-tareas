@@ -13,5 +13,4 @@ if (mysqli_query($connect->conn,$deleteQuery)) {
     echo "Error: " . $deleteQuery . "<br>".$connect->conn->error;
 
 }
-
 ?>
