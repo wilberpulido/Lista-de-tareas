@@ -1,8 +1,8 @@
 <div id="menu-short">
     <button class="btn btn-menu"> Menu</button>
     <div class="other-submenu">
-        <button class="btn"> <a href="view/login.html"> Login </a> </button> 
-        <button class="btn"> <a href="view/registration.html"> Register </a></button>
+        <button class="btn"> <a href="<?php echo $loginUrl ?>"> Login </a> </button> 
+        <button class="btn"> <a href="<?php echo $registerUrl ?>"> Register </a></button>
     </div>
     <ul class="navegbar">
         <li >

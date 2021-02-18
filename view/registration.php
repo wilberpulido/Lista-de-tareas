@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/form.css">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="shortcut icon" href="../images/iconTask.icon"/>
-    <title>Registratation</title>
-</head>
+<?php 
+    include("partials/head.html");
+?>
 <body>
     <div class="contenedor">
     <div class="formBoxRegister">
@@ -40,7 +35,7 @@
                     <label>Mail</label>
                 </div>
                 <div class="link-login-register">
-                    <a href="./login.html" class="link">
+                    <a href="./login.php" class="link">
                         GO TO LOGIN
                     </a>
                 </div>

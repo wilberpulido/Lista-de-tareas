@@ -26,11 +26,10 @@ body {
 }
 .contenedor{
     position: relative;
-    width: 100vw;
-    max-width: 1300px;
+    width: 100%;
+    max-width: 1250px;
     height: 100vh;
     margin: 0 auto;
-    /* background-color: chartreuse; */
 }
 p {
     display: block;
@@ -320,7 +319,10 @@ footer{
     display: flex;
     justify-content: center;
 }
-.headerProfile{
+#mainProfile{
+height: 80%;
+}
+#headerProfile{
     position: fixed;
     height: 20%;
     top: 80%;
@@ -353,10 +355,16 @@ footer{
     color: white;
 }
 .btn-add-task-form{
-    position: fixed;
-    top:2%;
-    left: 5%;
+    position: relative;
+    display: block;
+    top:3%;
+    line-height: 1;
+    padding: 2vh .75rem;
+    margin: 0 auto;
     z-index: 40;
+    background-color: rgb(18, 109, 245);
+    font-weight: 700;
+    color: white;
 }
 main .btn-add-task-form:focus ~ .formBoxTask{
     left: 10%;
@@ -367,48 +375,50 @@ main .btn-add-task-form:focus{
 .tasksBox{
     position: relative;
     margin: 0 auto;
-    top:12vh;
+    top:5%;
     width: 90%;
-    height: 68vh;
+    height: 80%;
     z-index: 21;
-    overflow:hidden;
+}
+.tasksBox h2{
+    height: 10%;
 }
 .tasksBox .tableBox{
-    background-color: brown;
     overflow: auto;
-    height: 62vh;
+    height: 90%;
 }
 .tasksBox h2{
     font-size: 4vh;
     text-align: center;
 }
 #tableTask{
+    width: 100%;
     overflow:auto;
     table-layout: fixed;
-    width: 100%;
+    border-collapse: collapse;
 }
 #tableTask tr .taskTable{
     overflow: auto;
-}
-#tableTask,
-#tableTask td,
-#tableTask th{
-    border: 1px solid cornflowerblue;
-    height: 50px;
 }
 #tableTask th {
     text-align: center;
     background-color: rgb(18, 109, 245);
     color: white;
     padding: 5px;
+    border: 1px solid rgb(18, 109, 245);
+
 }
 #tableTask td {
     padding: 5px 10px;
     text-align: left;
+    border: 1px solid rgb(18, 109, 245);
+
 }
 #tableTask tr{
     position: relative;
     background-color: skyblue;
+    height: 45px;
+
 }
 #tableTask thead .theadSmall th{
     width: 60%;
@@ -566,7 +576,7 @@ main .btn-add-task-form:focus{
         font-size: 2vw;
     }
     main .btn-add-task-form:focus ~ .formBoxTask{
-        left: 15%;
+        left: 10%;
     }
 }
 @media only screen and (min-width: 480px){
@@ -691,8 +701,9 @@ main .btn-add-task-form:focus{
         font-size: 1.3rem;
     }
     main{
-        top: 10%;
+        position: relative;
         height: 85%;
+        background-color: blueviolet;
     }
     main .containerImagesHome{
         top: 0%;
@@ -719,9 +730,14 @@ main .btn-add-task-form:focus{
         top: 26%;
         font-size: 13px;
     }
+    #mainWhyUseAppGrid{
+        height: auto;
+        overflow: hidden;
+    }
     .whyUseAppGrid{
         width: 70%;
         row-gap: 40px;
+        background-color: chartreuse;
     }
     .whyUseAppGrid h2{
         font-size: 24px;
@@ -759,20 +775,23 @@ main .btn-add-task-form:focus{
     #contactPage section p{
         font-size: 1rem;
     }
-    .headerProfile{
-        height: 10vh;
-        top: 90vh;
+    /* #mainProfile{
+
+    } */
+    #headerProfile{
+        height: 10%;
+        top: 90%;
     }
     .nav-profile div a,
     .nav-profile div h2{
         font-size: 14px;
     }
     footer{
-        position: absolute;
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        top: 95%;
+        z-index: 40;
         height: 5%;
         width: 100%;
         background-color: rgba(0, 0, 0,0.9);

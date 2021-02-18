@@ -11,13 +11,13 @@
     background-color: rgba(0, 0, 0, 0.89);
     padding:5vh 6vw;
     width: 75%;
-    max-width: 350px;
+    max-width: 370px;
     height: 70%;
 }
 .formBoxRegister{
     padding: 20px 25px 30px 30px;
     width: 85%;
-    max-width: 340px;
+    max-width: 360px;
     height: 80%;
     max-height: 500px;
     background-color: rgba(0, 0, 0, 0.89);
@@ -48,6 +48,9 @@
 .formBoxLogin .form-container-login div{
 	position:relative;
     width: 100%;
+}
+.input-container {
+    top: 15px;
 }
 .input-container label{
     position:absolute;
@@ -147,7 +150,7 @@ width: 100%;
 }
 .input-container-register input:focus ~ label,
 .input-container-register input:valid ~ label{
-	top:-2vh;
+	top:-1vh;
 	font-size:2vh;
 }
 .link-login-register{
@@ -157,6 +160,7 @@ width: 100%;
 .link-login-register a{
     position: absolute;
     right: 0;
+    top: 30%;
     font-size: 12px;
     color: rgb(18, 109, 245);
 }
@@ -218,15 +222,18 @@ outline-color: transparent;
 .formBoxTask{
     position: fixed;
     left: -100%;
-    top: 12vh;
+    top: 5%;
     width:80%;
-    height: 67vh;
+    height: 64%;
     color: white;
     background-color: rgb(18, 109, 245);
     border: 2px solid #011BEB;
     font-size: 3vh;
     transition: left 1s;
     z-index: 50;
+}
+.formBoxTask .btn-submit button{
+    padding: 1vh 3vw;
 }
 .formBoxTask form:first-child{
     height: 100%;
@@ -264,13 +271,12 @@ font-weight: 500;
         width: 50%;
     }
     .formBoxTask{
-        top: 15vh;
-        width:70%;
-        height: 60vh;
+        top: 10%;
+        height: 59%;
         padding: 4vh 0;
     }
     main .formBoxTask:focus-within{
-        left: 15%;
+        left: 10%;
     }
     .formBoxTask div{
         display: grid;
