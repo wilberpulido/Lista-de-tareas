@@ -15,7 +15,7 @@
                 include("partials/header.php");
             ?>
         </header>
-        <main>
+        <main id="mainWhyUseAppGrid">
             <div class="whyUseAppGrid">
                 <h2> Why use this application? </h2>
                 <div>

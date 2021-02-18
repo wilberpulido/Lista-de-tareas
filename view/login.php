@@ -4,8 +4,7 @@
     include("partials/head.html");
 ?>
 <body>
-    <div class="container-fluid">
-    <main>
+    <div class="contenedor">
     <div class="formBoxLogin">
         <button type="button" class="btn-return-home">
             <a class="btn" href="../">Return home page</a>
@@ -25,7 +24,7 @@
                     <label>Password</label>
                 </div>
                 <div>
-                    <a class="link" href="./registration.html">
+                    <a class="link" href="./registration.php">
                         Free registration! 
                     </a>
                 </div>
@@ -35,7 +34,7 @@
             </div>
         </form>
     </div>
-    </main>
+
     </div>
 </body>
 </html>

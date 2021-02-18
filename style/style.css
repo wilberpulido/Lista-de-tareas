@@ -26,11 +26,10 @@ body {
 }
 .contenedor{
     position: relative;
-    width: 100vw;
-    max-width: 1300px;
+    width: 100%;
+    max-width: 1250px;
     height: 100vh;
     margin: 0 auto;
-    /* background-color: chartreuse; */
 }
 p {
     display: block;
@@ -702,8 +701,9 @@ main .btn-add-task-form:focus{
         font-size: 1.3rem;
     }
     main{
-        top: 10%;
+        position: relative;
         height: 85%;
+        background-color: blueviolet;
     }
     main .containerImagesHome{
         top: 0%;
@@ -730,9 +730,14 @@ main .btn-add-task-form:focus{
         top: 26%;
         font-size: 13px;
     }
+    #mainWhyUseAppGrid{
+        height: auto;
+        overflow: hidden;
+    }
     .whyUseAppGrid{
         width: 70%;
         row-gap: 40px;
+        background-color: chartreuse;
     }
     .whyUseAppGrid h2{
         font-size: 24px;
@@ -782,11 +787,11 @@ main .btn-add-task-form:focus{
         font-size: 14px;
     }
     footer{
-        position: absolute;
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        top: 95%;
+        z-index: 40;
         height: 5%;
         width: 100%;
         background-color: rgba(0, 0, 0,0.9);

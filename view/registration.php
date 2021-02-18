@@ -35,7 +35,7 @@
                     <label>Mail</label>
                 </div>
                 <div class="link-login-register">
-                    <a href="./login.html" class="link">
+                    <a href="./login.php" class="link">
                         GO TO LOGIN
                     </a>
                 </div>
