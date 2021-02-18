@@ -28,14 +28,14 @@ On localhost:8082 you will see "adminer", Database engine: mySQL,server: db, use
 On localhost:3306 you will be listening to mySQL image.
 
 
-##Instrucciones en español
+## Instrucciones en español
 
 
 # Lista-de-tareas-APP
 
 Lista-de-tareas-APP es una aplicación sencilla para agregar, editar y eliminar tareas con el objetivo de organizarte.
 
-##Requirements
+## Requirements
 
 Docker ^20.10.3
 php ^7.4.3
