@@ -27,9 +27,9 @@ On localhost:4000 you will see the page.
 On localhost:8082 you will see "adminer", Database engine: mySQL,server: db, user: root, password: example: taskList.
 On localhost:3306 you will be listening to mySQL image.
 
-Translated with www.DeepL.com/Translator (free version)
 
-Instrucciones en español
+##Instrucciones en español
+
 
 # Lista-de-tareas-APP
 
