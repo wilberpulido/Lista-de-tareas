@@ -144,12 +144,12 @@ width: 100%;
  border-bottom:1px solid #011BEB;
 }
 .input-container input:focus ~ label,
-.input-container input:valid ~ label{
+.input-container input:-webkit-autofill ~ label{
 	top:0;
 	font-size:2vh;
 }
 .input-container-register input:focus ~ label,
-.input-container-register input:valid ~ label{
+.input-container-register input:-webkit-autofill ~ label{
 	top:-1vh;
 	font-size:2vh;
 }
