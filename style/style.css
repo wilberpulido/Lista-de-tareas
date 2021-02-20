@@ -26,10 +26,11 @@ body {
 }
 .contenedor{
     position: relative;
-    width: 100%;
+    width: 100vw;
     max-width: 1250px;
     height: 100vh;
     margin: 0 auto;
+    background-color: greenyellow;
 }
 p {
     display: block;
@@ -43,7 +44,7 @@ p {
 main{
     position: absolute;
     width: 100%;
-    height: 90%;
+    height: 90vh;
     top: 0;
     bottom: 0;
     overflow: auto;
@@ -133,7 +134,7 @@ a:link, a:visited, a:active {
 }
 .other-submenu button,
 .btn-menu{
-    background-color: rgba(0, 0, 0, 0.89);
+    background-color:rgb(9, 56, 128);
     padding: 1vh 2vw;
     font-size: 4vw;
 }
@@ -184,7 +185,7 @@ header div .btn-menu:focus ~ .other-submenu{
     padding: 0;
     z-index: 50;
     border: 0.5px solid gray;
-    background-color: rgb(31, 27, 27);
+    background-color:rgb(9, 56, 128);
 }
 header li a{
     color: white;
@@ -320,20 +321,37 @@ footer{
     justify-content: center;
 }
 #mainProfile{
-height: 80%;
+height: 100%;
+}
+.menuProfile{
+    position: absolute;
+    bottom: 0%;
+    left: 40%;
+    width: 20%;
+    background-color:rgb(9, 56, 128);
+    padding-top: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    z-index: 21;
+    color:white;
+    transition: all 0.5s ease-out;
+    border-bottom: none;
 }
 #headerProfile{
     position: fixed;
     height: 20%;
-    top: 80%;
+    top: 100%;
     width: 100%;
     left: 0;
     right: 0;
-    z-index: 20;
+    z-index: 21;
+    transition: all 0.5s ease-out;
 }
 .nav-profile{
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color:rgb(9, 56, 128);
     width: 100%;
     height: 100%;
     display: flex;
@@ -354,10 +372,16 @@ height: 80%;
     text-align: center;
     color: white;
 }
+.menuProfile:focus{
+    bottom: 20%;
+}
+.menuProfile:focus ~ #headerProfile{
+    top: 80%;
+} 
 .btn-add-task-form{
     position: relative;
     display: block;
-    top:3%;
+    top:2px;
     line-height: 1;
     padding: 2vh .75rem;
     margin: 0 auto;
@@ -376,7 +400,7 @@ main .btn-add-task-form:focus{
     position: relative;
     margin: 0 auto;
     top:5%;
-    width: 90%;
+    width: 80%;
     height: 80%;
     z-index: 21;
 }
@@ -388,7 +412,7 @@ main .btn-add-task-form:focus{
     height: 90%;
 }
 .tasksBox h2{
-    font-size: 4vh;
+    font-size: 3vh;
     text-align: center;
 }
 #tableTask{
@@ -464,12 +488,12 @@ main .btn-add-task-form:focus{
     top: -50vh;
     right:0vw;
     border-radius: 5px;
-    background-color: rgb(18, 109, 245);
     grid-template-columns: 70% 30%;
     row-gap: 2vh;
     z-index: 35;
     transition: all 0s;
     transition-delay: 0.1s;
+    background-color: rgb(18, 109, 245);
     border: 1px solid #011BEB;
 }
 .detailsBox p,
@@ -575,13 +599,17 @@ main .btn-add-task-form:focus{
     #contactPage section p{
         font-size: 2vw;
     }
+    .menuProfile{
+        left: auto;
+        right: 5%;
+    }
     main .btn-add-task-form:focus ~ .formBoxTask{
         left: 10%;
     }
 }
 @media only screen and (min-width: 480px){
     main{
-        height: 90%;
+        height: 90vh;
     }
     main .containerImagesHome .titleWithoutLogin{
         top:45%;
@@ -667,14 +695,14 @@ main .btn-add-task-form:focus{
     header{
         position: relative;
         top: 0;
-        height: 10%;
+        height: 10vh;
     }
     #menu-short{
         display: none;
     }
     #menu-large{
         display: block;
-        background-color:rgba(0, 0, 0, 0.9);
+        background-color:rgb(9, 56, 128);
         height: 100%;
         width: 100%;
     }
@@ -702,8 +730,7 @@ main .btn-add-task-form:focus{
     }
     main{
         position: relative;
-        height: 85%;
-        background-color: blueviolet;
+        height: 85vh;
     }
     main .containerImagesHome{
         top: 0%;
@@ -775,9 +802,9 @@ main .btn-add-task-form:focus{
     #contactPage section p{
         font-size: 1rem;
     }
-    /* #mainProfile{
-
-    } */
+    #mainProfile{
+    background-color: burlywood;
+    }
     #headerProfile{
         height: 10%;
         top: 90%;
@@ -792,9 +819,9 @@ main .btn-add-task-form:focus{
         justify-content: center;
         align-items: center;
         z-index: 40;
-        height: 5%;
+        height: 5vh;
         width: 100%;
-        background-color: rgba(0, 0, 0,0.9);
+        background-color:rgb(9, 56, 128);
     }
     footer div{
         color: white;

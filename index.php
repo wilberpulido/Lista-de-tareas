@@ -62,6 +62,9 @@ if (empty($user)) {
 } else{
 ?>
 <div class= "contenedor">
+    <button class="menuProfile" >
+        <i class="fas fa-bars fa-1x"></i>
+    </button>
     <header id="headerProfile">
         <div class="nav-profile">
             <div>
