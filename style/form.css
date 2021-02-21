@@ -164,6 +164,10 @@ width: 100%;
     font-size: 12px;
     color: rgb(18, 109, 245);
 }
+.formBoxLogin a:visited,
+.formBoxRegister:visited{
+    color:rgb(196, 14, 196);
+}
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus{
@@ -235,14 +239,17 @@ outline-color: transparent;
     z-index: 50;
 }
 .formBoxEditTask{
+    position: relative;
     top: 50%;
-    height: 72%;
+    height: 70%;
     width: 70%;
     color: white;
     background-color: rgb(18, 109, 245);
     padding: 2vh 2vw;
+    font-size: 3vh;
 }
-.formBoxTask .btn-submit button{
+.formBoxTask .btn-submit button,
+.formBoxEditTask .btn-submit button{
     padding: 1vh 3vw;
 }
 .formBoxTask form,
@@ -252,7 +259,7 @@ outline-color: transparent;
 .formBoxTask form > div,
 .formBoxEditTask form > div{
     height: 100%;
-    border: 5px solid crimson;
+    padding: 2vh 10%;
 }
 main .formBoxTask:focus-within{
     left: 10%;
@@ -260,24 +267,23 @@ main .formBoxTask:focus-within{
 .input-container-addTask{
     width: 100%;
     height: 22.5%;
-    padding: 1vh 10%;
 }
 .input-container-addTask:nth-child(5){
     height: 10%;
 }
 .input-container-addTask label{
 font-size: 3vh;
-font-weight: 500;
+font-weight: 700;
 }
 .input-container-addTask select,
 .input-container-addTask input,
 .input-container-addTask textarea{
     width: 100%;
     height: 35%;
-    font-size: 2vh;
+    font-size: 2.5vh;
 }
 .input-container-addTask textarea{
-    height: 60%;
+    height: 50%;
 }
 @media only screen and (orientation: landscape) and (max-width: 768px) {
     #contactPage .btn-submit button{
@@ -286,16 +292,6 @@ font-weight: 500;
     }
     .formBoxLogin{
         width: 50%;
-    }
-    .formBoxTask{
-        /* top: 10%; */
-    }
-    main .formBoxTask:focus-within{
-        left: 10%;
-    }
-    .input-container-addTask label{
-        font-size: 3vh;
-        font-weight: 700;
     }
     /* .formBoxTask div{
         display: grid;
@@ -324,19 +320,19 @@ font-weight: 500;
         grid-column-start: 1;
         grid-column-end: 3;
     } */
-    .formBoxEditTask{
+    /* .formBoxEditTask{
         width: 60%;
         top: 50%;
-    }
-    .formBoxEditTask div .input-container-addTask{
+    } */
+    /* .formBoxEditTask div .input-container-addTask{
         padding: 0;
         height: 16%;
-    }
-    .formBoxEditTask .input-container-addTask textarea,
+    } */
+    /* .formBoxEditTask .input-container-addTask textarea,
     .formBoxEditTask .input-container-addTask select,
     .formBoxEditTask .input-container-addTask input{
         height: 25px;
-    }
+    } */
 }
 @media only screen and (min-width: 480px){
     .input-container-register label{
@@ -391,10 +387,10 @@ font-weight: 500;
         padding: 1vh 1vw;
         border: 0.5px solid crimson;
     }
-    .formBoxTask div .input-container-addTask button{
+    /* .formBoxTask div .input-container-addTask button{
         font-size: 3vh;
         padding: 1vh 2vw;
-    }
+    } */
     main .formBoxTask:focus-within{
         left: 1%;
     }

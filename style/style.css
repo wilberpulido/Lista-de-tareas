@@ -5,7 +5,7 @@
     
 }
 *::-webkit-scrollbar {
-    width: 0.5vw;
+    width: 3px;
     height: 10px;
 }
 
@@ -30,7 +30,6 @@ body {
     max-width: 1250px;
     height: 100vh;
     margin: 0 auto;
-    background-color: greenyellow;
 }
 p {
     display: block;
@@ -243,7 +242,7 @@ footer{
 }
 .aboutMe p{
     font-size: 0.8rem;
-    text-align: justify;
+    text-align: center;
     margin: 0 auto;
     max-width: 560px;
 }
@@ -291,7 +290,7 @@ footer{
 }
 #contactPage section p{
     font-size: 2vh;
-    text-align: justify;
+    text-align: center;
 }
 #contactInf{
     width: 90%;
@@ -419,41 +418,54 @@ main .btn-add-task-form:focus{
     width: 100%;
     overflow:auto;
     table-layout: fixed;
-    border-collapse: collapse;
+    border-spacing: 0px;
 }
 #tableTask tr .taskTable{
     overflow: auto;
 }
-#tableTask th {
-    text-align: center;
-    background-color: rgb(18, 109, 245);
-    color: white;
-    padding: 5px;
-    border: 1px solid rgb(18, 109, 245);
-
-}
-#tableTask td {
-    padding: 5px 10px;
-    text-align: left;
-    border: 1px solid rgb(18, 109, 245);
-
-}
 #tableTask tr{
     position: relative;
-    background-color: skyblue;
-    height: 45px;
-
+    height: 50px;
+    display: flex;
+}
+#tableTask .theadLarge th {
+    background-color: rgb(18, 109, 245);
+    color: white;
+    border: 0.01px solid #283fec;
+}
+#tableTask .theadSmall th {
+    background-color: rgb(18, 109, 245);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tableTask td {
+    position: relative;
+    height: 50px;
+    padding: 5px 10px;
+    text-align: left;
+    border: 0.01px solid #283fec;
+    background-color: skyblue
+}
+#tableTask .tbodySmall td:nth-child(1) {
+width: 70%;
+}
+#tableTask .tbodySmall td:nth-child(2) {
+    width: 30%;
 }
 #tableTask thead .theadSmall th{
-    width: 60%;
+    width: 70%;
 }
 .btn-edit,
 .btn-delete,
 .btn-details{
     display: block;
     color: white;
-    margin: 0 auto;
     background-color:rgb(18, 109, 245);
+    font-size: 3.5vw;
+    /* padding: 1vh 2vw; */
+    font-weight: 700;
 }
 #tableTask tr .btn-delete:active{
     background-color: rgb(248, 56, 38);
@@ -481,37 +493,63 @@ main .btn-add-task-form:focus{
 }
 .detailsBox{
     display: grid;
-    visibility: hidden;
     position: absolute;
-    padding: 5px;
-    width: 89vw;
-    top: -50vh;
+    display: none;
+    padding: 35px 5px 15px 5px;
+    width: 79vw;
+    top: 100%;
     right:0vw;
-    border-radius: 5px;
-    grid-template-columns: 70% 30%;
-    row-gap: 2vh;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: repeat(2, 80px) 30px 50px;
+    background-color: rgb(15, 97, 220,0.9);
+    grid-gap: 0px 10%;
     z-index: 35;
-    transition: all 0s;
-    transition-delay: 0.1s;
-    background-color: rgb(18, 109, 245);
-    border: 1px solid #011BEB;
+    border-radius: 5px;
+    border: 1px solid #283fec;
+}
+.detailsBox div:nth-child(1){
+position: absolute;
+background-color: white;
+top: 5%;
+right: 7%;
+width: 25px;
+height: 20px;
+}
+.fa-window-close{
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+    color:#011BEB;
+}
+.btn-details{
+    margin: 0 auto;
+}
+.detailsBox div:nth-child(2),
+.detailsBox div:nth-child(5){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.detailsBox div:nth-child(5){
+    display: flex;
+    justify-content: center;
+}
+.detailsBox div:nth-child(6){
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.detailsBox div:nth-child(7){
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .detailsBox p,
 .detailsBox h4{
     margin: 1vh 5vw;
 }
-.detailsBox .btn-centered{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.detailsBox .btn-centered button{
+.detailsBox button{
     background-color: #011BEB;
     width: 75px;
-}
-#tableTask tbody .tbodySmall td .btn-details:focus + .detailsBox{
-    visibility: visible;
-    top: 8vh;
 }
 @media only screen and (orientation: landscape) and (max-width: 767px) {
     main .containerImagesHome .titleWithoutLogin{
@@ -686,9 +724,18 @@ main .btn-add-task-form:focus{
     .tasksBox{
         width: 80%;
     }
+    .theadLarge th:nth-child(5),
+    .theadLarge th:nth-child(6){
+        width: 60px;
+        background-color: transparent !important;
+        border: transparent !important;
+    }
     .btn-edit,
     .btn-delete{
-        padding: 1vh 1vw;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media only screen and (min-width: 769px){
@@ -849,8 +896,6 @@ main .btn-add-task-form:focus{
     .btn-add-task-form{
         display: none;
     }
-    .btn-edit,
-    .btn-delete,
     .btn-details{
         padding: 0.5vh 1vw;
     }

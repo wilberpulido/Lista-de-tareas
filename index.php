@@ -86,6 +86,8 @@ if (empty($user)) {
                         <th><h4>State</h4></th>
                         <th><h4>Priority</h4></th>
                         <th><h4>Deadline</h4></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     <tr class="theadSmall">
                         <th><h4>Task</h4></th>
@@ -97,6 +99,16 @@ if (empty($user)) {
                 $urlDelete = "services/deleteTask.php?idTask=".$row['idTask'];
                 $urlEdit = "view/editTaskForm.php?idTask=".$row['idTask'];
             ?>
+                <script>
+                function showDetails(id) {
+                    document.getElementById("idTask"+id).style.marginBottom = "290px";
+                    document.getElementById(id).style.display = "grid";
+                }
+                function hideDetails(id) {
+                    document.getElementById("idTask"+id).style.marginBottom = "0px";
+                    document.getElementById(id).style.display = "none";
+                }
+                </script>
                     <tr class="tbodyLarge">
                         <td class="taskTable">
                             <p>
@@ -120,45 +132,39 @@ if (empty($user)) {
                         </td>
                         <td>
                             <button class="btn btn-edit">
-                                <a href="<?php echo $urlEdit?>"> Edit </a>
+                                <a href="<?php echo $urlEdit?>"><i class="far fa-edit"></i></a>
                             </button>
                         </td>
                         <td>
                             <button class="btn btn-delete">
-                                <a href="<?php echo $urlDelete?>">Delete</a>
+                                <a href="<?php echo $urlDelete?>"><i class="fas fa-trash-alt"></i></a>
                             </button>
                         </td>
                     </tr>
-                    <tr class="tbodySmall">
+                    <tr id="<?php echo "idTask".$row["idTask"]?>" class="tbodySmall">
                         <td class="taskTable">
                             <?php echo $row['task']?>
                         </td>
                         <td>
-                            <button class="btn btn-details">
+                            <button class="btn btn-details" onclick="showDetails(<?php echo $row["idTask"]?>)">
                                 Details
                             </button>
-                            <div class="detailsBox">
+                            <div id="<?php echo $row["idTask"]?>" class="detailsBox">
+                                <div 
+                                onclick="hideDetails(<?php echo $row["idTask"]?>)">
+                                    <i class="fas fa-window-close fa-2x"></i>
+                                </div>
                                 <div>
                                     <h4>Task:</h4>
                                     <p class="taskTable">
                                         <?php echo $row['task']?>
                                     </p>
                                 </div>
-                                <div class="btn-centered">
-                                    <button class="btn btn-edit">
-                                        <a href="<?php echo $urlEdit?>"> Edit </a>
-                                    </button>
-                                </div>
                                 <div>
                                     <h4>State:</h4> 
                                     <p>
                                         <?php echo $row['state']?>
                                     </p>
-                                </div>
-                                <div class = "btn-centered">
-                                    <button class="btn btn-delete">
-                                        <a href="<?php echo $urlDelete?>">Delete</a>
-                                    </button>
                                 </div>
                                 <div>
                                     <h4>Priority: </h4>
@@ -167,20 +173,27 @@ if (empty($user)) {
                                     </p>
                                 </div>
                                 <div>
-                                    <!-- avoid -->
-                                </div>
-                                <div>
                                     <h4> Deadline:</h4> 
                                     <p>
                                         <?php echo $row['deadline']?>
                                     </p>
                                 </div>
+                                <div>
+                                    <button class="btn btn-edit">
+                                        <a href="<?php echo $urlEdit?>"><i class="far fa-edit"></i></a>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button class="btn btn-delete">
+                                        <a href="<?php echo $urlDelete?>"><i class="fas fa-trash-alt"></i></a>
+                                    </button>
+                                </div>
                             </div>
                         </td>
                     </tr>
-            <?php
-            }
-            ?>
+                <?php
+                }
+                ?>
                 </tbody>
             </table>
         </div>
