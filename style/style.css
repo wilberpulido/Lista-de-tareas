@@ -380,7 +380,7 @@ height: 100%;
 .btn-add-task-form{
     position: relative;
     display: block;
-    top:2px;
+    top:6%;
     line-height: 1;
     padding: 2vh .75rem;
     margin: 0 auto;
@@ -443,16 +443,21 @@ main .btn-add-task-form:focus{
 #tableTask td {
     position: relative;
     height: 50px;
-    padding: 5px 10px;
     text-align: left;
     border: 0.01px solid #283fec;
-    background-color: skyblue
+    background-color: skyblue;
+    text-align: center;
 }
+
 #tableTask .tbodySmall td:nth-child(1) {
 width: 70%;
+padding-top: 10px;
 }
 #tableTask .tbodySmall td:nth-child(2) {
     width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #tableTask thead .theadSmall th{
     width: 70%;
@@ -464,7 +469,6 @@ width: 70%;
     color: white;
     background-color:rgb(18, 109, 245);
     font-size: 3.5vw;
-    /* padding: 1vh 2vw; */
     font-weight: 700;
 }
 #tableTask tr .btn-delete:active{
@@ -520,9 +524,6 @@ height: 20px;
     bottom: 5px;
     right: 5px;
     color:#011BEB;
-}
-.btn-details{
-    margin: 0 auto;
 }
 .detailsBox div:nth-child(2),
 .detailsBox div:nth-child(5){
@@ -715,11 +716,11 @@ height: 20px;
         display: none;
     }
     #tableTask thead .theadLarge h4{
-        font-size: 3vw;
+        font-size: 14px;
     }
     #tableTask tbody .tbodyLarge td,
     #tableTask tbody .tbodyLarge td button a{
-        font-size: 2.5vw;
+        font-size: 12px;
     }
     .tasksBox{
         width: 80%;
@@ -732,8 +733,10 @@ height: 20px;
     }
     .btn-edit,
     .btn-delete{
-        padding: 5px 10px;
+        position: relative;
         display: flex;
+        left: 10px;
+        width: 40px;
         justify-content: center;
         align-items: center;
     }
@@ -811,7 +814,6 @@ height: 20px;
     .whyUseAppGrid{
         width: 70%;
         row-gap: 40px;
-        background-color: chartreuse;
     }
     .whyUseAppGrid h2{
         font-size: 24px;
@@ -849,9 +851,6 @@ height: 20px;
     #contactPage section p{
         font-size: 1rem;
     }
-    #mainProfile{
-    background-color: burlywood;
-    }
     #headerProfile{
         height: 10%;
         top: 90%;
@@ -876,22 +875,21 @@ height: 20px;
         height: max-content;
     }
     #tableTask thead .theadLarge h4{
-        font-size: 2vw;
+        font-size: 16px;
     }
     #tableTask tbody .tbodyLarge td,
     #tableTask tbody .tbodyLarge td button a{
-        font-size: 1.5vw;
+        font-size: 14px;
     }
     .tasksBox{
-        top: 5vh;
-        background-color: aquamarine;
+        top: 5%;
         width: 70%;
         height: 85vh;
         margin-right: 2%;
         float: right;
     }
     .tasksBox .tableBox{
-        height: 79vh;
+        height: 85%;
     }
     .btn-add-task-form{
         display: none;

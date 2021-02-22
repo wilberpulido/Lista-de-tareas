@@ -46,13 +46,13 @@ if (empty($user)) {
         <section class="containerImagesHome">
             <div class="titleWithoutLogin">
                 <div>
-                <h2 >WELCOME</h2>
-                <h4>Organize your days in a few steps</h4>
+                    <h2 >WELCOME</h2>
+                    <h4>Organize your days in a few steps</h4>
+                </div>
             </div>
-        </div>
-        <figure>
-        </figure>
-    </section>
+            <figure>
+            </figure>
+        </section>
     </main>
     <?php
         include("view/partials/footer.html");
@@ -197,6 +197,7 @@ if (empty($user)) {
                 </tbody>
             </table>
         </div>
+        </div>
         <button class="btn btn-add-task-form">
             ADD TASK
         </button>
@@ -205,13 +206,7 @@ if (empty($user)) {
                 include_once("view/partials/formTask.html");
             ?>
         </div>
-        </div>
     </main>
-    <!-- <footer>
-        <div>
-            Holas
-        </div>
-    </footer> -->
 <?php
 }
 ?>

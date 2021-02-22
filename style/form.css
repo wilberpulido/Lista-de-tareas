@@ -293,46 +293,6 @@ font-weight: 700;
     .formBoxLogin{
         width: 50%;
     }
-    /* .formBoxTask div{
-        display: grid;
-        grid-template-columns: 46% 46%;
-        grid-template-rows: repeat(2,40%) 20%;
-        border: 2px solid red;
-        column-gap: 8%;
-        height: 100%;
-    }
-    .formBoxTask div .input-container-addTask{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 2vh 3vw;
-    }
-    .formBoxTask .input-container-addTask label,
-    .formBoxTask div .input-container-addTask button{
-        font-size: 3vh;
-    }
-    .formBoxTask .input-container-addTask textarea,
-    .formBoxTask .input-container-addTask select,
-    .formBoxTask .input-container-addTask input{
-        height: 40%;
-    }
-    .formBoxTask div:nth-child(5){
-        grid-column-start: 1;
-        grid-column-end: 3;
-    } */
-    /* .formBoxEditTask{
-        width: 60%;
-        top: 50%;
-    } */
-    /* .formBoxEditTask div .input-container-addTask{
-        padding: 0;
-        height: 16%;
-    } */
-    /* .formBoxEditTask .input-container-addTask textarea,
-    .formBoxEditTask .input-container-addTask select,
-    .formBoxEditTask .input-container-addTask input{
-        height: 25px;
-    } */
 }
 @media only screen and (min-width: 480px){
     .input-container-register label{
@@ -377,21 +337,28 @@ font-weight: 700;
         padding:6px 21px;
     }
     .formBoxTask{
-        width:26%;
-        height: 68vh;
-        left: 1%;
-        top: 5vh;
-        font-size: 3vh;
+        position: relative;
+        width:27%;
+        height: 72%;
+        max-height: 420px;
+        left: 0;
+        top: 13.5%;
     }
-    .formBoxTask div{
+    .formBoxTask .input-container-addTask label,
+    .formBoxTask .input-container-addTask input{
+        font-size: 14px;
+    }
+    .formBoxTask .input-container-addTask button{
+        padding: 5px 15px;
+    }
+    /* .formBoxTask div{
         padding: 1vh 1vw;
-        border: 0.5px solid crimson;
-    }
+    } */
     /* .formBoxTask div .input-container-addTask button{
         font-size: 3vh;
         padding: 1vh 2vw;
     } */
     main .formBoxTask:focus-within{
-        left: 1%;
+        left: 0;
     }
 }
