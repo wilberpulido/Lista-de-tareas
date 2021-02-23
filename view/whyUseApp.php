@@ -15,7 +15,7 @@
                 include("partials/header.php");
             ?>
         </header>
-        <main id="mainWhyUseAppGrid">
+        <main class="mainAdapted">
             <div class="whyUseAppGrid">
                 <h2> Why use this application? </h2>
                 <div>
@@ -41,7 +41,6 @@
         <?php
         include("partials/footer.html");
         ?>
-</div>
-    
+    </div>
 </body>
 </html>

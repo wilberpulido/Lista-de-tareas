@@ -404,7 +404,7 @@ main .btn-add-task-form:focus{
     z-index: 21;
 }
 .tasksBox h2{
-    height: 10%;
+    height: 50px;
 }
 .tasksBox .tableBox{
     overflow: auto;
@@ -742,12 +742,16 @@ height: 20px;
     }
 }
 @media only screen and (min-width: 769px){
-    header{
+    header,
+    #headerProfile{
         position: relative;
+        height: 10%;
         top: 0;
-        height: 10vh;
     }
     #menu-short{
+        display: none;
+    }
+    .menuProfile{
         display: none;
     }
     #menu-large{
@@ -780,7 +784,7 @@ height: 20px;
     }
     main{
         position: relative;
-        height: 85vh;
+        height: 85%;
     }
     main .containerImagesHome{
         top: 0%;
@@ -807,7 +811,7 @@ height: 20px;
         top: 26%;
         font-size: 13px;
     }
-    #mainWhyUseAppGrid{
+    .mainAdapted{
         height: auto;
         overflow: hidden;
     }
@@ -851,9 +855,10 @@ height: 20px;
     #contactPage section p{
         font-size: 1rem;
     }
-    #headerProfile{
-        height: 10%;
-        top: 90%;
+    #mainProfile{
+        position: relative;
+        height: 85%;
+        top:0%;
     }
     .nav-profile div a,
     .nav-profile div h2{
@@ -865,7 +870,8 @@ height: 20px;
         justify-content: center;
         align-items: center;
         z-index: 40;
-        height: 5vh;
+        top: 0%;
+        height: 5%;
         width: 100%;
         background-color:rgb(9, 56, 128);
     }
@@ -882,11 +888,15 @@ height: 20px;
         font-size: 14px;
     }
     .tasksBox{
-        top: 5%;
+        top: 2%;
         width: 70%;
-        height: 85vh;
+        height: 97%;
         margin-right: 2%;
         float: right;
+    }
+    .tasksBox h2{
+        padding-top: 14px;
+        font-size: 18px;
     }
     .tasksBox .tableBox{
         height: 85%;

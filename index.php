@@ -207,6 +207,9 @@ if (empty($user)) {
             ?>
         </div>
     </main>
+    <?php
+        include("view/partials/footer.html");
+    ?>
 <?php
 }
 ?>

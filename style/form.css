@@ -341,8 +341,10 @@ font-weight: 700;
         width:27%;
         height: 72%;
         max-height: 420px;
-        left: 0;
-        top: 13.5%;
+        margin-top: 50px;
+        left: 0.5%;
+        top: 2%;
+        font-size: 14px;
     }
     .formBoxTask .input-container-addTask label,
     .formBoxTask .input-container-addTask input{
@@ -350,6 +352,14 @@ font-weight: 700;
     }
     .formBoxTask .input-container-addTask button{
         padding: 5px 15px;
+    }
+    .formBoxTask form > div,
+    .formBoxEditTask form > div{
+    height: 100%;
+    padding: 10px 35px;
+    }
+    .formBoxTask .btn-submit button{
+        font-size: 18px;
     }
     /* .formBoxTask div{
         padding: 1vh 1vw;
