@@ -4,7 +4,7 @@
     include("partials/head.html");
 ?>
 <body>
-    <div class="contenedor">
+    <div class="contenedorAdapted">
         <header>
             <?php 
                 $whyUseUrl = "./whyUseApp.php";
