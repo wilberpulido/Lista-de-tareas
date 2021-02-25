@@ -127,7 +127,7 @@ a:active {
 }
 .other-submenu {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 35%;
   right: 5vw;
 }
@@ -359,19 +359,22 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   z-index: 20;
 }
-.nav-profile div {
-  width: 35vw;
+.nav-profile div:nth-child(1) {
+  width: 40%;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+.nav-profile div:nth-child(2) {
+  width: 30%;
+  text-align: center;
   overflow-wrap: break-word;
 }
 .nav-profile div a,
 .nav-profile div h2 {
   width: 100%;
-  font-size: 12px;
-  margin: 0 5vw;
-  text-align: center;
+  font-size: 10px;
   color: white;
 }
 .menuProfile:focus {
@@ -384,12 +387,12 @@ footer {
   position: relative;
   display: block;
   line-height: 1;
-  padding: 2vh 0.75rem;
-  margin: 3% auto 0 auto;
+  padding: 0.5rem 0.75rem;
+  margin: 2% auto;
   z-index: 40;
   background-color: rgb(18, 109, 245);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 2vh;
   color: white;
 }
 main .btn-add-task-form:focus ~ .formBoxTask {
@@ -400,20 +403,19 @@ main .btn-add-task-form:focus {
 }
 .tasksBox {
   position: relative;
-  margin: 5% auto 0 auto;
+  margin: 20px auto 0 auto;
   width: 80%;
   height: 80%;
   z-index: 21;
-}
-.tasksBox h2 {
-  height: 50px;
 }
 .tasksBox .tableBox {
   overflow: auto;
   height: 90%;
 }
 .tasksBox h2 {
-  font-size: 3vh;
+  height: 10%;
+  font-size: 2.5vh;
+  padding-top: 5px;
   text-align: center;
 }
 #tableTask {
@@ -427,13 +429,13 @@ main .btn-add-task-form:focus {
 }
 #tableTask tr {
   position: relative;
-  height: 50px;
+  height: 40px;
   display: flex;
 }
 #tableTask .theadLarge th {
   background-color: rgb(18, 109, 245);
   color: white;
-  border: 0.01px solid #283fec;
+  border: 0.5px solid #283fec;
 }
 #tableTask .theadSmall th {
   background-color: rgb(18, 109, 245);
@@ -444,16 +446,17 @@ main .btn-add-task-form:focus {
 }
 #tableTask td {
   position: relative;
-  height: 50px;
+  height: 40px;
   text-align: left;
-  border: 0.01px solid #283fec;
+  border: 0.5px solid #283fec;
   background-color: skyblue;
   text-align: center;
+  font-size: 12px;
 }
 
 #tableTask .tbodySmall td:nth-child(1) {
   width: 70%;
-  padding-top: 10px;
+  padding-top: 3px;
 }
 #tableTask .tbodySmall td:nth-child(2) {
   width: 30%;
@@ -474,7 +477,7 @@ main .btn-add-task-form:focus {
   font-weight: 700;
 }
 .btn-details{
-    padding: 1vh 3vw;
+    padding: 2px 3vw;
 }
 #tableTask tr .btn-delete:active {
   background-color: rgb(248, 56, 38);
@@ -485,7 +488,7 @@ main .btn-add-task-form:focus {
 #tableTask tr button a {
   color: white;
 }
-#tableTask tr .btn-details:focus {
+#tableTask tr .btn-details:active {
   color: white;
   background-color: rgb(20, 197, 64);
 }
@@ -518,15 +521,16 @@ main .btn-add-task-form:focus {
 .detailsBox div:nth-child(1) {
   position: absolute;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 5%;
   right: 7%;
-  width: 25px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
 }
 .fa-window-close {
   position: relative;
-  bottom: 5px;
-  right: 5px;
   color: #011beb;
 }
 .detailsBox div:nth-child(2),
@@ -693,7 +697,7 @@ main .btn-add-task-form:focus {
     height: 10%;
   }
   .other-submenu {
-    width: 30%;
+    width: 40%;
   }
   .whyUseAppGrid h2 {
     font-size: 4vw;
@@ -739,7 +743,7 @@ main .btn-add-task-form:focus {
     font-size: 12px;
   }
   .tasksBox {
-    margin-top: 0;
+    margin-top: 10px;
     width: 80%;
   }
   .theadLarge th:nth-child(5),
@@ -756,6 +760,16 @@ main .btn-add-task-form:focus {
     width: 40px;
     justify-content: center;
     align-items: center;
+  }
+  .nav-profile div a,
+  .nav-profile div h2 {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 480px) and (min-height: 800px) {
+  .titleWithoutLogin > * {
+    top: 26%;
+    font-size: 13px;
   }
 }
 @media only screen and (min-width: 769px) {
@@ -903,6 +917,12 @@ main .btn-add-task-form:focus {
     height: 85%;
     top: 0%;
   }
+  .nav-profile div:nth-child(1) {
+    width: 30%;
+  }
+  .nav-profile div:nth-child(2) {
+    width: 20%;
+  }
   .nav-profile div a,
   .nav-profile div h2 {
     font-size: 14px;
@@ -934,13 +954,10 @@ main .btn-add-task-form:focus {
   .tasksBox {
     top: 2%;
     width: 70%;
-    height: 97%;
+    height: 95%;
     margin-right: 2%;
     float: right;
-  }
-  .tasksBox h2 {
-    padding-top: 14px;
-    font-size: 18px;
+    min-height: 300px;
   }
   .tasksBox .tableBox {
     height: 85%;
