@@ -1,830 +1,971 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 *::-webkit-scrollbar {
-    width: 0.5vw;
-    height: 10px;
+  width: 3px;
+  height: 10px;
 }
 
 *::-webkit-scrollbar-track {
-    background: rgb(193, 219, 230);
+  background: rgb(193, 219, 230);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: rgb(37, 5, 250);
-    border-radius: 20px;
-  }
-body {
-    margin: 0;
-    font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
+  background-color: rgb(37, 5, 250);
+  border-radius: 20px;
 }
-.contenedor{
-    position: relative;
-    width: 100%;
-    max-width: 1250px;
-    height: 100vh;
-    margin: 0 auto;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.contenedor {
+  position: relative;
+  width: 100%;
+  max-width: 1450px;
+  height: 100vh;
+  margin: 0 auto;
 }
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    margin: 0;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin: 0;
 }
- /* homestyle */
-main{
-    position: absolute;
-    width: 100%;
-    height: 90%;
-    top: 0;
-    bottom: 0;
-    overflow: auto;
-    z-index: 20;
+/* homestyle */
+main {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  z-index: 20;
 }
-.containerImagesHome{
-    position: absolute;
-    top: 10%;
-    width: 100%;
-    height: 90%;
+.containerImagesHome {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 90%;
 }
-main .containerImagesHome .titleWithoutLogin{
-    position: relative;
-    margin: 0vh auto;
-    z-index: 20;
-    text-align: center;
+main .containerImagesHome .titleWithoutLogin {
+  position: relative;
+  margin: 0vh auto;
+  z-index: 20;
+  text-align: center;
 }
-.titleWithoutLogin > *{
-    position: absolute;
-    width: 90%;
-    left: 5%;
-    color: black;
-    font-size: 2.5vh;
+.titleWithoutLogin > * {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  color: black;
+  font-size: 2.5vh;
 }
-main .containerImagesHome figure{
-    position: absolute;
-    width: 100%;
-    height: 70%;
-    top:18%;
-    background-image: url("../images/fo-1200x675.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+main .containerImagesHome figure {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  top: 18%;
+  background-image: url("../images/fo-1200x675.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 /* navegador */
-header{
-    position: fixed;
-    height: 35vh;
-    top: 90%;
-    right: 0;
-    width: 100%;
-    z-index: 30;
+header {
+  position: fixed;
+  height: 35vh;
+  top: 90%;
+  right: 0;
+  width: 100%;
+  z-index: 30;
 }
-#menu-short{
-    position: relative;
-    height: 100%;
-    width: 100%;
+#menu-short {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
-#menu-large{
-    display: none;
+#menu-large {
+  display: none;
 }
 .btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 3px;
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 3px;
 }
-a:link, a:visited, a:active {
-    text-decoration:none;
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
 }
 .other-submenu,
-.btn-menu{
-    position: absolute;
-    color: white;
-    transition: top 0.5s ease-out;
-    transition-delay: 0.7s;
+.btn-menu {
+  position: absolute;
+  color: white;
+  transition: top 0.5s ease-out;
+  transition-delay: 0.7s;
 }
-.other-submenu{
-    display: flex;
-    justify-content: space-between;
-    width: 35%;
-    right: 5vw;
+.other-submenu {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+  right: 5vw;
 }
-.btn-menu{
-    left: 5vw;
+.btn-menu {
+  left: 5vw;
 }
 .other-submenu button,
-.btn-menu{
-    background-color: rgba(0, 0, 0, 0.89);
-    padding: 1vh 2vw;
-    font-size: 4vw;
+.btn-menu {
+  background-color: rgb(9, 56, 128);
+  padding: 1vh 2vw;
+  font-size: 4vw;
 }
 .other-submenu button a {
-    color: white;
+  color: white;
 }
-.navegbar{
-    position: absolute;
-    width: 100vw;
-    height: 25vh;
-    top: 35vh;
-    transition: top 0.5s ease-out;
-    transition-delay: 0.7s;
-    z-index: 30;
+.navegbar {
+  position: absolute;
+  width: 100vw;
+  height: 25vh;
+  top: 35vh;
+  transition: top 0.5s ease-out;
+  transition-delay: 0.7s;
+  z-index: 30;
 }
 .btn-menu:focus {
-    background-color: rgb(18, 109, 245);
-    color: white;
-    top: -25vh;
+  background-color: rgb(18, 109, 245);
+  color: white;
+  top: -25vh;
 }
-header div .btn-menu:focus ~ .navegbar{
-    top: -15vh;
-    z-index: 50;
+header div .btn-menu:focus ~ .navegbar {
+  top: -15vh;
+  z-index: 50;
 }
-header div .btn-menu:focus ~ .other-submenu{
-    top: -25vh;
+header div .btn-menu:focus ~ .other-submenu {
+  top: -25vh;
 }
-.navegbar{
-    display: inline;
-    margin: 0;
-    padding: 0;
+.navegbar {
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
-.navegbar li{
-    position: relative;
-    z-index:inherit;
-    height: 33.33%;
+.navegbar li {
+  position: relative;
+  z-index: inherit;
+  height: 33.33%;
 }
-.navegbar li button{
-    position: relative;
-    list-style: none;
-    outline: none;
-    width: 100%;
-    height:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    z-index: 50;
-    border: 0.5px solid gray;
-    background-color: rgb(31, 27, 27);
+.navegbar li a {
+  position: relative;
+  list-style: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  z-index: 50;
+  border: 0.5px solid gray;
+  background-color: rgb(9, 56, 128);
 }
-header li a{
-    color: white;
-    font-size: 14px;
+header li a {
+  color: white;
+  font-size: 14px;
 }
-footer{
-    display: none;
+footer {
+  display: none;
 }
 /* pages*/
-.whyUseAppGrid{
-    margin: 8vh auto;
-    width: 90%;
-    display: grid;
-    grid-template-columns: 45% 45%;
-    grid-column-gap: 10%;
-    grid-template-rows: 10vh repeat(3,30vh);
+.whyUseAppGrid {
+  margin: 8vh auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-column-gap: 10%;
+  grid-template-rows: 10vh repeat(3, 30vh);
 }
-.whyUseAppGrid h2{
-    margin: auto;
-    text-align: center;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    font-size: 6vw;
+.whyUseAppGrid h2 {
+  margin: auto;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 6vw;
 }
 .whyUseAppGrid picture,
-.whyUseAppGrid div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.whyUseAppGrid div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.whyUseAppGrid div{
-    padding: 2vh 2vw;
+.whyUseAppGrid div {
+  padding: 2vh 2vw;
 }
-.whyUseAppGrid div h4{
-    font-size: 3vw;
-    text-align: center;
-    margin: 0;
+.whyUseAppGrid div h4 {
+  font-size: 3vw;
+  text-align: center;
+  margin: 0;
 }
-.whyUseAppGrid picture img{
-    width: 70%;
-    max-width: 100px;
-    height: 70%;
-    max-height: 100px;
+.whyUseAppGrid picture img {
+  width: 70%;
+  max-width: 100px;
+  height: 70%;
+  max-height: 100px;
 }
-.aboutMe{
-    position: relative;
-    width: 90%;
-    margin: 3vh auto 0 auto;
-    padding: 3vh 5vw 1vh 5vw;
+.aboutMe {
+  position: relative;
+  width: 90%;
+  margin: 3vh auto 0 auto;
+  padding: 3vh 5vw 1vh 5vw;
 }
-.aboutMe h1{
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 3vh;
+.aboutMe h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 3vh;
 }
-.aboutMe p{
-    font-size: 0.8rem;
-    text-align: justify;
-    margin: 0 auto;
-    max-width: 560px;
+.aboutMe p {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 560px;
 }
-.aboutMe p:nth-child(2){
-    margin-bottom: 2vh;
+.aboutMe p:nth-child(2) {
+  margin-bottom: 2vh;
 }
-.iconTech{
-    width: 90%;
-    max-width: 470px;
-    margin: 5vh auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.iconTech {
+  width: 90%;
+  max-width: 470px;
+  margin: 5vh auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.icon{
-    width: 16vw;
-    height: 10vh;
-    margin: 0vh 0.5vw;
+.icon {
+  width: 16vw;
+  height: 10vh;
+  margin: 0vh 0.5vw;
 }
 .icon img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-.iconTech picture:nth-child(2){
-    width: 12vw;
-    height: 10vh;
+.iconTech picture:nth-child(2) {
+  width: 12vw;
+  height: 10vh;
 }
-.iconTech picture:nth-child(4){
-    width: 20vw;
-    height: 8vh;
+.iconTech picture:nth-child(4) {
+  width: 20vw;
+  height: 8vh;
 }
-#contactPage{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2vh auto;
-    width: 80%;
+#contactPage {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2vh auto;
+  width: 80%;
 }
-#contactPage section{
-    width: 100%;
+#contactPage section {
+  width: 100%;
 }
-#contactPage section h2{
-    margin: 3vh 0vw;
-    font-size: 3vh;
-    text-align: center;
+#contactPage section h2 {
+  margin: 3vh 0vw;
+  font-size: 3vh;
+  text-align: center;
 }
-#contactPage section p{
-    font-size: 2vh;
-    text-align: justify;
+#contactPage section p {
+  font-size: 2vh;
+  text-align: center;
 }
-#contactInf{
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 45% 45%;
-    row-gap: 2vh;
-    column-gap: 10%;
+#contactInf {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  row-gap: 2vh;
+  column-gap: 10%;
 }
 .contactGit,
 #contactInf h2,
 #formContact div,
 #formContact button {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
-#contactInf div:nth-child(2){
-    display: flex;
-    justify-content: flex-end;
+#contactInf div:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
 }
-#contactInf div:nth-child(3){
-    display: flex;
-    justify-content: flex-start;
+#contactInf div:nth-child(3) {
+  display: flex;
+  justify-content: flex-start;
 }
-#contactInf div:nth-child(5){
-    display: flex;
-    justify-content: center;
+#contactInf div:nth-child(5) {
+  display: flex;
+  justify-content: center;
 }
-#mainProfile{
-height: 80%;
+#mainProfile {
+  height: 100%;
 }
-#headerProfile{
-    position: fixed;
-    height: 20%;
-    top: 80%;
-    width: 100%;
-    left: 0;
-    right: 0;
-    z-index: 20;
+.menuProfile {
+  position: absolute;
+  bottom: 0%;
+  left: 40%;
+  width: 20%;
+  background-color: rgb(9, 56, 128);
+  padding-top: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  z-index: 21;
+  color: white;
+  transition: all 0.5s ease-out;
+  border-bottom: none;
 }
-.nav-profile{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.85);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    z-index: 20;
+#headerProfile {
+  position: fixed;
+  height: 20%;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 21;
+  transition: all 0.5s ease-out;
 }
-.nav-profile div {
-    width: 35vw;
-    overflow-wrap: break-word;
+.nav-profile {
+  position: absolute;
+  background-color: rgb(9, 56, 128);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+}
+.nav-profile div:nth-child(1) {
+  width: 40%;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+.nav-profile div:nth-child(2) {
+  width: 30%;
+  text-align: center;
+  overflow-wrap: break-word;
 }
 .nav-profile div a,
-.nav-profile div h2{
-    width: 100%;
-    font-size: 12px;
-    margin: 0 5vw;
-    text-align: center;
-    color: white;
+.nav-profile div h2 {
+  width: 100%;
+  font-size: 10px;
+  color: white;
 }
-.btn-add-task-form{
-    position: relative;
-    display: block;
-    top:3%;
-    line-height: 1;
-    padding: 2vh .75rem;
-    margin: 0 auto;
-    z-index: 40;
-    background-color: rgb(18, 109, 245);
-    font-weight: 700;
-    color: white;
+.menuProfile:focus {
+  bottom: 20%;
 }
-main .btn-add-task-form:focus ~ .formBoxTask{
-    left: 10%;
+.menuProfile:focus ~ #headerProfile {
+  top: 80%;
 }
-main .btn-add-task-form:focus{
-    background-color: rgb(18, 109, 245);
+.btn-add-task-form {
+  position: relative;
+  display: block;
+  line-height: 1;
+  padding: 0.5rem 0.75rem;
+  margin: 2% auto;
+  z-index: 40;
+  background-color: rgb(18, 109, 245);
+  font-weight: 700;
+  font-size: 2vh;
+  color: white;
 }
-.tasksBox{
-    position: relative;
-    margin: 0 auto;
-    top:5%;
-    width: 90%;
-    height: 80%;
-    z-index: 21;
+main .btn-add-task-form:focus ~ .formBoxTask {
+  left: 10%;
 }
-.tasksBox h2{
-    height: 10%;
+main .btn-add-task-form:focus {
+  background-color: rgb(18, 109, 245);
 }
-.tasksBox .tableBox{
-    overflow: auto;
-    height: 90%;
+.tasksBox {
+  position: relative;
+  margin: 20px auto 0 auto;
+  width: 80%;
+  height: 80%;
+  z-index: 21;
 }
-.tasksBox h2{
-    font-size: 4vh;
-    text-align: center;
+.tasksBox .tableBox {
+  overflow: auto;
+  height: 90%;
 }
-#tableTask{
-    width: 100%;
-    overflow:auto;
-    table-layout: fixed;
-    border-collapse: collapse;
+.tasksBox h2 {
+  height: 10%;
+  font-size: 2.5vh;
+  padding-top: 5px;
+  text-align: center;
 }
-#tableTask tr .taskTable{
-    overflow: auto;
+#tableTask {
+  width: 100%;
+  overflow: auto;
+  table-layout: fixed;
+  border-spacing: 0px;
 }
-#tableTask th {
-    text-align: center;
-    background-color: rgb(18, 109, 245);
-    color: white;
-    padding: 5px;
-    border: 1px solid rgb(18, 109, 245);
-
+#tableTask tr .taskTable {
+  overflow: auto;
+}
+#tableTask tr {
+  position: relative;
+  height: 40px;
+  display: flex;
+}
+#tableTask .theadLarge th {
+  background-color: rgb(18, 109, 245);
+  color: white;
+  border: 0.5px solid #283fec;
+}
+#tableTask .theadSmall th {
+  background-color: rgb(18, 109, 245);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #tableTask td {
-    padding: 5px 10px;
-    text-align: left;
-    border: 1px solid rgb(18, 109, 245);
-
+  position: relative;
+  height: 40px;
+  text-align: left;
+  border: 0.5px solid #283fec;
+  background-color: skyblue;
+  text-align: center;
+  font-size: 12px;
 }
-#tableTask tr{
-    position: relative;
-    background-color: skyblue;
-    height: 45px;
 
+#tableTask .tbodySmall td:nth-child(1) {
+  width: 70%;
+  padding-top: 3px;
 }
-#tableTask thead .theadSmall th{
-    width: 60%;
+#tableTask .tbodySmall td:nth-child(2) {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tableTask thead .theadSmall th {
+  width: 70%;
 }
 .btn-edit,
 .btn-delete,
+.btn-details {
+  display: block;
+  color: white;
+  background-color: rgb(18, 109, 245);
+  font-size: 3vw;
+  font-weight: 700;
+}
 .btn-details{
-    display: block;
-    color: white;
-    margin: 0 auto;
-    background-color:rgb(18, 109, 245);
+    padding: 2px 3vw;
 }
-#tableTask tr .btn-delete:active{
-    background-color: rgb(248, 56, 38);
-
+#tableTask tr .btn-delete:active {
+  background-color: rgb(248, 56, 38);
 }
-#tableTask tr .btn-edit:active{
-    background-color: rgb(241, 241, 82);
+#tableTask tr .btn-edit:active {
+  background-color: rgb(241, 241, 82);
 }
-#tableTask tr button a{
-    color:white;
+#tableTask tr button a {
+  color: white;
 }
-#tableTask tr .btn-details:focus{
-    color: white;
-    background-color: rgb(20, 197, 64);
+#tableTask tr .btn-details:active {
+  color: white;
+  background-color: rgb(20, 197, 64);
 }
 #tableTask thead .theadLarge,
-#tableTask tbody .tbodyLarge{
-    display: none;
+#tableTask tbody .tbodyLarge {
+  display: none;
 }
-#tableTask thead .theadLarge h4{
-    font-size: 2.5vh;
+#tableTask thead .theadLarge h4 {
+  font-size: 2.5vh;
 }
-#tableTask tbody .tbodySmall td{
-    position: relative;
+#tableTask tbody .tbodySmall td {
+  position: relative;
 }
-.detailsBox{
-    display: grid;
-    visibility: hidden;
-    position: absolute;
-    padding: 5px;
-    width: 89vw;
-    top: -50vh;
-    right:0vw;
-    border-radius: 5px;
-    background-color: rgb(18, 109, 245);
-    grid-template-columns: 70% 30%;
-    row-gap: 2vh;
-    z-index: 35;
-    transition: all 0s;
-    transition-delay: 0.1s;
-    border: 1px solid #011BEB;
+.detailsBox {
+  display: grid;
+  position: absolute;
+  display: none;
+  padding: 35px 5px 15px 5px;
+  width: 79vw;
+  top: 100%;
+  right: 0vw;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: repeat(2, 80px) 30px 50px;
+  background-color: rgb(15, 97, 220, 0.9);
+  grid-gap: 0px 10%;
+  z-index: 35;
+  border-radius: 5px;
+  border: 1px solid #283fec;
+}
+.detailsBox div:nth-child(1) {
+  position: absolute;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 5%;
+  right: 7%;
+  width: 10px;
+  height: 10px;
+}
+.fa-window-close {
+  position: relative;
+  color: #011beb;
+}
+.detailsBox div:nth-child(2),
+.detailsBox div:nth-child(5) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.detailsBox div:nth-child(5) {
+  display: flex;
+  justify-content: center;
+}
+.detailsBox div:nth-child(6) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.detailsBox div:nth-child(7) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .detailsBox p,
-.detailsBox h4{
-    margin: 1vh 5vw;
+.detailsBox h4 {
+  margin: 1vh 5vw;
 }
-.detailsBox .btn-centered{
+.detailsBox button {
+  background-color: #011beb;
+  width: 75px;
+}
+@media only screen and (orientation: landscape) and (max-width: 767px) {
+  main .containerImagesHome .titleWithoutLogin {
+    top: 45%;
+    width: 60%;
+    height: 20%;
+    max-height: 90px;
+    background-image: url("../images/nube0.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    animation: mymove 3s 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+  }
+  @keyframes mymove {
+    0% {
+      top: 0%;
+    }
+    20% {
+      top: 45%;
+    }
+    40% {
+      top: 30%;
+    }
+    60% {
+      top: 45%;
+    }
+    80% {
+      top: 35%;
+    }
+    100% {
+      top: 45%;
+    }
+  }
+  .titleWithoutLogin > * {
+    position: relative;
+    top: 25%;
+    font-size: 2vh;
+  }
+  main .containerImagesHome figure {
+    top: 10%;
+    height: 90% !important;
+    width: 100%;
+  }
+  header div .btn-menu:focus ~ .navegbar {
+    top: -15vh;
+    z-index: 50;
+  }
+  .other-submenu,
+  .btn-menu {
+    top: 0;
+  }
+  .other-submenu {
+    justify-content: space-around;
+  }
+  .other-submenu button,
+  .btn-menu {
+    font-size: 3vh !important;
+  }
+  /* Why use this application */
+  .whyUseAppGrid {
+    grid-template-columns: 47.5% 47.5%;
+    grid-column-gap: 5%;
+    grid-template-rows: 20vh repeat(3, 50vh);
+    grid-row-gap: 2vh;
+  }
+  .whyUseAppGrid h2 {
+    font-size: 4vh;
+  }
+  .whyUseAppGrid div h4 {
+    font-size: 3vh;
+  }
+  /* About ME page */
+  .iconTech {
+    margin: 5vh auto;
+  }
+  .icon {
+    width: 12vw;
+    height: 16vh;
+  }
+  .iconTech .icon:nth-child(2) {
+    width: 7.5vw;
+    height: 16vh;
+  }
+  .iconTech .icon:nth-child(4) {
+    width: 14vw;
+    height: 12vh;
+  }
+  #contactPage {
+    width: 90%;
+  }
+  #contactPage section h2 {
+    font-size: 3vw;
+  }
+  #contactPage section p {
+    font-size: 2vw;
+  }
+  .menuProfile {
+    left: auto;
+    right: 5%;
+  }
+  main .btn-add-task-form:focus ~ .formBoxTask {
+    left: 10%;
+  }
+}
+@media only screen and (min-width: 480px) {
+  main {
+    height: 90%;
+  }
+  main .containerImagesHome .titleWithoutLogin {
+    top: 45%;
+    width: 390px;
+    height: 20%;
+    max-height: 100px;
+    background-image: url("../images/nube0.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .titleWithoutLogin > * {
+    top: 20%;
+    font-size: 2vh;
+  }
+  main .containerImagesHome figure {
+    position: absolute;
+    top: 5%;
+    height: 80%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  header {
+    height: 10%;
+  }
+  .other-submenu {
+    width: 40%;
+  }
+  .whyUseAppGrid h2 {
+    font-size: 4vw;
+  }
+  .whyUseAppGrid div h4 {
+    font-size: 2.5vw;
+  }
+  .aboutMe p {
+    font-size: 0.9rem;
+  }
+  .other-submenu button,
+  .btn-menu {
+    padding: 5px 15px;
+    font-size: 16px;
+  }
+  .whyUseAppGrid picture img {
+    width: 50%;
+    height: 60%;
+    max-width: 200px;
+    max-height: 300px;
+  }
+  #contactPage section {
+    margin: 2vh 0;
+    padding: 4vh 2vw;
+    width: 50%;
+  }
+  #contactPage section:nth-child(2) {
+    padding: 4vh 0 0 1vw;
+  }
+  #tableTask thead .theadLarge,
+  #tableTask tbody .tbodyLarge {
+    display: table-row;
+  }
+  #tableTask thead .theadSmall,
+  #tableTask tbody .tbodySmall {
+    display: none;
+  }
+  #tableTask thead .theadLarge h4 {
+    font-size: 14px;
+  }
+  #tableTask tbody .tbodyLarge td,
+  #tableTask tbody .tbodyLarge td button a {
+    font-size: 12px;
+  }
+  .tasksBox {
+    margin-top: 10px;
+    width: 80%;
+  }
+  .theadLarge th:nth-child(5),
+  .theadLarge th:nth-child(6) {
+    width: 60px;
+    background-color: transparent !important;
+    border: transparent !important;
+  }
+  .btn-edit,
+  .btn-delete {
+    position: relative;
+    display: flex;
+    left: 10px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-profile div a,
+  .nav-profile div h2 {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 480px) and (min-height: 800px) {
+  .titleWithoutLogin > * {
+    top: 26%;
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  header,
+  #headerProfile {
+    position: relative;
+    height: 10%;
+    top: 0;
+  }
+  #menu-short {
+    display: none;
+  }
+  .menuProfile {
+    display: none;
+  }
+  #menu-large {
+    display: block;
+    background-color: rgb(9, 56, 128);
+    height: 100%;
+    width: 100%;
+  }
+  #menu-large .navegbar-desktop {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    height: 100%;
+  }
+  #menu-large .navegbar-desktop div:nth-child(1) {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #menu-large .navegbar-desktop div:nth-child(2) {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+  #menu-large .navegbar-desktop div:nth-child(2) li:nth-child(2) {
+    margin-left: 30px;
+  }
+  #menu-large .navegbar-desktop li a {
+    font-size: 1rem;
+  }
+  main {
+    position: relative;
+    height: 85%;
+  }
+  main .containerImagesHome {
+    top: 0%;
+    height: 100%;
+  }
+  main .containerImagesHome figure {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+  }
+  main .containerImagesHome .titleWithoutLogin {
+    top: 50%;
+    height: 300px;
+  }
+  @keyframes mymove {
+    0% {
+      top: 0%;
+    }
+    20% {
+      top: 50%;
+    }
+    40% {
+      top: 35%;
+    }
+    60% {
+      top: 50%;
+    }
+    80% {
+      top: 45%;
+    }
+    100% {
+      top: 50%;
+    }
+  }
+  .titleWithoutLogin > * {
+    top: 26%;
+    font-size: 13px;
+  }
+  .contenedorAdapted{
+    position: relative;
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+  }
+  .contenedorAdapted header {
+      height: 10vh;
+  }
+  .contenedorAdapted main{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  .contenedorAdapted footer{
+    height: 5vh;
+  }
+  .whyUseAppGrid {
+    width: 70%;
+    row-gap: 40px;
+  }
+  .whyUseAppGrid h2 {
+    font-size: 24px;
+  }
+  .whyUseAppGrid div h4 {
+    font-size: 20px;
+  }
+  .whyUseAppGrid picture img {
+    height: 80%;
+  }
+  .aboutMe p {
+    font-size: 1rem;
+    max-width: 900px;
+  }
+  #contactInf {
+    grid-template-columns: 40% 40%;
+    column-gap: 20%;
+  }
+  #contactPage {
+    height: 100%;
+    margin: 0vh auto;
+  }
+  #contactPage section {
+    height: 100%;
+    padding: 2vh 2vw 0 2vw;
+    margin: 0;
+  }
+  #contactPage section:nth-child(2) {
+    padding: 2vh 0 0 1vw;
+  }
+  #contactPage section h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+  #contactPage section p {
+    font-size: 1rem;
+  }
+  #mainProfile {
+    position: relative;
+    height: 85%;
+    top: 0%;
+  }
+  .nav-profile div:nth-child(1) {
+    width: 30%;
+  }
+  .nav-profile div:nth-child(2) {
+    width: 20%;
+  }
+  .nav-profile div a,
+  .nav-profile div h2 {
+    font-size: 14px;
+  }
+  footer {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.detailsBox .btn-centered button{
-    background-color: #011BEB;
-    width: 75px;
-}
-#tableTask tbody .tbodySmall td .btn-details:focus + .detailsBox{
-    visibility: visible;
-    top: 8vh;
-}
-@media only screen and (orientation: landscape) and (max-width: 767px) {
-    main .containerImagesHome .titleWithoutLogin{
-        top:45%;
-        width: 60%;
-        height: 20%;
-        max-height: 90px;
-        background-image: url("../images/nube0.png");
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        border-radius: 5px;
-        animation: mymove 3s 1;
-        animation-timing-function: ease-out;
-        animation-fill-mode: backwards;
-    }
-    @keyframes mymove {
-        0% {top: 0%}
-        20% {top: 45%}
-        40% {top: 30%}
-        60% {top: 45%}
-        80% {top: 35%}
-        100% {top: 45%}
-    }
-    .titleWithoutLogin > *{
-        position: relative;
-        top: 25%;
-        font-size:2vh;
-    }
-    main .containerImagesHome figure{
-        top: 10%;
-        height: 90% !important;
-        width: 100%;
-    }
-    header div .btn-menu:focus ~ .navegbar{
-        top: -15vh;
-        z-index: 50;
-    }
-    .other-submenu,
-    .btn-menu{
-        top: 0;
-    }
-    .other-submenu{
-        justify-content: space-around;
-    }
-    .other-submenu button,
-    .btn-menu{
-        font-size: 3vh !important;
-    }
-    /* Why use this application */
-    .whyUseAppGrid{
-        grid-template-columns: 47.5% 47.5%;
-        grid-column-gap: 5%;
-        grid-template-rows: 20vh repeat(3,50vh);
-        grid-row-gap: 2vh;
-    }
-    .whyUseAppGrid h2{
-        font-size: 4vh;
-    }    
-    .whyUseAppGrid div h4{
-        font-size: 3vh;
-    }
-    /* About ME page */
-    .iconTech{
-        margin: 5vh auto;
-    }
-    .icon{
-        width: 12vw;
-        height: 16vh;
-    }
-    .iconTech .icon:nth-child(2){
-        width: 7.5vw;
-        height: 16vh;
-    }
-    .iconTech .icon:nth-child(4){
-        width: 14vw;
-        height: 12vh;
-    }
-    #contactPage{
-        width: 90%;
-    }
-    #contactPage section h2{
-        font-size: 3vw;
-    }
-    #contactPage section p{
-        font-size: 2vw;
-    }
-    main .btn-add-task-form:focus ~ .formBoxTask{
-        left: 10%;
-    }
-}
-@media only screen and (min-width: 480px){
-    main{
-        height: 90%;
-    }
-    main .containerImagesHome .titleWithoutLogin{
-        top:45%;
-        width: 390px;
-        height: 20%;
-        max-height: 100px;
-        background-image: url("../images/nube0.png");
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    .titleWithoutLogin > *{
-        top: 20%;
-        font-size: 2vh;
-    }
-    main .containerImagesHome figure{
-        position: absolute;
-        top:5%;
-        height: 80%;
-        width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    header{
-        height: 10%;
-    }
-    .other-submenu{
-        width: 30%;
-    }
-    .whyUseAppGrid h2{
-        font-size: 4vw;
-    }    
-    .whyUseAppGrid div h4{
-        font-size: 2.5vw;
-    }
-    .aboutMe p{
-        font-size: .9rem;
-    }
-    .other-submenu button,
-    .btn-menu{
-        padding: 5px 15px;
-        font-size: 16px;
-    }
-    .whyUseAppGrid picture img{
-        width: 50%;
-        height: 60%;
-        max-width: 200px;
-        max-height: 300px;
-    }
-    #contactPage section{
-        margin: 2vh 0;
-        padding: 4vh 2vw;
-        width: 50%;
-    }
-    #contactPage section:nth-child(2){
-        padding: 4vh 0 0 1vw;
-    }
-    #tableTask thead .theadLarge,
-    #tableTask tbody .tbodyLarge{
-        display: table-row;
-    }
-    #tableTask thead .theadSmall,
-    #tableTask tbody .tbodySmall{
-        display: none;
-    }
-    #tableTask thead .theadLarge h4{
-        font-size: 3vw;
-    }
-    #tableTask tbody .tbodyLarge td,
-    #tableTask tbody .tbodyLarge td button a{
-        font-size: 2.5vw;
-    }
-    .tasksBox{
-        width: 80%;
-    }
-    .btn-edit,
-    .btn-delete{
-        padding: 1vh 1vw;
-    }
-}
-@media only screen and (min-width: 769px){
-    header{
-        position: relative;
-        top: 0;
-        height: 10%;
-    }
-    #menu-short{
-        display: none;
-    }
-    #menu-large{
-        display: block;
-        background-color:rgba(0, 0, 0, 0.9);
-        height: 100%;
-        width: 100%;
-    }
-    #menu-large .navegbar-desktop{
-        display: flex;
-        list-style: none;
-        align-items: center;
-        height: 100%;
-    }
-    #menu-large .navegbar-desktop div:nth-child(1){
-        width: 70%;
-        display: flex;
-        justify-content: space-around;
-    }
-    #menu-large .navegbar-desktop div:nth-child(2){
-        width: 30%;
-        display: flex;
-        justify-content: center;
-    }
-    #menu-large .navegbar-desktop div:nth-child(2) li:nth-child(2){
-        margin-left: 30px;
-    }
-    #menu-large .navegbar-desktop li a{
-        font-size: 1.3rem;
-    }
-    main{
-        position: relative;
-        height: 85%;
-        background-color: blueviolet;
-    }
-    main .containerImagesHome{
-        top: 0%;
-        height: 100%;
-    }
-    main .containerImagesHome figure{
-        position: absolute;
-        top:0%;
-        height: 100%;
-    }
-    main .containerImagesHome .titleWithoutLogin{
-        top:50%;
-        height: 300px;
-    }
-    @keyframes mymove {
-        0% {top: 0%}
-        20% {top: 50%}
-        40% {top: 35%}
-        60% {top: 50%}
-        80% {top: 45%}
-        100% {top: 50%}
-    }
-    .titleWithoutLogin > *{
-        top: 26%;
-        font-size: 13px;
-    }
-    #mainWhyUseAppGrid{
-        height: auto;
-        overflow: hidden;
-    }
-    .whyUseAppGrid{
-        width: 70%;
-        row-gap: 40px;
-        background-color: chartreuse;
-    }
-    .whyUseAppGrid h2{
-        font-size: 24px;
-    }    
-    .whyUseAppGrid div h4{
-        font-size: 20px;
-    }
-    .whyUseAppGrid picture img{
-        height: 80%;
-    }
-    .aboutMe p{
-        font-size: 1rem;
-        max-width: 900px;
-    }
-    #contactInf{
-        grid-template-columns: 40% 40%;
-        column-gap: 20%;
-    }
-    #contactPage{
-        height: 100%;
-        margin: 0vh auto;
-    }
-    #contactPage section{
-        height: 100%;
-        padding: 2vh 2vw 0 2vw;
-        margin: 0;
-    }
-    #contactPage section:nth-child(2){
-        padding: 2vh 0 0 1vw;
-    }
-    #contactPage section h2{
-        font-size: 1.5rem;
-        margin: 15px 0;
-    }
-    #contactPage section p{
-        font-size: 1rem;
-    }
-    /* #mainProfile{
-
-    } */
-    #headerProfile{
-        height: 10%;
-        top: 90%;
-    }
-    .nav-profile div a,
-    .nav-profile div h2{
-        font-size: 14px;
-    }
-    footer{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 40;
-        height: 5%;
-        width: 100%;
-        background-color: rgba(0, 0, 0,0.9);
-    }
-    footer div{
-        color: white;
-        width: max-content;
-        height: max-content;
-    }
-    #tableTask thead .theadLarge h4{
-        font-size: 2vw;
-    }
-    #tableTask tbody .tbodyLarge td,
-    #tableTask tbody .tbodyLarge td button a{
-        font-size: 1.5vw;
-    }
-    .tasksBox{
-        top: 5vh;
-        background-color: aquamarine;
-        width: 70%;
-        height: 85vh;
-        margin-right: 2%;
-        float: right;
-    }
-    .tasksBox .tableBox{
-        height: 79vh;
-    }
-    .btn-add-task-form{
-        display: none;
-    }
-    .btn-edit,
-    .btn-delete,
-    .btn-details{
-        padding: 0.5vh 1vw;
-    }
+    z-index: 40;
+    top: 0%;
+    height: 5%;
+    width: 100%;
+    background-color: rgb(9, 56, 128);
+    margin: 0;
+  }
+  footer div {
+    color: white;
+    width: max-content;
+    height: max-content;
+  }
+  #tableTask thead .theadLarge h4 {
+    font-size: 16px;
+  }
+  #tableTask tbody .tbodyLarge td,
+  #tableTask tbody .tbodyLarge td button a {
+    font-size: 14px;
+  }
+  .tasksBox {
+    top: 2%;
+    width: 70%;
+    height: 95%;
+    margin-right: 2%;
+    float: right;
+    min-height: 300px;
+  }
+  .tasksBox .tableBox {
+    height: 85%;
+  }
+  .btn-add-task-form {
+    display: none;
+  }
+  .btn-details {
+    padding: 0.5vh 1vw;
+  }
 }

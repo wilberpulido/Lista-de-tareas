@@ -1,16 +1,9 @@
 <?php
-
 require_once('../model/connection.php');
-
 $query = "SELECT * FROM tasks WHERE idTask='".$_GET['idTask']."'";
-
 $resultTask = mysqli_query($connect->conn,$query);
-
 $task = mysqli_fetch_assoc($resultTask);
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <?php 
@@ -25,7 +18,6 @@ $task = mysqli_fetch_assoc($resultTask);
                 <label for="task">Task</label>
                 <textarea id="editTask" required placeholder="Write something here" rows="3" cols="40" name = "task" id="task" type="text"><?php echo $task['task']?></textarea>
             </div>
-
             <div class="input-container-addTask">
                 <label for="state">State</label>
                 <select id="editState" name="state">
@@ -35,7 +27,6 @@ $task = mysqli_fetch_assoc($resultTask);
                     <option value="Delayed">Delayed</option>
                 </select>
             </div>
-
             <div class="input-container-addTask">
                 <label for="priority">Priority</label>
                 <select id="editPriority" name="priority">
@@ -45,14 +36,14 @@ $task = mysqli_fetch_assoc($resultTask);
                     <option value="High">High</option>
                 </select>
             </div>
-        <div class="input-container-addTask">
-            <label for="deadline">Deadline</label>
-            <input value="<?php echo $task['deadline']; ?>" id="editDeadline" class="mb-4" type="date" name="deadline">
-        </div>
-        
-        <div class="input-container-addTask btn-submit">
-            <input name="idTask" style="display:none; height: 0px;" value=<?php echo $task["idTask"]?> type="text">
-            <button class="btn" type="submit">Edit Task</button>
+            <div class="input-container-addTask">
+                <label for="deadline">Deadline</label>
+                <input value="<?php echo $task['deadline']; ?>" id="editDeadline" class="mb-4" type="date" name="deadline">
+            </div>
+            <div class="input-container-addTask btn-submit">
+                <input name="idTask" style="display:none; height: 0px;" value=<?php echo $task["idTask"]?> type="text">
+                <button class="btn" type="submit">Edit Task</button>
+            </div>
         </div>
         </form>
     </div>

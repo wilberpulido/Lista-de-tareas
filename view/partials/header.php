@@ -5,26 +5,23 @@
         <button class="btn"> <a href="<?php echo $registerUrl ?>"> Register </a></button>
     </div>
     <ul class="navegbar">
-        <li >
-            <button>
-                <a href="<?php echo $whyUseUrl ?>">
+        <li>
+            <a href="<?php echo $whyUseUrl ?>">
                     Why this application?
-                </a>
-            </button>
+            </a>
+
         </li>
         <li>
-            <button>
-                <a href="<?php echo $aboutMeUrl ?>">
+            <a href="<?php echo $aboutMeUrl ?>">
                     About me
-                </a>
-            </button>
+            </a>
+
         </li>
         <li>
-            <button>
             <a href="<?php echo $contactUrl ?>">
                 Contact
             </a>
-            </button>
+
         </li>
     </ul>
 </div>
