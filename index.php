@@ -25,7 +25,6 @@ if (isset($_SESSION["idUser"])) {
     <link rel="stylesheet" href="style/style.css">
     <script src="https://kit.fontawesome.com/ae8e09c608.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="images/iconTask.icon"/>
-    <script defer type="text/javascript" src="./funciones.js"></script>
     <title>Home page</title>
 </head>
 <body>
@@ -47,13 +46,13 @@ if (empty($user)) {
         <section class="containerImagesHome">
             <div class="titleWithoutLogin">
                 <div>
-                <h2 >WELCOME</h2>
-                <h4>Organize your days in a few steps</h4>
+                    <h2 >WELCOME</h2>
+                    <h4>Organize your days in a few steps</h4>
+                </div>
             </div>
-        </div>
-        <figure>
-        </figure>
-    </section>
+            <figure>
+            </figure>
+        </section>
     </main>
     <?php
         include("view/partials/footer.html");
@@ -63,6 +62,9 @@ if (empty($user)) {
 } else{
 ?>
 <div class= "contenedor">
+    <button class="menuProfile" >
+        <i class="fas fa-bars fa-1x"></i>
+    </button>
     <header id="headerProfile">
         <div class="nav-profile">
             <div>
@@ -84,6 +86,8 @@ if (empty($user)) {
                         <th><h4>State</h4></th>
                         <th><h4>Priority</h4></th>
                         <th><h4>Deadline</h4></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     <tr class="theadSmall">
                         <th><h4>Task</h4></th>
@@ -95,6 +99,18 @@ if (empty($user)) {
                 $urlDelete = "services/deleteTask.php?idTask=".$row['idTask'];
                 $urlEdit = "view/editTaskForm.php?idTask=".$row['idTask'];
             ?>
+                <script>
+                function showDetails(id) {
+                    document.getElementById("button-"+id).style.backgroundColor = "rgb(20, 197, 64)";
+                    document.getElementById("idTask"+id).style.marginBottom = "290px";
+                    document.getElementById(id).style.display = "grid";
+                }
+                function hideDetails(id) {
+                    document.getElementById("button-"+id).style.backgroundColor = "rgb(18, 109, 245)";
+                    document.getElementById("idTask"+id).style.marginBottom = "0px";
+                    document.getElementById(id).style.display = "none";
+                }
+                </script>
                     <tr class="tbodyLarge">
                         <td class="taskTable">
                             <p>
@@ -118,45 +134,40 @@ if (empty($user)) {
                         </td>
                         <td>
                             <button class="btn btn-edit">
-                                <a href="<?php echo $urlEdit?>"> Edit </a>
+                                <a href="<?php echo $urlEdit?>"><i class="far fa-edit"></i></a>
                             </button>
                         </td>
                         <td>
                             <button class="btn btn-delete">
-                                <a href="<?php echo $urlDelete?>">Delete</a>
+                                <a href="<?php echo $urlDelete?>"><i class="fas fa-trash-alt"></i></a>
                             </button>
                         </td>
                     </tr>
-                    <tr class="tbodySmall">
+                    <tr id="<?php echo "idTask".$row["idTask"]?>" class="tbodySmall">
                         <td class="taskTable">
                             <?php echo $row['task']?>
                         </td>
                         <td>
-                            <button class="btn btn-details">
+                            <button id="<?php echo "button-".$row["idTask"]?>" class="btn btn-details" 
+                            onclick="showDetails(<?php echo $row["idTask"]?>)">
                                 Details
                             </button>
-                            <div class="detailsBox">
+                            <div id="<?php echo $row["idTask"]?>" class="detailsBox">
+                                <div 
+                                onclick="hideDetails(<?php echo $row["idTask"]?>)">
+                                    <i class="fas fa-window-close fa-2x"></i>
+                                </div>
                                 <div>
                                     <h4>Task:</h4>
                                     <p class="taskTable">
                                         <?php echo $row['task']?>
                                     </p>
                                 </div>
-                                <div class="btn-centered">
-                                    <button class="btn btn-edit">
-                                        <a href="<?php echo $urlEdit?>"> Edit </a>
-                                    </button>
-                                </div>
                                 <div>
                                     <h4>State:</h4> 
                                     <p>
                                         <?php echo $row['state']?>
                                     </p>
-                                </div>
-                                <div class = "btn-centered">
-                                    <button class="btn btn-delete">
-                                        <a href="<?php echo $urlDelete?>">Delete</a>
-                                    </button>
                                 </div>
                                 <div>
                                     <h4>Priority: </h4>
@@ -165,22 +176,30 @@ if (empty($user)) {
                                     </p>
                                 </div>
                                 <div>
-                                    <!-- avoid -->
-                                </div>
-                                <div>
                                     <h4> Deadline:</h4> 
                                     <p>
                                         <?php echo $row['deadline']?>
                                     </p>
                                 </div>
+                                <div>
+                                    <button class="btn btn-edit">
+                                        <a href="<?php echo $urlEdit?>"><i class="far fa-edit"></i></a>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button class="btn btn-delete">
+                                        <a href="<?php echo $urlDelete?>"><i class="fas fa-trash-alt"></i></a>
+                                    </button>
+                                </div>
                             </div>
                         </td>
                     </tr>
-            <?php
-            }
-            ?>
+                <?php
+                }
+                ?>
                 </tbody>
             </table>
+        </div>
         </div>
         <button class="btn btn-add-task-form">
             ADD TASK
@@ -190,13 +209,10 @@ if (empty($user)) {
                 include_once("view/partials/formTask.html");
             ?>
         </div>
-        </div>
     </main>
-    <!-- <footer>
-        <div>
-            Holas
-        </div>
-    </footer> -->
+    <?php
+        include("view/partials/footer.html");
+    ?>
 <?php
 }
 ?>
