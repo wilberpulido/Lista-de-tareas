@@ -144,16 +144,16 @@ width: 100%;
  outline:none;
  border-bottom:1px solid #011BEB;
 }
-.input-container input:focus ~ label,
 .input-container input:-webkit-autofill ~ label,
+.input-container input:focus ~ label,
 .input-container input:valid ~ label{
-    font-size: 12px;
+    font-size: 10px;
     top:0;
 }
-.input-container-register input:focus ~ label,
 .input-container-register input:-webkit-autofill ~ label,
+.input-container-register input:focus ~ label,
 .input-container-register input:valid ~ label{
-    font-size: 12px;
+    font-size: 10px;
     top:0;
 }
 .link-login-register{
@@ -345,15 +345,14 @@ font-weight: 700;
         font-size: 14px;
     }
     .input-container input:focus ~ label,
-    .input-container input:-webkit-autofill ~ label{
-        font-size:14px;
-    }
-    .input-container-register input:focus ~ label,
-    .input-container-register input:-webkit-autofill     ~ label{
+    .input-container input:-webkit-autofill ~ label,
+    .input-container input:valid ~ label{
         font-size:12px;
     }
-    .input-container label{
-        font-size:14px;
+    .input-container-register input:focus ~ label,
+    .input-container-register input:-webkit-autofill ~ label,
+    .input-container-register input:valid ~ label{
+        font-size:12px;
     }
     .form-container-register .btn-submit button{
         padding: 5px 40px;
