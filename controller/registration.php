@@ -12,7 +12,7 @@ if ($result->num_rows === 0) {
     $insert = "INSERT INTO users(firstName,lastName,username,password,mail) VALUES ('".$_POST['firstName']."','".$_POST['lastName']."','".$_POST['username']."','".$encryptedPassword."','".$_POST['mail']."')";
 
     if (mysqli_query($connect->conn,$insert)) {
-        header("location: ../view/login.html");
+        header("location: ../view/login.php");
         
     } else {
         echo "Error: " . $insert . "<br>".$connect->conn->error;
@@ -22,7 +22,7 @@ if ($result->num_rows === 0) {
 } else {
     echo '<script type="text/javascript"> alert("This username or mail is already taken") </script>';
 
-    include_once("../view/registration.html");
+    include_once("../view/registration.php");
 
 }
 ?>

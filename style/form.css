@@ -55,9 +55,8 @@
 }
 .input-container label{
     position:absolute;
-    top:40%;
-	left:2%;
-	font-size:3vh;
+    top:35%;
+	font-size:16px;
     pointer-events: none;
 	transition: all 0.5s ease-in;
 }
@@ -128,6 +127,7 @@ width: 100%;
     position: absolute;
     bottom: 5px;
     z-index: 20;
+    font-size: 14px;
 }
 .input-container input,
 .input-container-register input{ 
@@ -135,7 +135,7 @@ width: 100%;
     border-bottom:1px solid #555;  
     background:transparent;
     width:100%;
-    font-size:3vh;
+    font-size:14px;
     color:#fff;
 }
 .input-container input:focus,
@@ -145,14 +145,16 @@ width: 100%;
  border-bottom:1px solid #011BEB;
 }
 .input-container input:focus ~ label,
-.input-container input:-webkit-autofill ~ label{
-	top:0;
-	font-size:2vh;
+.input-container input:-webkit-autofill ~ label,
+.input-container input:valid ~ label{
+    font-size: 12px;
+    top:0;
 }
 .input-container-register input:focus ~ label,
-.input-container-register input:-webkit-autofill     ~ label{
-	top:-1vh;
-	font-size:2vh;
+.input-container-register input:-webkit-autofill ~ label,
+.input-container-register input:valid ~ label{
+    font-size: 12px;
+    top:0;
 }
 .link-login-register{
     position: relative;
