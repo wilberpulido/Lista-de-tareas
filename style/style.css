@@ -488,10 +488,6 @@ main .btn-add-task-form:focus {
 #tableTask tr button a {
   color: white;
 }
-#tableTask tr .btn-details:active {
-  color: white;
-  background-color: rgb(20, 197, 64);
-}
 #tableTask thead .theadLarge,
 #tableTask tbody .tbodyLarge {
   display: none;

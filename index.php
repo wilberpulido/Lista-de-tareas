@@ -101,10 +101,12 @@ if (empty($user)) {
             ?>
                 <script>
                 function showDetails(id) {
+                    document.getElementById("button-"+id).style.backgroundColor = "rgb(20, 197, 64)";
                     document.getElementById("idTask"+id).style.marginBottom = "290px";
                     document.getElementById(id).style.display = "grid";
                 }
                 function hideDetails(id) {
+                    document.getElementById("button-"+id).style.backgroundColor = "rgb(18, 109, 245)";
                     document.getElementById("idTask"+id).style.marginBottom = "0px";
                     document.getElementById(id).style.display = "none";
                 }
@@ -146,7 +148,8 @@ if (empty($user)) {
                             <?php echo $row['task']?>
                         </td>
                         <td>
-                            <button class="btn btn-details" onclick="showDetails(<?php echo $row["idTask"]?>)">
+                            <button id="<?php echo "button-".$row["idTask"]?>" class="btn btn-details" 
+                            onclick="showDetails(<?php echo $row["idTask"]?>)">
                                 Details
                             </button>
                             <div id="<?php echo $row["idTask"]?>" class="detailsBox">
