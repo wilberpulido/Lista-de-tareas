@@ -6,6 +6,7 @@
 	top:45%;
 	transform: translate(-50%,-50%);
 	border-radius:3px;
+    color: white;
 }
 .formBoxLogin{
     background-color: rgba(0, 0, 0, 0.89);
@@ -36,7 +37,6 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows:  repeat(5,20%);
-    color: white;
 }
 .formBoxLogin .form-container-login div h2{
     font-size: 4vh;
@@ -92,7 +92,6 @@
     right: 0;
     border: none;
     border-radius: 5px;
-    color: white;
     background-color: rgba(0, 0, 0, 0.89);
 }
 .btn-return-home a{
@@ -168,8 +167,8 @@ width: 100%;
     color: rgb(18, 109, 245);
 }
 .formBoxLogin a:visited,
-.formBoxRegister:visited{
-    color:rgb(196, 14, 196);
+.formBoxRegister a:visited{
+    color:white;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -255,7 +254,7 @@ font-size: 14px;
     top: 50%;
     height: 70%;
     width: 70%;
-    color: white;
+    max-width: 430px;
     background-color: rgb(18, 109, 245);
     padding: 2vh 2vw;
     font-size: 3vh;
@@ -358,7 +357,8 @@ font-weight: 700;
         padding: 5px 40px;
     }
     .btn-submit button,
-    .btn-form button{
+    .btn-form button,
+    .btn-form{
         font-size:18px;
     }
     .form-container-register div h2{
