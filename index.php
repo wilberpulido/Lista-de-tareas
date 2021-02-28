@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("./model/connection.php");
+require_once("./model/connection.php");
 
 if (isset($_SESSION["idUser"])) {
 
@@ -14,7 +14,6 @@ if (isset($_SESSION["idUser"])) {
     if ($userResult->num_rows > 0) {
         $user = mysqli_fetch_assoc($userResult);
     }
-    echo "Entro al if";
 }
 ?>
 <!DOCTYPE html>

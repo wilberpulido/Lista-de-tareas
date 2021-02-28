@@ -12,13 +12,15 @@
         private $user = "root";
         private $password = "example";
         private $database = 'taskList';
-        private static $conn;        
+        private $conn;        
         private static $Connection = NULL; 
         private static $isLoanedOut = FALSE;
         
-        private function __construct() {
+        private function __construct()
+        {
         }
-        static function instanceConnection() {  
+        static function instanceConnection()
+        {  
             if (FALSE == self::$isLoanedOut) {
               if (NULL == self::$Connection) {
                  self::$Connection = new Connection();
@@ -32,18 +34,20 @@
         public function connect()
         {
             $this->conn = new mysqli($this->host,$this->user,$this->password,$this->database);
-            if ($this->conn->connect_errno) {
+            if ($this->conn ->connect_errno) {
                 echo "Hubo un error";
             }
         }
+        public function disconnect(){
+            mysqli_close($this->conn);
+        }
         public function getConnect(){
-            return self::$conn;
+            return $this->conn;
         }
     }
 
     $instanceConnect = Connection::instanceConnection();
 
     $instanceConnect -> connect();
-
 
 ?>

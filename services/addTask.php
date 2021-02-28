@@ -3,13 +3,21 @@
 require_once("../model/connection.php");
 session_start();
 
-$insert = "INSERT INTO tasks(idUser,task,state,priority,deadline) VALUES ('".$_SESSION['idUser']."','".$_POST['task']."','".$_POST['state']."','".$_POST['priority']."','".$_POST['deadline']."')";
+$idUser = mysqli_real_escape_string($instanceConnect-> getConnect(), $_SESSION['idUser']);
+$task = mysqli_real_escape_string($instanceConnect-> getConnect(), $_POST['task']);
 
-if (mysqli_query($connect->conn,$insert)) {
+
+
+$insert = "INSERT INTO tasks(idUser,task,state,priority,deadline) VALUES ('".$idUser."','".$task."','".$_POST['state']."','".$_POST['priority']."','".$_POST['deadline']."')";
+
+if (mysqli_query($instanceConnect-> getConnect(),$insert)) {
     
     header("location: ../");
 
 } else {
-    echo "Error: " . $insert . "<br>".$connect->conn->error;
+    echo "Error: " . $insert . "<br>".$instanceConnect-> getConnect()->error;
 
 }
+$instanceConnect -> disconnect();
+
+?>

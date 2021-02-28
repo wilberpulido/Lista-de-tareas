@@ -1,13 +1,9 @@
 <?php
-
 session_start();
-
-include_once("../model/connection.php");
+require_once("../model/connection.php");
 
 $userName = mysqli_real_escape_string($instanceConnect-> getConnect(), $_POST['username']);
 $mail = mysqli_real_escape_string($instanceConnect-> getConnect(), $_POST['username']);
-
-echo "haber";
 
 $query= "SELECT * from users WHERE username = "."'".$userName."' OR mail= "."'".$mail."'"; // AND password = '".$_POST['password']."'";
 
@@ -38,5 +34,5 @@ if ($result->num_rows > 0) {
 
   }
   
-
+  $instanceConnect -> disconnect();
 ?>
