@@ -38,10 +38,12 @@
                 echo "Hubo un error";
             }
         }
-        public function disconnect(){
+        public function disconnect()
+        {
             mysqli_close($this->conn);
         }
-        public function getConnect(){
+        public function getConnect()
+        {
             return $this->conn;
         }
     }
