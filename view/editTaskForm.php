@@ -1,7 +1,8 @@
 <?php
 require_once('../model/connection.php');
+
 $query = "SELECT * FROM tasks WHERE idTask='".$_GET['idTask']."'";
-$resultTask = mysqli_query($connect->conn,$query);
+$resultTask = mysqli_query($instanceConnect-> getConnect(),$query);
 $task = mysqli_fetch_assoc($resultTask);
 ?>
 <!DOCTYPE html>
@@ -51,3 +52,7 @@ $task = mysqli_fetch_assoc($resultTask);
 
     </body>
 </html>
+
+<?php
+$instanceConnect -> disconnect();
+?>
