@@ -1,6 +1,6 @@
 <?php
 
-require_once("../model/connection.php");
+require_once("../model/Connection.php");
 
 $userName = mysqli_real_escape_string($instanceConnect-> getConnect(), $_POST['username']);
 $mail = mysqli_real_escape_string($instanceConnect-> getConnect(), $_POST['mail']);
