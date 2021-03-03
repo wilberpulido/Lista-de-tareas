@@ -1,6 +1,6 @@
 <?php
 
-require_once('../model/connection.php');
+require_once('../model/Connection.php');
 session_start();
 
 $deleteQuery = "DELETE FROM tasks WHERE idTask='".$_GET['idTask']."'";

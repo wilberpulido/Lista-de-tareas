@@ -16,7 +16,7 @@
                     <h3>welcome! login information</h3>
                 </div>
                 <div class="input-container">
-                    <input name="username" type="text" required=""/>
+                    <input name="mailUsername" type="text" required=""/>
                     <label>Mail/Username</label>		
                 </div>
                 <div class="input-container">		

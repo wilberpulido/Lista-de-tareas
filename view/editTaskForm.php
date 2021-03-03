@@ -1,5 +1,5 @@
 <?php
-require_once('../model/connection.php');
+require_once('../model/Connection.php');
 
 $query = "SELECT * FROM tasks WHERE idTask='".$_GET['idTask']."'";
 $resultTask = mysqli_query($instanceConnect-> getConnect(),$query);

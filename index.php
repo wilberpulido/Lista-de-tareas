@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("./model/connection.php");
+require_once("./model/Connection.php");
 
 if (isset($_SESSION["idUser"])) {
 

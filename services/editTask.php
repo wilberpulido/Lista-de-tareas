@@ -1,5 +1,5 @@
 <?php
-require_once('../model/connection.php');
+require_once('../model/Connection.php');
 session_start();
 
 $update = "UPDATE tasks SET task = '".$_POST['task']."', state = '".$_POST['state']."', priority = '".$_POST['priority']."', deadline = '".$_POST['deadline']."' WHERE idTask =".$_POST['idTask'];

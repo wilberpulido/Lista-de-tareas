@@ -1,38 +1,24 @@
 <?php
 session_start();
 require_once("../model/Connection.php");
+require_once("../model/mappers/User.php");
+require_once("../model/services/UserService.php");
 
-$userName = mysqli_real_escape_string($instanceConnect-> getConnect(), $_POST['username']);
-$mail = mysqli_real_escape_string($instanceConnect-> getConnect(), $_POST['username']);
+$user = new User(0,"","",$_POST['mailUsername'],$_POST['password'],$_POST['mailUsername']);
+$userService = new UserService();
+$userDB = $userService-> searchForUserNameOrMailDB($user,$instanceConnect);
 
-$query= "SELECT * from users WHERE username = "."'".$userName."' OR mail= "."'".$mail."'"; // AND password = '".$_POST['password']."'";
-
-$result = mysqli_query($instanceConnect-> getConnect(),$query);
-
-
-if ($result->num_rows > 0) {
-
-    while ($fila = mysqli_fetch_assoc($result)) {
-
-        echo $fila["username"];
-
-        if (password_verify($_POST['password'],$fila["password"])) {
-            $_SESSION["idUser"] = $fila['idUser'];
-            return header("location: ../index.php");
-        }else {
-            echo '<script type="text/javascript"> alert("The user or password entered does not match") </script>';
-        
-            include_once("../view/login.php");
-        
-          }
+if ($userDB !== NULL) {
+    if ($userService-> verifyLoginData($user,$userDB)) {
+        $_SESSION["idUser"] = $userDB-> getId();
+        return header("location: ../index.php");
+    }else {
+        echo '<script type="text/javascript"> alert("The mail/username and password entered does not match") </script>';
+        include_once("../view/login.php");
     }
-
 } else {
-    echo '<script type="text/javascript"> alert("The user entered does not match") </script>';
-
+    echo '<script type="text/javascript"> alert("The mail/username entered does not match.") </script>';
     include_once("../view/login.php");
-
-  }
-  
+}
   $instanceConnect -> disconnect();
 ?>

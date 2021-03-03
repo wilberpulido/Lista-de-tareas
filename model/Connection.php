@@ -47,9 +47,6 @@
             return $this->conn;
         }
     }
-
     $instanceConnect = Connection::instanceConnection();
-
     $instanceConnect -> connect();
-
 ?>
