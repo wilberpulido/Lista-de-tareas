@@ -54,10 +54,5 @@ class Task
     public function getDeadline(){
         return $this-> deadline;
     }
-
-
 }
-
-
-
 ?>

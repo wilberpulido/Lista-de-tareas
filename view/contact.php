@@ -54,7 +54,7 @@
                 <h2>
                     Contact form
                 </h2>
-                <form method="POST" action="../services/contactMail.php">
+                <form method="POST" action="../controller/sendMailContact.php">
                     <div  id="formContact">
                         <label for="nameContact">Name: </label>
                         <input type="text" name="nameContact" id="nameContact" required>
@@ -75,22 +75,18 @@
                     </div>
                 </form>
                 <?php 
-                    if (isset($_SESSION["message"])) {
-                        
+                    if (isset($_SESSION["message"])) { 
                         if($_SESSION["message"]){
-                            echo "<div class = 'd-flex justify-content-center'>";
-                            echo "<h3 class = 'mt-4 btn btn-success'> message sent successfully. </h3>";
+                            echo "<div class = 'messageContact successMail'>";
+                            echo "<h3 class = ''> message sent successfully. </h3>";
                             echo "</div>";
-
                             $_SESSION["message"] = null;
 
                         }else{
-                            echo "<div class = 'd-flex justify-content-center'>";
-                            echo "<h3 class = 'mt-4 btn btn-danger'> The message has not been sent, data is missing. </h3>";
+                            echo "<div class = 'messageContact failMail'>";
+                            echo "<h3 class = ''> The message has not been sent, data is missing. </h3>";
                             echo "</div>";
-
                             $_SESSION["message"] = null;
-
                         }
                     }
                 ?>

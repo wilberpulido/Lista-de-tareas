@@ -39,20 +39,15 @@ class TaskService implements InterfaceTaskService{
     $state = mysqli_real_escape_string($connection-> getConnect(), $task->getState());
     $priority = mysqli_real_escape_string($connection-> getConnect(), $task->getPriority());
     $deadline = mysqli_real_escape_string($connection-> getConnect(), $task->getDeadline());
-
+    
     $update = "UPDATE tasks SET task = '".$content."', state = '".$state."', priority = '".$priority."', deadline = '".$deadline."' WHERE idTask = '".$idTask."'";
     
     if (mysqli_query($connection-> getConnect(),$update)) {
-        return true;
-    
+      return true; 
     } else {
-        return "Error: " . $update . "<br>".$connection-> getConnect()->error;
+      return "Error: " . $update . "<br>".$connection-> getConnect()->error;
     }
-
   }
-
-
-
 }
 
 
