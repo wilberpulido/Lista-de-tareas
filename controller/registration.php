@@ -1,28 +1,21 @@
 <?php
+require_once("../model/Connection.php");
+require_once("../model/mappers/User.php");
+require_once("../model/services/UserService.php");
 
-require_once("../model/connection.php");
+$userService = new UserService();
+$user = new User(0,$_POST['firstName'],$_POST['lastName'],$_POST['username'],$_POST['password'],$_POST['mail']);
+$result = $userService->createUser($user,$instanceConnect);
 
-$consult= "SELECT * from users WHERE username = "."'".$_POST['username']."' OR mail= "."'".$_POST['mail']."'";
-$result = mysqli_query($connect->conn,$consult);
-
-if ($result->num_rows === 0) {
-
-    $encryptedPassword = password_hash($_POST['password'],PASSWORD_DEFAULT, array("cost"=>12));
-
-    $insert = "INSERT INTO users(firstName,lastName,username,password,mail) VALUES ('".$_POST['firstName']."','".$_POST['lastName']."','".$_POST['username']."','".$encryptedPassword."','".$_POST['mail']."')";
-
-    if (mysqli_query($connect->conn,$insert)) {
-        header("location: ../view/login.php");
-        
+if (is_bool($result)){
+    if ($result){
+        return header("location: ../view/login.php");
     } else {
-        echo "Error: " . $insert . "<br>".$connect->conn->error;
-
+        echo '<script type="text/javascript"> alert("This username or mail is already taken") </script>';
     }
-
 } else {
-    echo '<script type="text/javascript"> alert("This username or mail is already taken") </script>';
-
-    include_once("../view/registration.php");
-
+    echo '<script type="text/javascript"> alert("'.$result.'") </script>';
 }
+return require_once("../view/registration.php");
+$instanceConnect -> disconnect();
 ?>

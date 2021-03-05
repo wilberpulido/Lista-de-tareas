@@ -1,15 +1,15 @@
 <?php
 session_start();
-require_once("./model/connection.php");
+require_once("./model/Connection.php");
 
 if (isset($_SESSION["idUser"])) {
 
     $queryTaks = "SELECT DISTINCT tasks.*, users.* FROM tasks, users WHERE tasks.idUser = "."'".$_SESSION["idUser"]."' AND users.idUSer = '".$_SESSION["idUser"]."'";
-    $taskResult = mysqli_query($connect->conn,$queryTaks );
+    $taskResult = mysqli_query($instanceConnect-> getConnect(),$queryTaks );
 
     $queryUser = "SELECT * FROM users WHERE idUser ="."'".$_SESSION["idUser"]."'";
     
-    $userResult = mysqli_query($connect->conn,$queryUser);
+    $userResult = mysqli_query($instanceConnect-> getConnect(),$queryUser);
     $user = null;
     if ($userResult->num_rows > 0) {
         $user = mysqli_fetch_assoc($userResult);
@@ -96,8 +96,8 @@ if (empty($user)) {
                 <tbody>
             <?php
             while ($row = mysqli_fetch_assoc($taskResult)) {
-                $urlDelete = "services/deleteTask.php?idTask=".$row['idTask'];
-                $urlEdit = "view/editTaskForm.php?idTask=".$row['idTask'];
+                $urlDelete = "controller/deleteTask.php?idTask=".$row['idTask'];
+                $urlEdit = "controller/searchTaskId.php?idTask=".$row['idTask'];
             ?>
                 <script>
                 function showDetails(id) {
