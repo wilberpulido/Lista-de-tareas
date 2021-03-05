@@ -209,7 +209,7 @@ font-size: 14px;
     column-gap: 10%;
     row-gap: 5vh;
     background-color:rgb(18, 109, 245);
-    margin: 6vh auto;
+    margin: 6vh auto 0 auto;
     border-radius: 1%;
     padding: 5vh 5vw;
     color: white;

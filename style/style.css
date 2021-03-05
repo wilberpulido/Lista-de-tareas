@@ -322,6 +322,20 @@ footer {
   display: flex;
   justify-content: center;
 }
+.messageContact{
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+.failMail{
+  background-color: rgb(248, 56, 38);
+}
+.successMail{
+  background-color: greenyellow;
+}
 #mainProfile {
   height: 100%;
 }
