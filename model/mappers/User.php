@@ -8,7 +8,7 @@
         private String $password;
         private String $mail;
         
-        public function __construct(int $id,String $firstName,String $lastName,String $userName,String $password,String $mail)
+        public function __construct(int $id = 0,String $firstName = "",String $lastName="",String $userName="",String $password="",String $mail="")
         {
             $this-> id = $id;
             $this->firstName = $firstName;

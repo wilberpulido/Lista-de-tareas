@@ -18,7 +18,6 @@ if ($userDB !== NULL) {
 } else {
     echo '<script type="text/javascript"> alert("The mail/username entered does not match.") </script>';
 }
-  return require_once("../view/login.php");
   $instanceConnect -> disconnect();
-
+  return require_once("../view/login.php");
 ?>

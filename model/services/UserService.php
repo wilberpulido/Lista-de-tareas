@@ -1,7 +1,7 @@
 <?php
-require_once("UserInterfaceService.php");
+require_once("InterfaceUserService.php");
 
-class UserService implements UserInterfaceService
+class UserService implements InterfaceUserService
 {
   public function searchForUserNameOrMailDB(User $user,Connection $connection)
   {
@@ -39,24 +39,21 @@ class UserService implements UserInterfaceService
     $lastName = mysqli_real_escape_string($connection-> getConnect(), $user-> getLastName());
     $userName = mysqli_real_escape_string($connection-> getConnect(), $user-> getUserName());
     $password = mysqli_real_escape_string($connection-> getConnect(), $user-> getPassword());
-    $mail = mysqli_real_escape_string($connection-> getConnect(), $user->getPassword());
+    $mail = mysqli_real_escape_string($connection-> getConnect(), $user->getMail());
 
-    $userDB = $this->searchForUserNameOrMailDB($user,$connection);
-
-    $insert = "INSERT INTO users(firstName,lastName,username,password,mail) VALUES ('".$firstName."','".$lastName."','".$userName."','".$password."','".$mail."')";
+    $userDB = $this-> searchForUserNameOrMailDB($user,$connection);
     
     if ($userDB === NULL){
       $encryptedPassword = password_hash($password,PASSWORD_DEFAULT, array("cost"=>12));
-      $user-> setPassword($encryptedPassword);
-        
+      $insert = "INSERT INTO users(firstName,lastName,username,password,mail) VALUES ('".$firstName."','".$lastName."','".$userName."','".$encryptedPassword."','".$mail."')";
+      
       if(mysqli_query($connection-> getConnect(),$insert)){
         return true;
       }else{
-        return false;
+        return $connection-> getConnect()-> error;
       }
-
     } else {
-      return NULL;
+      return false;
     }
   }
 }
