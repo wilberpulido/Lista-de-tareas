@@ -10,13 +10,8 @@
 <div class="contenedor">
     <header>
         <?php 
-            $whyUseUrl = "./whyUseApp.php";
-            $aboutMeUrl = "./aboutMe.php";
-            $contactUrl = "./contact.php";
-            $loginUrl = "./login.php";
-            $registerUrl = "./registration.php";
             include("partials/header.php");
-            ?>
+        ?>
     </header>
     <main>
         <div id="contactPage">
