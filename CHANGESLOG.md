@@ -2,6 +2,10 @@
 Últimos cambios realizados al repositorio de Lista-de Tareas
 
 ## [Unreleased]
+## [v2.0.1] - 2021-03-09
+### Fixed
+Hice algunas mejores menores en el front-end en la seccion tareas.
+
 ## [v2.0.0] - 2021-03-05
 ### Fixed
 En esta version terminé los cambios en el diseño del modelo mvc
@@ -15,6 +19,7 @@ En esta version terminé diseño responsivo.
 -  -->
 
 [Unreleased]: https://github.com/wilberpulido/Lista-de-tareas/compare/main...HEAD
+[v2.0.1]: https://github.com/wilberpulido/Lista-de-tareas/compare/v2.0.0...v2.0.1
 [v2.0.0]: https://github.com/wilberpulido/Lista-de-tareas/compare/v1.0.1...v2.0.0
 [v1.0.1]: https://github.com/wilberpulido/Lista-de-tareas/compare/v1.0.0...v1.0.1
 [v1.0.0]: https://github.com/wilberpulido/Lista-de-tareas/compare/main...v1.0.0
