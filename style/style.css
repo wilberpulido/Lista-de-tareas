@@ -153,7 +153,7 @@ a:active {
   z-index: 30;
 }
 .btn-menu:focus {
-  background-color: rgb(18, 109, 245);
+  background-color: #2B66FF;
   color: white;
   top: -25vh;
 }
@@ -404,7 +404,7 @@ footer {
   padding: 0.5rem 0.75rem;
   margin: 2% auto;
   z-index: 40;
-  background-color: rgb(18, 109, 245);
+  background-color: #2B66FF;
   font-weight: 700;
   font-size: 2vh;
   color: white;
@@ -413,7 +413,7 @@ main .btn-add-task-form:focus ~ .formBoxTask {
   left: 10%;
 }
 main .btn-add-task-form:focus {
-  background-color: rgb(18, 109, 245);
+  background-color: #2B66FF;
 }
 .tasksBox {
   position: relative;
@@ -447,12 +447,12 @@ main .btn-add-task-form:focus {
   display: flex;
 }
 #tableTask .theadLarge th {
-  background-color: rgb(18, 109, 245);
+  background-color: #2B66FF;
   color: white;
-  border: 0.5px solid #283fec;
+  border: 0.5px solid #1C8BE8;
 }
 #tableTask .theadSmall th {
-  background-color: rgb(18, 109, 245);
+  background-color: #2B66FF;
   color: white;
   display: flex;
   justify-content: center;
@@ -462,10 +462,10 @@ main .btn-add-task-form:focus {
   position: relative;
   height: 40px;
   text-align: left;
-  border: 0.5px solid #283fec;
-  background-color: skyblue;
+  border: 0.5px solid #1C8BE8;
+  background-color: rgb(132, 207, 230);
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 #tableTask .tbodySmall td:nth-child(1) {
@@ -486,7 +486,7 @@ main .btn-add-task-form:focus {
 .btn-details {
   display: block;
   color: white;
-  background-color: rgb(18, 109, 245);
+  background-color: #2B66FF;
   font-size: 3vw;
   font-weight: 700;
 }
@@ -522,7 +522,7 @@ main .btn-add-task-form:focus {
   right: 0vw;
   grid-template-columns: 45% 45%;
   grid-template-rows: repeat(2, 80px) 30px 50px;
-  background-color: rgb(15, 97, 220, 0.9);
+  background-color: #1C8BE8;
   grid-gap: 0px 10%;
   z-index: 35;
   border-radius: 5px;
@@ -530,7 +530,6 @@ main .btn-add-task-form:focus {
 }
 .detailsBox div:nth-child(1) {
   position: absolute;
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -538,6 +537,7 @@ main .btn-add-task-form:focus {
   right: 7%;
   width: 10px;
   height: 10px;
+  background-color: white;
 }
 .fa-window-close {
   position: relative;
