@@ -440,6 +440,13 @@ main .btn-add-task-form:focus {
 }
 #tableTask tr .taskTable {
   overflow: auto;
+  height: 100%;
+  padding: 0 10px;
+}
+#tableTask tr .taskTable p {
+  width: max-content;
+  background-color: rgb(132, 207, 230);
+
 }
 #tableTask tr {
   position: relative;
