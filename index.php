@@ -34,11 +34,6 @@ if (empty($user)) {
 <div class="contenedor">
     <header>
         <?php
-            $whyUseUrl ="view/whyUseApp.php" ;
-            $aboutMeUrl = "view/aboutMe.php";
-            $contactUrl = "view/contact.php";
-            $loginUrl = "view/login.php";
-            $registerUrl = "view/registration.php";
             include("view/partials/header.php");
             ?>
     </header>
