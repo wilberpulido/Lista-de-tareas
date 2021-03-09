@@ -170,15 +170,14 @@ width: 100%;
 .formBoxRegister a:visited{
     color:white;
 }
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus{
+.formBoxLogin input:-webkit-autofill,
+.formBoxLogin input:-webkit-autofill:hover,
+.formBoxLogin input:-webkit-autofill:focus,
+.formBoxRegister input:-webkit-autofill,
+.formBoxRegister input:-webkit-autofill:hover,
+.formBoxRegister input:-webkit-autofill:focus{
 -webkit-text-fill-color: #fff;
 box-shadow: 10px 10px 10px 10vw rgba(0, 0, 0, 0.9) inset;
-outline: none;
-outline-style: none;
-outline-color: transparent;
-font-size: 14px;
 }
 .btn-submit{
     position: relative;
