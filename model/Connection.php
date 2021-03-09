@@ -2,11 +2,11 @@
 
     class Connection
     {
-        // public $host = "localhost";
-        // public $user = "id15418449_root";
-        // public $password = "TThmjhg00.123";
-        // public $database = 'id15418449_mydb';
-        // public $conn;
+        // private $host = "localhost";
+        // private $user = "id15418449_root";
+        // private $password = "TThmjhg00.123";
+        // private $database = 'id15418449_mydb';
+        // private $conn;
 
         private $host = "localhost:3306";
         private $user = "root";
