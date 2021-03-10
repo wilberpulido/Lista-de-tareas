@@ -9,12 +9,19 @@ $result = $userService->createUser($user,$instanceConnect);
 
 if (is_bool($result)){
     if ($result){
-        return header("location: ../view/login.php");
+        header("location: ../view/login.php");
+        die(); 
     } else {
-        echo '<script type="text/javascript"> alert("This username or mail is already taken") </script>';
+        echo '<script type="text/javascript">
+            alert("This username or mail is already taken")
+            window.location = "../view/registration.php"  
+          </script>';
     }
 } else {
-    echo '<script type="text/javascript"> alert("'.$result.'") </script>';
+    echo '<script type="text/javascript">
+      alert("'.$result.'")
+      
+      </script>';
 }
 return require_once("../view/registration.php");
 $instanceConnect -> disconnect();
