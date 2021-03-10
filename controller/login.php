@@ -13,11 +13,16 @@ if ($userDB !== NULL) {
     $_SESSION["idUser"] = $userDB-> getId();
     return header("location: ../index.php");
   }else {
-    echo '<script type="text/javascript"> alert("The mail/username and password entered does not match") </script>';
+    echo'<script type="text/javascript"> 
+      alert("The mail/username and password entered does not match")
+      window.location = "../view/login.php"
+    </script>';
   }
 } else {
-    echo '<script type="text/javascript"> alert("The mail/username entered does not match.") </script>';
+    echo '<script type="text/javascript">
+      alert("The mail/username entered does not match.") 
+      window.location = "../view/login.php"
+     </script>';
 }
-  $instanceConnect -> disconnect();
-  return require_once("../view/login.php");
+$instanceConnect -> disconnect();
 ?>
