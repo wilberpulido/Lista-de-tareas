@@ -675,10 +675,6 @@ main .btn-add-task-form:focus {
   #contactPage section p {
     font-size: 2vw;
   }
-  .menuProfile {
-    left: auto;
-    right: 5%;
-  }
   main .btn-add-task-form:focus ~ .formBoxTask {
     left: 10%;
   }
