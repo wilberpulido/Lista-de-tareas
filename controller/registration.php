@@ -20,7 +20,7 @@ if (is_bool($result)){
 } else {
     echo '<script type="text/javascript">
       alert("'.$result.'")
-      
+      window.location = "../view/registration.php"
       </script>';
 }
 return require_once("../view/registration.php");
