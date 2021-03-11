@@ -121,9 +121,9 @@ a:active {
 .other-submenu,
 .btn-menu {
   position: absolute;
+  top: 0;
   color: white;
-  transition: top 0.5s ease-out;
-  transition-delay: 0.7s;
+  transition: top 0.5s ease-out 0.5s;
 }
 .other-submenu {
   display: flex;
@@ -148,8 +148,7 @@ a:active {
   width: 100vw;
   height: 25vh;
   top: 35vh;
-  transition: top 0.5s ease-out;
-  transition-delay: 0.7s;
+  transition: top 0.5s ease-out 0.5s;
   z-index: 30;
 }
 .btn-menu:focus {
@@ -342,7 +341,7 @@ footer {
 .menuProfile {
   position: absolute;
   bottom: 0%;
-  left: 40%;
+  left: 5%;
   width: 20%;
   background-color: rgb(9, 56, 128);
   padding-top: 5px;
@@ -428,7 +427,7 @@ main .btn-add-task-form:focus {
 }
 .tasksBox h2 {
   height: 10%;
-  font-size: 2.5vh;
+  font-size: 3vh;
   padding-top: 5px;
   text-align: center;
 }
@@ -674,10 +673,6 @@ main .btn-add-task-form:focus {
   }
   #contactPage section p {
     font-size: 2vw;
-  }
-  .menuProfile {
-    left: auto;
-    right: 5%;
   }
   main .btn-add-task-form:focus ~ .formBoxTask {
     left: 10%;
