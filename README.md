@@ -30,7 +30,7 @@ Type in console:
 php -S localhost:4000
 ```
 On localhost:4000 you will see the page.
-On localhost:8082 you will see "adminer", Database engine: mySQL,server: db, user: root, password: example: taskList.
+On localhost:8082 you will see "adminer", Database engine: mySQL,server: db, user: root, password: example, name database: taskList.
 On localhost:3306 you will be listening to mySQL image.
 
 
@@ -66,5 +66,5 @@ Escribir en consola:
 php -S localhost:4000
 ```
 En localhost:4000 se verá la página.
-En localhost:8082 se verá "adminer", Motor de base de datos: mySQL,servidor: db, usuario: root, contraseña: example: taskList.
+En localhost:8082 se verá "adminer", Motor de base de datos: mySQL,servidor: db, usuario: root, contraseña: example, nombre base de datos: taskList.
 En localhost:3306 estará escuchando la imagen de mySQL.
